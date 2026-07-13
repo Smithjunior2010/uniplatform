@@ -227,6 +227,7 @@ export default function Home() {
 
           <div className="biz-card biz-card-cta">
             <div className="biz-cta-content">
+              <h2 className="biz-cta-heading">{t.biz.cta.heading}</h2>
               <span className="biz-cta-flag">🇭🇹</span>
               <div className="biz-cta-title">{t.biz.cta.title}</div>
               <p className="biz-cta-desc">{t.biz.cta.desc}</p>

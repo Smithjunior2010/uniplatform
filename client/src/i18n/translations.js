@@ -75,6 +75,7 @@
         },
       },
       cta: {
+        heading: 'OPEN FOR INVESTORS',
         title: 'A unique opportunity.',
         desc: 'Invest in a rapidly growing multisector group.',
         btn: 'Get in touch',
@@ -270,6 +271,7 @@
         },
       },
       cta: {
+        heading: 'OUVERT AUX INVESTISSEURS',
         title: 'Une opportunité unique.',
         desc: 'Investissez dans un groupe multisectoriel en pleine croissance.',
         btn: 'Nous contacter',
