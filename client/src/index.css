@@ -573,11 +573,53 @@ footer{background:white;padding:4rem 3.5rem 0;display:grid;grid-template-columns
 .auth-terms a{color:var(--ink3);text-decoration:underline;text-underline-offset:2px;transition:color .2s}
 .auth-terms a:hover{color:var(--blue)}
 @media (max-width:480px){
-  .auth-page{padding:5rem 1rem 2rem}
-  .auth-card{border-radius:16px}
-  .auth-header{padding:1.5rem 1.5rem 0}
-  .auth-tabs{margin:1.2rem 1.5rem 0}
-  .auth-body{padding:1.5rem 1.5rem 1.8rem}
+  .auth-page{padding:4.5rem .8rem 1.5rem}
+  .auth-card{border-radius:14px}
+  .auth-header{padding:1.2rem 1.2rem 0}
+  .auth-tabs{margin:1rem 1.2rem 0}
+  .auth-body{padding:1.2rem 1.2rem 1.4rem}
+  .auth-heading{margin-bottom:.8rem}
+  .auth-heading h2{font-size:1.2rem;margin-bottom:.15rem}
+  .auth-heading p{font-size:.78rem}
+  .auth-form{gap:.6rem}
+  .auth-field{gap:.2rem}
+  .auth-field label{font-size:.72rem}
+  .auth-input-wrap input{font-size:.82rem;padding:.55rem .8rem .55rem 2.2rem}
+  .auth-input-icon{left:.65rem;width:16px;height:16px}
+  .auth-pw-toggle{right:.5rem}
+  .auth-submit{font-size:.82rem;padding:.6rem 1rem;margin-top:.1rem}
+  .auth-divider{margin:.8rem 0}
+  .auth-divider span{font-size:.7rem}
+  .auth-social{margin-bottom:.8rem;gap:.55rem}
+  .auth-social-btn{width:38px;height:38px;border-radius:8px}
+  .auth-switch p{font-size:.76rem}
+  .auth-switch-link{font-size:.76rem}
+  .auth-message{font-size:.74rem;padding:.5rem .8rem;margin-bottom:.6rem}
+  .auth-forgot-link{font-size:.72rem}
+  .auth-terms{font-size:.68rem;margin-top:.4rem}
+}
+@media (max-width:400px){
+  .auth-page{padding:4rem .6rem 1rem}
+  .auth-card{border-radius:12px}
+  .auth-header{padding:1rem 1rem 0}
+  .auth-tabs{margin:.8rem 1rem 0}
+  .auth-body{padding:1rem 1rem 1.2rem}
+  .auth-heading{margin-bottom:.6rem}
+  .auth-heading h2{font-size:1.1rem}
+  .auth-heading p{font-size:.74rem}
+  .auth-form{gap:.5rem}
+  .auth-field label{font-size:.68rem}
+  .auth-input-wrap input{font-size:.78rem;padding:.48rem .7rem .48rem 2rem}
+  .auth-input-icon{left:.55rem;width:15px;height:15px}
+  .auth-submit{font-size:.78rem;padding:.55rem .8rem}
+  .auth-divider{margin:.6rem 0}
+  .auth-divider span{font-size:.66rem}
+  .auth-social{gap:.45rem}
+  .auth-social-btn{width:34px;height:34px}
+  .auth-switch p{font-size:.72rem}
+  .auth-switch-link{font-size:.72rem}
+  .auth-message{font-size:.7rem;padding:.4rem .6rem;margin-bottom:.5rem}
+  .auth-forgot-link{font-size:.68rem}
 }
 @media (min-width:768px){
   .auth-container{max-width:480px}
