@@ -382,10 +382,11 @@ footer{background:white;padding:4rem 3.5rem 0;display:grid;grid-template-columns
   .il p{font-size:clamp(.88rem,3vw,1rem)}
   .ipt{font-size:clamp(.88rem,3vw,1rem)}
   .inote-text{font-size:clamp(.78rem,2.5vw,.9rem)}
-  .fcard{padding:2rem}
+  .fcard{padding:1.5rem}
+  .fch{margin-bottom:1.2rem}
   .frow{grid-template-columns:1fr}
   .tmc{padding:1rem}
-  .mf-wrap,.pw,.cvw,.iw{grid-template-columns:1fr;gap:3rem}
+  .mf-wrap,.pw,.cvw,.iw{grid-template-columns:1fr;gap:2rem}
   .sec{padding:4rem 2rem}
   footer{grid-template-columns:1fr 1fr;padding:3rem 2rem 0}
   .fbot{margin:0 -2rem;padding:1.2rem 2rem;flex-direction:column;text-align:center}
@@ -419,6 +420,7 @@ footer{background:white;padding:4rem 3.5rem 0;display:grid;grid-template-columns
   .sn{font-size:2rem}
   .sl{font-size:.7rem}
   .sec{padding:3rem 1.2rem}
+  #contact.sec{padding:2rem 1.2rem}
   .sgrid{grid-template-columns:1fr}
   .scard{padding:1.5rem}
   .tgrid{grid-template-columns:1fr}
@@ -429,12 +431,20 @@ footer{background:white;padding:4rem 3.5rem 0;display:grid;grid-template-columns
   .fcl{gap:.4rem}
   .biz-sec .st{font-size:clamp(1.8rem,5.5vw,2.4rem)}
   #team .st{font-size:clamp(1.8rem,5.5vw,2.4rem)}
-  .il h2{font-size:clamp(1.8rem,5.5vw,2.4rem)}
-  .il p{font-size:.88rem}
+  .il h2{font-size:clamp(1.8rem,5.5vw,2.4rem);margin-bottom:.8rem}
+  .il p{font-size:.88rem;margin-bottom:1.2rem}
+  .ipts{gap:.55rem;margin-bottom:1rem}
   .ipt{font-size:.88rem}
   .inote-text{font-size:.78rem}
-  .fcard{padding:1.5rem}
-  .frow{grid-template-columns:1fr}
+  .fcard{padding:1.1rem}
+  .fch{margin-bottom:.8rem}
+  .fch h3{font-size:.95rem;margin-bottom:.15rem}
+  .fch p{font-size:.78rem}
+  .frow{grid-template-columns:1fr;gap:.4rem}
+  .fiw{margin-bottom:.4rem}
+  .fi,.fta,.fisel{padding:.5rem .65rem;font-size:.8rem}
+  .fta{min-height:65px;padding-top:.5rem}
+  .fsub{padding:.5rem;font-size:.8rem;margin-top:.15rem}
   .tmc{padding:.85rem}
   .tmc-name{font-size:clamp(.85rem,3.5vw,.95rem)}
   .tmc-title,.tmc-loc,.tmc-bio{font-size:clamp(.75rem,3vw,.85rem)}
@@ -469,13 +479,15 @@ footer{background:white;padding:4rem 3.5rem 0;display:grid;grid-template-columns
   .sn{font-size:1.7rem}
   .sl{font-size:.65rem}
   .sec{padding:2.5rem 1rem}
+  #contact.sec{padding:1.5rem 1rem}
   .scard{padding:1.3rem}
   .tgrid{grid-template-columns:1fr}
   .sbar{grid-template-columns:1fr}
   .biz-sec .st{font-size:clamp(1.6rem,6vw,2rem)}
   #team .st{font-size:clamp(1.6rem,6vw,2rem)}
-  .il h2{font-size:clamp(1.6rem,6vw,2rem)}
-  .il p{font-size:.82rem}
+  .il h2{font-size:clamp(1.6rem,6vw,2rem);margin-bottom:.6rem}
+  .il p{font-size:.82rem;margin-bottom:1rem}
+  .ipts{gap:.45rem;margin-bottom:.8rem}
   .ipt{font-size:.82rem}
   .inote-text{font-size:.74rem}
   .tmc{padding:.8rem}
@@ -483,7 +495,16 @@ footer{background:white;padding:4rem 3.5rem 0;display:grid;grid-template-columns
   .tmc-title,.tmc-loc,.tmc-bio{font-size:.74rem}
   .tmc-avatar{border-radius:8px}
   .biz-card{padding:1rem 1.1rem .9rem}
-  .iw{gap:1.5rem}
+  .iw{gap:1.2rem}
+  .fcard{padding:.9rem}
+  .fch{margin-bottom:.6rem}
+  .fch h3{font-size:.88rem;margin-bottom:.1rem}
+  .fch p{font-size:.74rem}
+  .frow{gap:.35rem}
+  .fiw{margin-bottom:.35rem}
+  .fi,.fta,.fisel{padding:.42rem .55rem;font-size:.76rem}
+  .fta{min-height:55px;padding-top:.42rem}
+  .fsub{padding:.45rem;font-size:.76rem;margin-top:.1rem}
   footer{grid-template-columns:repeat(3,1fr);padding:1.5rem 1rem 0;gap:1rem}
   .fbrand{grid-column:1/-1}
   .fbot{margin:0 -1rem;padding:.6rem 1rem}

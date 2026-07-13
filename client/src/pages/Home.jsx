@@ -253,7 +253,7 @@ export default function Home() {
         <div className="tgrid">
           <div className="tmc tmc-founder">
             <div className="tmc-avatar">
-              <img src="/images/team/founder.jpg" alt="The Founder" />
+              <img src="https://i.postimg.cc/528rV460/incognito.jpg" alt="The Founder" />
             </div>
             <div className="tmc-name">{t.team.members.founder.name}</div>
             <div className="tmc-title">{t.team.members.founder.title}</div>
@@ -283,7 +283,7 @@ export default function Home() {
               <img src="https://i.postimg.cc/jjdQDZ3S/profile-picture.jpg" alt="Prud'homme Smith Junior" />
             </div>
             <div className="tmc-name">{t.team.members.smith.name}</div>
-            <div className="tmc-title">{t.team.members.smith.title}</div>
+            <div className="tmc-title">{t.team.members.smith.title} · <a href="#" target="_blank" rel="noopener noreferrer" style={{textDecoration:'underline',color:'var(--blue)',fontWeight:600}}>Portfolio</a></div>
             <div className="tmc-loc">📍 {t.team.members.smith.loc}</div>
             <div className="tmc-bio">{t.team.members.smith.bio}</div>
             <div className="tmc-tags">
