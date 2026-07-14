@@ -53,6 +53,14 @@ export default function WiFi() {
             </div>
           </div>
         </div>
+
+        <div className="wifi-hero-visual">
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `<dotlottie-wc src="https://lottie.host/f57db765-6839-418c-8ffd-143386d70cd0/RTwJR5k3lT.json" style="width:100%;max-width:300px;height:300px" autoplay loop></dotlottie-wc>`
+            }}
+          />
+        </div>
       </section>
 
       {/* ══════════════════════════════════════
@@ -216,30 +224,6 @@ export default function WiFi() {
       </section>
 
       {/* ══════════════════════════════════════
-          FAQ
-          ══════════════════════════════════════ */}
-      <section className="wifi-sec" id="wifi-faq">
-        <div className="wifi-ey">{t.wifi.faq.eyebrow}</div>
-        <h2 className="wifi-st">{t.wifi.faq.title1} <span className="wifi-st-i">{t.wifi.faq.title2}</span></h2>
-        <p className="wifi-sb">{t.wifi.faq.subtitle}</p>
-
-        <div className="wifi-faq-grid">
-          {t.wifi.faq.items.map((faq, i) => (
-            <div key={i} className="wifi-faq-card">
-              <div className="wifi-faq-q">
-                <span className="wifi-faq-q-ico">Q</span>
-                {faq.q}
-              </div>
-              <div className="wifi-faq-a">
-                <span className="wifi-faq-a-ico">A</span>
-                {faq.a}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════
           CONTACT / CTA
           ══════════════════════════════════════ */}
       <section className="wifi-sec wifi-sec-cta" id="wifi-contact">
@@ -251,10 +235,6 @@ export default function WiFi() {
             <a href="https://wa.me/50900000000" target="_blank" rel="noopener noreferrer" className="wifi-cta-btn-p">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
               {t.wifi.contact.whatsapp}
-            </a>
-            <a href={`mailto:${t.wifi.contact.email}`} className="wifi-cta-btn-s">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 14L2 4"/></svg>
-              {t.wifi.contact.emailBtn}
             </a>
           </div>
           <div className="wifi-cta-info">

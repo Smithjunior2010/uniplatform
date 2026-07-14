@@ -637,7 +637,9 @@ footer{background:white;padding:4rem 3.5rem 0;display:grid;grid-template-columns
 @keyframes wifiOrbFloat{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(3%,-2%) scale(1.05)}66%{transform:translate(-2%,2%) scale(.96)}}
 .wifi-hero-grid{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.05;background-image:linear-gradient(rgba(26,86,219,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(26,86,219,.12) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,black 30%,transparent 70%)}
 
-.wifi-hero-content{position:relative;z-index:2;max-width:640px;padding:4rem 0}
+.wifi-hero-content{position:relative;z-index:2;max-width:640px;padding:4rem 0;flex:1}
+.wifi-hero-visual{position:relative;z-index:2;flex:1;display:flex;align-items:center;justify-content:center;padding:2rem 0}
+.wifi-hero-visual dotlottie-wc{max-width:480px;height:auto}
 .wifi-hero-eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:1.8rem;padding:.4rem 1rem;background:var(--blue-l);border:1px solid var(--blue-m);border-radius:100px}
 .wifi-dot{width:7px;height:7px;background:var(--blue);border-radius:50%;box-shadow:0 0 8px rgba(26,86,219,.4);animation:pd 2.2s ease-in-out infinite}
 .wifi-hero-title{font-family:'Manrope',sans-serif;font-size:clamp(2.6rem,4.2vw,4.4rem);font-weight:800;line-height:1.08;letter-spacing:-.03em;color:var(--ink);margin-bottom:1rem}
@@ -662,12 +664,12 @@ footer{background:white;padding:4rem 3.5rem 0;display:grid;grid-template-columns
 .wifi-sec-cta{background:var(--off)}
 .wifi-ey{display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);background:var(--blue-l);padding:.28rem .8rem;border-radius:100px;margin-bottom:.9rem;border:1px solid var(--blue-m)}
 .wifi-ey-dark{display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7AB5FF;background:rgba(26,86,219,.2);padding:.28rem .8rem;border-radius:100px;margin-bottom:.9rem;border:1px solid rgba(26,86,219,.3)}
-.wifi-st{font-family:'Instrument Serif',serif;font-size:clamp(2.2rem,3.4vw,3.2rem);line-height:1.1;letter-spacing:-.02em;color:var(--ink);margin-bottom:.9rem}
+.wifi-st{font-family:'Manrope',sans-serif;font-size:clamp(2.6rem,4.2vw,4.4rem);font-weight:800;line-height:1.08;letter-spacing:-.03em;color:var(--ink);margin-bottom:1rem}
 .wifi-st-i{font-style:italic;color:var(--blue)}
-.wifi-sb{font-size:clamp(1rem,1.5vw,1.15rem);font-weight:400;line-height:1.82;color:var(--ink3);max-width:58ch;margin-bottom:3.5rem}
-.wifi-st-dark{font-family:'Instrument Serif',serif;font-size:clamp(2.2rem,3.4vw,3.2rem);line-height:1.1;letter-spacing:-.02em;color:white;margin-bottom:.9rem}
+.wifi-sb{font-size:clamp(1.05rem,1.6vw,1.25rem);font-weight:500;line-height:1.55;color:var(--ink2);max-width:48ch;margin-bottom:.8rem;padding-left:1rem;border-left:3px solid var(--blue)}
+.wifi-st-dark{font-family:'Manrope',sans-serif;font-size:clamp(2.6rem,4.2vw,4.4rem);font-weight:800;line-height:1.08;letter-spacing:-.03em;color:white;margin-bottom:1rem}
 .wifi-st-i-dark{font-style:italic;color:#7AB5FF}
-.wifi-sb-dark{font-size:clamp(1rem,1.5vw,1.15rem);font-weight:400;line-height:1.82;color:rgba(255,255,255,.48);max-width:58ch;margin-bottom:2.5rem}
+.wifi-sb-dark{font-size:clamp(1.05rem,1.6vw,1.25rem);font-weight:500;line-height:1.55;color:rgba(255,255,255,.5);max-width:48ch;margin-bottom:.8rem;padding-left:1rem;border-left:3px solid #7AB5FF}
 
 /* Plans */
 .wifi-plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
@@ -765,8 +767,10 @@ footer{background:white;padding:4rem 3.5rem 0;display:grid;grid-template-columns
 
 /* WiFi Responsive */
 @media (max-width:1024px){
-  .wifi-hero{padding:82px 2rem 0;min-height:100dvh}
-  .wifi-hero-content{max-width:100%;padding:3rem 0 2rem}
+  .wifi-hero{padding:82px 2rem 0;min-height:100dvh;flex-direction:column;gap:0}
+  .wifi-hero-content{max-width:100%;padding:3rem 0 0}
+  .wifi-hero-visual{padding:0 0 1rem}
+  .wifi-hero-visual dotlottie-wc{max-width:200px}
   .wifi-plans-grid{grid-template-columns:1fr;max-width:500px;margin:0 auto}
   .wifi-plan-featured{transform:none}
   .wifi-plan-featured:hover{transform:translateY(-6px)}
@@ -778,7 +782,8 @@ footer{background:white;padding:4rem 3.5rem 0;display:grid;grid-template-columns
 }
 
 @media (max-width:640px){
-  .wifi-hero{padding:72px 1.2rem 0;min-height:100dvh}
+  .wifi-hero{padding:72px 1.2rem 0;min-height:auto}
+  .wifi-hero-visual dotlottie-wc{max-width:140px}
   .wifi-hero-title{font-size:clamp(2rem,6vw,2.8rem)}
   .wifi-hero-sub{font-size:clamp(.95rem,3.5vw,1.1rem)}
   .wifi-hero-desc{font-size:clamp(.88rem,3vw,1rem)}
