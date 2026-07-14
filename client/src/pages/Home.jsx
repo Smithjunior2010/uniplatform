@@ -40,7 +40,7 @@ export default function Home() {
         </div>
 
         <div className={`hero-right ${showAll ? 'expanded' : ''}`}>
-          <a href="#" className="hero-bcard" style={{'--hc':'var(--c-wifi)'}}>
+          <a href="/wifi" className="hero-bcard" style={{'--hc':'var(--c-wifi)'}}>
             <div className="brow">
               <div className="bico" style={{background:'rgba(26,86,219,.15)',border:'1px solid rgba(26,86,219,.25)'}}>
                 <span style={{fontSize:'1.1rem'}}>📶</span>
@@ -51,7 +51,7 @@ export default function Home() {
               </div>
             </div>
           </a>
-          <a href="#" className="hero-bcard" style={{'--hc':'var(--c-ship)'}}>
+          <a href="/shipping" className="hero-bcard" style={{'--hc':'var(--c-ship)'}}>
             <div className="brow">
               <div className="bico" style={{background:'rgba(15,76,117,.15)',border:'1px solid rgba(15,76,117,.25)'}}>
                 <span style={{fontSize:'1.1rem'}}>📦</span>
@@ -145,7 +145,7 @@ export default function Home() {
         <p className="sb">{t.biz.subtitle}</p>
 
         <div className="biz-grid">
-          <a href="#" className="biz-card" style={{'--bc':'var(--c-wifi)'}}>
+          <a href="/wifi" className="biz-card" style={{'--bc':'var(--c-wifi)'}}>
             <div className="biz-top">
               <div className="biz-ico" style={{background:'rgba(26,86,219,.1)',border:'1px solid rgba(26,86,219,.2)'}}>
                 <span className="biz-emoji">📶</span>
@@ -161,7 +161,7 @@ export default function Home() {
             <span className="biz-link">{t.biz.discover}</span>
           </a>
 
-          <a href="#" className="biz-card" style={{'--bc':'var(--c-ship)'}}>
+          <a href="/shipping" className="biz-card" style={{'--bc':'var(--c-ship)'}}>
             <div className="biz-top">
               <div className="biz-ico" style={{background:'rgba(15,76,117,.1)',border:'1px solid rgba(15,76,117,.2)'}}>
                 <span className="biz-emoji">📦</span>

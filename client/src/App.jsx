@@ -4,6 +4,8 @@ import { LanguageProvider, useLang } from './i18n/LanguageContext';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
+import WiFi from './pages/WiFi';
+import Shipping from './pages/Shipping';
 
 function Footer() {
   const { t, lang } = useLang();
@@ -96,6 +98,8 @@ function AppContent() {
         </Link>
         <ul className={`nl ${menuOpen ? 'open' : ''}`}>
           <li><a href="/#home" onClick={() => setMenuOpen(false)}>{t.nav.home}</a></li>
+          <li><Link to="/wifi" onClick={() => setMenuOpen(false)}>Unidev WiFi</Link></li>
+          <li><Link to="/shipping" onClick={() => setMenuOpen(false)}>Unidev Shipping</Link></li>
           <li><a href="#about" onClick={() => setMenuOpen(false)}>{t.nav.about}</a></li>
           <li><a href="#team" onClick={() => setMenuOpen(false)}>{t.nav.team}</a></li>
           <li><a href="#contact" onClick={() => setMenuOpen(false)}>{t.nav.contact}</a></li>
@@ -117,6 +121,8 @@ function AppContent() {
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/wifi" element={<WiFi />} />
+        <Route path="/shipping" element={<Shipping />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
