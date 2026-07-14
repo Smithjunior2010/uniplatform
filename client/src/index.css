@@ -979,8 +979,8 @@ footer{background:white;padding:4rem 3.5rem 0;display:grid;grid-template-columns
   .ship-hero-eyebrow{font-size:.7rem;padding:.35rem .85rem;margin-bottom:1.2rem}
   .ship-hero-sub{font-size:1rem}
   .ship-hero-desc{font-size:1.02rem;line-height:1.65;margin-bottom:1.2rem}
-  .ship-hero-content{padding:1.5rem 0 0}
-  .ship-hero-visual{display:flex;flex:0 0 auto;padding:0 0 1rem}
+  .ship-hero-content{max-width:100%;padding:1.5rem 0 0}
+  .ship-hero-visual{display:flex;flex:0 0 auto;padding:0 0 1rem;max-width:100%}
   .ship-hero-visual dotlottie-wc{max-width:140px;height:100px}
   .ship-hero-stats{flex-wrap:wrap;gap:.8rem;justify-content:center}
   .ship-stat-div{display:none}
@@ -1048,14 +1048,41 @@ footer{background:white;padding:4rem 3.5rem 0;display:grid;grid-template-columns
   .ship-sec-cta{padding:2rem 1rem 3.5rem}
   .ship-st{font-size:1.6rem}
   .ship-st-dark{font-size:1.6rem}
+  .ship-sb{font-size:.9rem;margin-bottom:1.2rem}
+  .ship-sb-dark{font-size:.9rem;margin-bottom:1.2rem}
+  .ship-ey{font-size:.65rem;padding:.22rem .6rem;margin-bottom:.6rem}
+  .ship-ey-dark{font-size:.65rem;padding:.22rem .6rem;margin-bottom:.6rem}
+  .ship-services-grid{grid-template-columns:1fr;gap:.8rem}
   .ship-service-card{padding:1.2rem 1rem}
-  .ship-service-name{font-size:1.05rem}
-  .ship-service-desc{font-size:.92rem}
-  .ship-pricing-card{padding:1rem 1rem}
-  .ship-pricing-grid{grid-template-columns:1fr}
+  .ship-service-name{font-size:1.15rem}
+  .ship-service-desc{font-size:1rem}
+  .ship-service-features li{font-size:.9rem}
+  .ship-pricing-grid{grid-template-columns:1fr;gap:.8rem}
+  .ship-pricing-card{padding:1rem}
   .ship-pricing-zone{font-size:1rem}
-  .ship-pricing-rate-num{font-size:1.7rem}
-  .ship-pricing-note{flex-direction:column;font-size:.9rem}
+  .ship-pricing-rate-num{font-size:1.8rem}
+  .ship-pricing-rate-unit{font-size:.95rem}
+  .ship-pricing-desc{font-size:.95rem}
+  .ship-pricing-note{flex-direction:column;text-align:center;gap:.4rem;font-size:.95rem}
+  .ship-steps{grid-template-columns:1fr;gap:.8rem}
+  .ship-step{padding:1rem .5rem}
+  .ship-step-ico{font-size:1.8rem}
+  .ship-step-title{font-size:1.1rem}
+  .ship-step-desc{font-size:.92rem}
+  .ship-why-wrap{grid-template-columns:1fr;gap:1rem}
+  .ship-why-left{text-align:center}
+  .ship-why-points{text-align:left;gap:1rem;margin-top:1rem}
+  .ship-why-pt{padding:.5rem 0}
+  .ship-why-pt-title{font-size:1rem}
+  .ship-why-pt-desc{font-size:.9rem}
+  .ship-why-card{padding:1.2rem 1rem;max-width:100%}
+  .ship-why-card-title{font-size:1.2rem}
+  .ship-why-card-desc{font-size:.92rem}
+  .ship-why-card-stats{flex-direction:column;gap:.5rem}
+  .ship-why-cs{border-right:none;border-bottom:1px solid rgba(255,255,255,.08);padding:.5rem 0}
+  .ship-why-cs:last-child{border-bottom:none}
+  .ship-why-cs-num{font-size:1.2rem}
+  .ship-why-cs-label{font-size:.7rem}
   .ship-cta-card{padding:1.5rem 1rem}
   .ship-cta-title{font-size:1.4rem}
   .ship-cta-desc{font-size:.95rem}
