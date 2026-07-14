@@ -837,12 +837,12 @@ footer{background:white;padding:4rem 3.5rem 0;display:grid;grid-template-columns
 .ship-hero-eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--c-ship);margin-bottom:1.8rem;padding:.4rem 1rem;background:rgba(15,76,117,.08);border:1px solid rgba(15,76,117,.2);border-radius:100px}
 .ship-dot{width:7px;height:7px;border-radius:50%;background:var(--c-ship);animation:shipPulse 2s ease-in-out infinite}
 @keyframes shipPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
-.ship-hero-title{font-family:'Manrope',sans-serif;font-size:clamp(2.6rem,4.2vw,4.4rem);font-weight:800;line-height:1.08;letter-spacing:-.03em;color:var(--ink);margin-bottom:1rem}
+.ship-hero-title{font-family:'Manrope',sans-serif;font-size:clamp(3rem,4.2vw,5rem);font-weight:800;line-height:1.08;letter-spacing:-.03em;color:var(--ink);margin-bottom:1rem}
 .ship-gt{background:linear-gradient(135deg,var(--c-ship),#0D7A5F);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.ship-hero-sub{font-size:clamp(1.05rem,1.5vw,1.2rem);font-weight:600;color:var(--ink2);margin-bottom:.8rem}
-.ship-hero-desc{font-size:clamp(1rem,1.5vw,1.2rem);font-weight:400;line-height:1.75;color:var(--ink3);max-width:52ch;margin-bottom:2rem}
+.ship-hero-sub{font-size:clamp(1.15rem,1.5vw,1.4rem);font-weight:600;color:var(--ink2);margin-bottom:.8rem}
+.ship-hero-desc{font-size:clamp(1.1rem,1.6vw,1.35rem);font-weight:400;line-height:1.75;color:var(--ink3);max-width:52ch;margin-bottom:2rem}
 .ship-hero-cta{display:flex;gap:.85rem;flex-wrap:wrap;margin-bottom:2.5rem}
-.ship-btn-p{display:inline-flex;align-items:center;gap:.55rem;background:var(--c-ship);color:white;font-size:.9rem;font-weight:700;padding:.85rem 2rem;border-radius:10px;text-decoration:none;transition:opacity .2s,transform .15s;box-shadow:0 4px 20px rgba(15,76,117,.25)}
+.ship-btn-p{display:inline-flex;align-items:center;gap:.55rem;background:var(--c-ship);color:white;font-size:.95rem;font-weight:700;padding:.95rem 2rem;border-radius:10px;text-decoration:none;transition:opacity .2s,transform .15s;box-shadow:0 4px 20px rgba(15,76,117,.25)}
 .ship-btn-p:hover{opacity:.92;transform:translateY(-2px)}
 .ship-btn-s{display:inline-flex;align-items:center;gap:.55rem;background:transparent;color:var(--c-ship);font-size:.9rem;font-weight:700;padding:.85rem 2rem;border-radius:10px;text-decoration:none;border:1.5px solid var(--bdr);transition:border-color .2s,background .2s,color .2s}
 .ship-btn-s:hover{border-color:var(--c-ship);background:rgba(15,76,117,.04)}
@@ -859,12 +859,12 @@ footer{background:white;padding:4rem 3.5rem 0;display:grid;grid-template-columns
 .ship-sec-cta{padding:5rem 3.5rem 6rem;min-height:100vh;display:flex;flex-direction:column;justify-content:center}
 .ship-ey{display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--c-ship);background:rgba(15,76,117,.08);padding:.28rem .8rem;border-radius:100px;margin-bottom:.9rem;border:1px solid rgba(15,76,117,.2);margin-left:auto;margin-right:auto}
 .ship-ey-dark{display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7AB5FF;background:rgba(26,86,219,.2);padding:.28rem .8rem;border-radius:100px;margin-bottom:.9rem;border:1px solid rgba(26,86,219,.3);margin-left:auto;margin-right:auto}
-.ship-st{font-family:'Instrument Serif',serif;font-size:clamp(2.2rem,3.4vw,3.2rem);line-height:1.1;letter-spacing:-.02em;color:var(--ink);text-align:center;margin-bottom:.9rem}
+.ship-st{font-family:'Manrope',sans-serif;font-size:clamp(2.2rem,3.4vw,3.2rem);line-height:1.1;letter-spacing:-.02em;color:var(--ink);text-align:center;margin-bottom:.9rem}
 .ship-st-i{color:var(--c-ship);font-style:italic}
-.ship-st-dark{font-family:'Instrument Serif',serif;font-size:clamp(2.2rem,3.4vw,3.2rem);line-height:1.1;letter-spacing:-.02em;color:white;margin-bottom:.9rem}
+.ship-st-dark{font-family:'Manrope',sans-serif;font-size:clamp(2.2rem,3.4vw,3.2rem);line-height:1.1;letter-spacing:-.02em;color:white;margin-bottom:.9rem}
 .ship-st-i-dark{color:var(--c-ship);font-style:italic;opacity:.9}
-.ship-sb{font-size:clamp(.92rem,1.3vw,1.1rem);font-weight:400;line-height:1.65;color:var(--ink3);text-align:center;max-width:52ch;margin:0 auto 3.5rem}
-.ship-sb-dark{font-size:clamp(.92rem,1.3vw,1.1rem);font-weight:400;line-height:1.65;color:rgba(255,255,255,.65);max-width:52ch;margin-bottom:3rem}
+.ship-sb{font-family:'Manrope',sans-serif;font-size:clamp(1rem,1.3vw,1.2rem);font-weight:400;line-height:1.7;color:var(--ink3);text-align:center;max-width:52ch;margin:0 auto 3.5rem}
+.ship-sb-dark{font-family:'Manrope',sans-serif;font-size:clamp(1rem,1.3vw,1.2rem);font-weight:400;line-height:1.7;color:rgba(255,255,255,.65);max-width:52ch;margin-bottom:3rem}
 
 /* SERVICES GRID */
 .ship-services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem;max-width:1200px;margin:0 auto}
@@ -873,31 +873,31 @@ footer{background:white;padding:4rem 3.5rem 0;display:grid;grid-template-columns
 .ship-service-card:hover{transform:translateY(-4px);box-shadow:var(--s3);border-color:var(--sc)}
 .ship-service-card:hover::before{opacity:1}
 .ship-service-ico{width:44px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:10px;font-size:1.2rem;margin-bottom:1rem}
-.ship-service-name{font-size:1.1rem;font-weight:700;color:var(--ink);margin-bottom:.5rem;font-family:'Manrope',sans-serif}
-.ship-service-desc{font-size:.88rem;line-height:1.6;color:var(--ink3);margin-bottom:1rem}
-.ship-service-features{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.45rem}
-.ship-service-features li{display:flex;align-items:center;gap:.5rem;font-size:.82rem;color:var(--ink2);font-weight:500}
+.ship-service-name{font-size:1.35rem;font-weight:700;color:var(--ink);margin-bottom:.6rem;font-family:'Manrope',sans-serif}
+.ship-service-desc{font-family:'Manrope',sans-serif;font-size:1.1rem;line-height:1.7;color:var(--ink3);margin-bottom:1rem}
+.ship-service-features{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.55rem}
+.ship-service-features li{font-family:'Manrope',sans-serif;display:flex;align-items:center;gap:.5rem;font-size:1rem;color:var(--ink2);font-weight:500}
 
 /* PRICING */
 .ship-pricing-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.2rem}
 .ship-pricing-card{background:white;border:1px solid var(--bdr);border-radius:16px;padding:1.5rem;text-align:center;transition:transform .2s,box-shadow .2s;box-shadow:var(--s2)}
 .ship-pricing-card:hover{transform:translateY(-3px);box-shadow:var(--s3)}
-.ship-pricing-zone{display:flex;align-items:center;justify-content:center;gap:.4rem;font-size:.85rem;font-weight:700;color:var(--ink);margin-bottom:.8rem}
-.ship-pricing-zone-icon{font-size:1rem}
+.ship-pricing-zone{display:flex;align-items:center;justify-content:center;gap:.4rem;font-family:'Manrope',sans-serif;font-size:1.15rem;font-weight:700;color:var(--ink);margin-bottom:.8rem}
+.ship-pricing-zone-icon{font-size:1.1rem}
 .ship-pricing-rate{margin-bottom:.6rem}
-.ship-pricing-rate-num{font-size:2.2rem;font-weight:800;font-family:'Manrope',sans-serif;color:var(--c-ship);letter-spacing:-.03em}
-.ship-pricing-rate-unit{font-size:.85rem;font-weight:600;color:var(--ink3)}
-.ship-pricing-desc{font-size:.8rem;line-height:1.5;color:var(--ink4)}
-.ship-pricing-note{grid-column:1/-1;display:flex;align-items:flex-start;gap:.6rem;font-size:.8rem;color:var(--ink4);line-height:1.6;background:white;border:1px solid var(--bdr);border-radius:12px;padding:1rem 1.2rem;max-width:700px;margin:0 auto}
+.ship-pricing-rate-num{font-size:2.6rem;font-weight:800;font-family:'Manrope',sans-serif;color:var(--c-ship);letter-spacing:-.03em}
+.ship-pricing-rate-unit{font-size:1.05rem;font-weight:600;color:var(--ink3)}
+.ship-pricing-desc{font-family:'Manrope',sans-serif;font-size:1.05rem;line-height:1.7;color:var(--ink4)}
+.ship-pricing-note{grid-column:1/-1;display:flex;align-items:flex-start;gap:.6rem;font-family:'Manrope',sans-serif;font-size:1.05rem;color:var(--ink4);line-height:1.7;background:white;border:1px solid var(--bdr);border-radius:12px;padding:1rem 1.2rem;max-width:700px;margin:0 auto}
 .ship-pricing-note-icon{font-size:1rem;flex-shrink:0;margin-top:1px}
 
 /* STEPS */
 .ship-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;max-width:960px;margin:0 auto}
 .ship-step{text-align:center;padding:1.5rem 1rem}
-.ship-step-num{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;color:white;font-size:.85rem;font-weight:800;margin:0 auto 1rem;font-family:'Manrope',sans-serif}
-.ship-step-ico{font-size:2rem;margin-bottom:.6rem}
-.ship-step-title{font-size:1.05rem;font-weight:700;color:var(--ink);margin-bottom:.4rem;font-family:'Manrope',sans-serif}
-.ship-step-desc{font-size:.88rem;line-height:1.55;color:var(--ink3)}
+.ship-step-num{width:44px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:50%;color:white;font-size:1rem;font-weight:800;margin:0 auto 1rem;font-family:'Manrope',sans-serif}
+.ship-step-ico{font-size:2.4rem;margin-bottom:.6rem}
+.ship-step-title{font-family:'Manrope',sans-serif;font-size:1.25rem;font-weight:700;color:var(--ink);margin-bottom:.4rem}
+.ship-step-desc{font-family:'Manrope',sans-serif;font-size:1.05rem;line-height:1.6;color:var(--ink3)}
 
 /* WHY CHOOSE US */
 .ship-why-wrap{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
@@ -905,19 +905,19 @@ footer{background:white;padding:4rem 3.5rem 0;display:grid;grid-template-columns
 .ship-why-points{display:flex;flex-direction:column;gap:1.2rem;margin-top:1.5rem}
 .ship-why-pt{display:flex;align-items:flex-start;gap:.9rem;padding:1rem;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;transition:background .2s}
 .ship-why-pt:hover{background:rgba(255,255,255,.08)}
-.ship-why-pt-ico{font-size:1.3rem;flex-shrink:0;width:36px;text-align:center}
-.ship-why-pt-title{font-size:.95rem;font-weight:700;color:white;margin-bottom:.15rem}
-.ship-why-pt-desc{font-size:.82rem;line-height:1.5;color:rgba(255,255,255,.55)}
+.ship-why-pt-ico{font-size:1.5rem;flex-shrink:0;width:40px;text-align:center}
+.ship-why-pt-title{font-family:'Manrope',sans-serif;font-size:1.15rem;font-weight:700;color:white;margin-bottom:.15rem}
+.ship-why-pt-desc{font-family:'Manrope',sans-serif;font-size:1rem;line-height:1.6;color:rgba(255,255,255,.65)}
 .ship-why-right{display:flex;justify-content:center}
 .ship-why-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:2.5rem 2rem;text-align:center;max-width:380px;backdrop-filter:blur(12px)}
-.ship-why-card-icon{font-size:3rem;margin-bottom:1rem}
-.ship-why-card-title{font-size:1.3rem;font-weight:800;color:white;margin-bottom:.6rem;font-family:'Manrope',sans-serif}
-.ship-why-card-desc{font-size:.88rem;line-height:1.6;color:rgba(255,255,255,.55);margin-bottom:1.5rem}
+.ship-why-card-icon{font-size:3.2rem;margin-bottom:1rem}
+.ship-why-card-title{font-family:'Manrope',sans-serif;font-size:1.45rem;font-weight:800;color:white;margin-bottom:.6rem}
+.ship-why-card-desc{font-family:'Manrope',sans-serif;font-size:1.05rem;line-height:1.6;color:rgba(255,255,255,.65);margin-bottom:1.5rem}
 .ship-why-card-stats{display:flex;gap:0;justify-content:center;border-top:1px solid rgba(255,255,255,.1);padding-top:1.2rem}
 .ship-why-cs{flex:1;display:flex;flex-direction:column;gap:.15rem;padding:0 .8rem;border-right:1px solid rgba(255,255,255,.08)}
 .ship-why-cs:last-child{border-right:none}
-.ship-why-cs-num{font-size:1.2rem;font-weight:800;color:white;font-family:'Manrope',sans-serif}
-.ship-why-cs-label{font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;color:rgba(255,255,255,.45)}
+.ship-why-cs-num{font-size:1.35rem;font-weight:800;color:white;font-family:'Manrope',sans-serif}
+.ship-why-cs-label{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:rgba(255,255,255,.45)}
 
 /* FAQ */
 .ship-faq-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:1.2rem}
@@ -931,16 +931,16 @@ footer{background:white;padding:4rem 3.5rem 0;display:grid;grid-template-columns
 /* CTA */
 .ship-cta-card{max-width:720px;margin:0 auto;text-align:center;background:white;border:1px solid var(--bdr);border-radius:20px;padding:3.5rem 3rem;box-shadow:var(--s4)}
 .ship-cta-badge{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--c-ship);background:rgba(15,76,117,.08);padding:.35rem 1rem;border-radius:100px;border:1px solid rgba(15,76,117,.2);margin-bottom:1.2rem}
-.ship-cta-title{font-family:'Instrument Serif',serif;font-size:clamp(2rem,3vw,2.8rem);line-height:1.1;letter-spacing:-.02em;color:var(--ink);margin-bottom:.8rem}
-.ship-cta-desc{font-size:clamp(.92rem,1.3vw,1.1rem);font-weight:400;line-height:1.75;color:var(--ink3);max-width:48ch;margin:0 auto 2rem}
+.ship-cta-title{font-family:'Manrope',sans-serif;font-size:clamp(2rem,3vw,2.8rem);line-height:1.1;letter-spacing:-.02em;color:var(--ink);margin-bottom:.8rem}
+.ship-cta-desc{font-family:'Manrope',sans-serif;font-size:clamp(1rem,1.4vw,1.2rem);font-weight:400;line-height:1.75;color:var(--ink3);max-width:48ch;margin:0 auto 2rem}
 .ship-cta-btns{display:flex;gap:.85rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.8rem}
-.ship-cta-btn-p{display:inline-flex;align-items:center;gap:.55rem;background:#25D366;color:white;font-size:.9rem;font-weight:700;padding:.8rem 2rem;border-radius:10px;text-decoration:none;transition:opacity .2s,transform .15s;box-shadow:0 4px 16px rgba(37,211,102,.25)}
+.ship-cta-btn-p{display:inline-flex;align-items:center;gap:.55rem;background:#25D366;color:white;font-size:.95rem;font-weight:700;padding:.9rem 2rem;border-radius:10px;text-decoration:none;transition:opacity .2s,transform .15s;box-shadow:0 4px 16px rgba(37,211,102,.25)}
 .ship-cta-btn-p:hover{opacity:.9;transform:translateY(-2px)}
 .ship-cta-btn-s{display:inline-flex;align-items:center;gap:.55rem;background:var(--c-ship);color:white;font-size:.9rem;font-weight:700;padding:.8rem 2rem;border-radius:10px;text-decoration:none;transition:opacity .2s,transform .15s;box-shadow:0 4px 16px rgba(15,76,117,.25)}
 .ship-cta-btn-s:hover{opacity:.9;transform:translateY(-2px)}
 .ship-cta-info{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap}
-.ship-cta-info-item{display:flex;align-items:center;gap:.45rem;font-size:.85rem;font-weight:500;color:var(--ink4)}
-.ship-cta-info-ico{font-size:1rem}
+.ship-cta-info-item{display:flex;align-items:center;gap:.45rem;font-family:'Manrope',sans-serif;font-size:1.05rem;font-weight:500;color:var(--ink4)}
+.ship-cta-info-ico{font-size:1.15rem}
 
 /* RESPONSIVE */
 @media (max-width:1024px){
@@ -948,81 +948,114 @@ footer{background:white;padding:4rem 3.5rem 0;display:grid;grid-template-columns
   .ship-why-card{max-width:100%}
   .ship-pricing-grid{grid-template-columns:repeat(2,1fr)}
 }
+/* TABLET */
+@media (max-width:900px){
+  .ship-hero{padding:82px 2rem 0;gap:1.5rem;min-height:auto}
+  .ship-hero-content{max-width:50%;padding:1.5rem 0 2rem}
+  .ship-hero-visual{flex:0 0 45%}
+  .ship-hero-visual dotlottie-wc{max-width:100%;height:400px}
+  .ship-hero-title{font-size:clamp(2.2rem,3.6vw,3rem)}
+  .ship-hero-sub{font-size:1.05rem}
+  .ship-hero-desc{font-size:1.05rem;margin-bottom:1.5rem}
+  .ship-hero-stats{gap:1.2rem}
+  .ship-sec{padding:3.5rem 2rem;min-height:auto}
+  .ship-sec-cta{padding:3.5rem 2rem 4.5rem}
+  .ship-st{font-size:clamp(1.8rem,2.8vw,2.6rem)}
+  .ship-st-dark{font-size:clamp(1.8rem,2.8vw,2.6rem)}
+  .ship-sb{font-size:1rem;margin-bottom:2rem}
+  .ship-sb-dark{font-size:1rem;margin-bottom:2rem}
+  .ship-services-grid{grid-template-columns:repeat(2,1fr);gap:1.2rem}
+  .ship-service-card{padding:1.5rem 1.2rem}
+  .ship-pricing-grid{grid-template-columns:repeat(2,1fr);gap:1rem}
+  .ship-why-wrap{gap:2rem}
+  .ship-why-card{padding:2rem 1.5rem}
+  .ship-cta-card{padding:2.5rem 2rem}
+  .ship-cta-title{font-size:clamp(1.7rem,2.6vw,2.2rem)}
+  .ship-cta-info{gap:1.5rem}
+}
 @media (max-width:768px){
   .ship-hero{padding:76px 1.5rem 0;min-height:auto;flex-direction:column;gap:0}
-  .ship-hero-title{font-size:clamp(1.8rem,7vw,2.6rem);line-height:1.12}
-  .ship-hero-eyebrow{font-size:.68rem;padding:.35rem .85rem;margin-bottom:1.2rem}
-  .ship-hero-sub{font-size:.88rem}
-  .ship-hero-desc{font-size:.92rem;line-height:1.6;margin-bottom:1.2rem}
+  .ship-hero-title{font-size:clamp(1.95rem,7vw,3rem);line-height:1.12}
+  .ship-hero-eyebrow{font-size:.7rem;padding:.35rem .85rem;margin-bottom:1.2rem}
+  .ship-hero-sub{font-size:1rem}
+  .ship-hero-desc{font-size:1.02rem;line-height:1.65;margin-bottom:1.2rem}
   .ship-hero-content{padding:1.5rem 0 0}
   .ship-hero-visual{display:flex;flex:0 0 auto;padding:0 0 1rem}
   .ship-hero-visual dotlottie-wc{max-width:140px;height:100px}
   .ship-hero-stats{flex-wrap:wrap;gap:.8rem;justify-content:center}
   .ship-stat-div{display:none}
   .ship-stat-num{font-size:1rem}
-  .ship-stat-label{font-size:.7rem}
+  .ship-stat-label{font-size:.72rem}
   .ship-sec{padding:2.5rem 1.2rem;min-height:auto}
   .ship-sec-cta{padding:2.5rem 1.2rem 4rem}
-  .ship-st{font-size:clamp(1.6rem,5vw,2.2rem);margin-bottom:.6rem}
-  .ship-st-dark{font-size:clamp(1.6rem,5vw,2.2rem);margin-bottom:.6rem}
-  .ship-sb{font-size:.85rem;margin-bottom:1.5rem}
-  .ship-sb-dark{font-size:.85rem;margin-bottom:1.5rem}
-  .ship-ey{font-size:.68rem;padding:.25rem .7rem;margin-bottom:.7rem}
-  .ship-ey-dark{font-size:.68rem;padding:.25rem .7rem;margin-bottom:.7rem}
+  .ship-st{font-size:clamp(1.7rem,5vw,2.4rem);margin-bottom:.6rem}
+  .ship-st-dark{font-size:clamp(1.7rem,5vw,2.4rem);margin-bottom:.6rem}
+  .ship-sb{font-size:.95rem;margin-bottom:1.5rem}
+  .ship-sb-dark{font-size:.95rem;margin-bottom:1.5rem}
+  .ship-ey{font-size:.7rem;padding:.25rem .7rem;margin-bottom:.7rem}
+  .ship-ey-dark{font-size:.7rem;padding:.25rem .7rem;margin-bottom:.7rem}
   .ship-services-grid{grid-template-columns:1fr;gap:1rem}
   .ship-service-card{padding:1.5rem 1.2rem}
-  .ship-service-name{font-size:1.05rem}
-  .ship-service-desc{font-size:.82rem}
-  .ship-service-features li{font-size:.8rem}
+  .ship-service-name{font-size:1.2rem}
+  .ship-service-desc{font-size:1rem}
+  .ship-service-features li{font-size:.92rem}
   .ship-pricing-grid{grid-template-columns:1fr;gap:1rem}
   .ship-pricing-card{padding:1.3rem 1.2rem}
-  .ship-pricing-zone{font-size:.95rem}
-  .ship-pricing-rate-num{font-size:1.5rem}
-  .ship-pricing-note{flex-direction:column;text-align:center;gap:.4rem;font-size:.8rem}
+  .ship-pricing-zone{font-size:1.1rem}
+  .ship-pricing-rate-num{font-size:2rem}
+  .ship-pricing-desc{font-size:1rem}
+  .ship-pricing-note{flex-direction:column;text-align:center;gap:.4rem;font-size:1rem}
   .ship-steps{grid-template-columns:1fr;gap:1rem}
   .ship-step{padding:1.2rem .8rem}
-  .ship-step-ico{font-size:1.6rem}
-  .ship-step-title{font-size:.95rem}
-  .ship-step-desc{font-size:.82rem}
+  .ship-step-ico{font-size:2rem}
+  .ship-step-title{font-size:1.15rem}
+  .ship-step-desc{font-size:.95rem}
   .ship-why-wrap{grid-template-columns:1fr;gap:1.5rem}
   .ship-why-left{text-align:center}
   .ship-why-points{text-align:left}
   .ship-why-card{padding:1.5rem 1.2rem;max-width:100%}
-  .ship-why-card-title{font-size:1.1rem}
-  .ship-why-card-desc{font-size:.85rem}
+  .ship-why-card-title{font-size:1.25rem}
+  .ship-why-card-desc{font-size:.98rem}
   .ship-why-card-stats{flex-direction:column;gap:.6rem}
   .ship-why-cs{border-right:none;border-bottom:1px solid rgba(255,255,255,.08);padding:.5rem 0}
   .ship-why-cs:last-child{border-bottom:none}
-  .ship-why-cs-num{font-size:1.1rem}
-  .ship-why-cs-label{font-size:.72rem}
+  .ship-why-cs-num{font-size:1.3rem}
+  .ship-why-cs-label{font-size:.75rem}
   .ship-why-pt{padding:.5rem 0}
-  .ship-why-pt-title{font-size:.9rem}
-  .ship-why-pt-desc{font-size:.78rem}
+  .ship-why-pt-title{font-size:1.05rem}
+  .ship-why-pt-desc{font-size:.95rem}
   .ship-cta-card{padding:2rem 1.2rem}
-  .ship-cta-title{font-size:clamp(1.4rem,4.5vw,1.8rem)}
-  .ship-cta-desc{font-size:.85rem}
+  .ship-cta-title{font-size:clamp(1.5rem,4.5vw,1.9rem)}
+  .ship-cta-desc{font-size:.95rem}
   .ship-cta-btns{flex-direction:column;align-items:stretch}
-  .ship-cta-btn-p,.ship-cta-btn-s{justify-content:center;font-size:.9rem}
-  .ship-cta-info{flex-direction:column;align-items:center;gap:.5rem;font-size:.82rem}
+  .ship-cta-btn-p,.ship-cta-btn-s{justify-content:center;font-size:.95rem}
+  .ship-cta-info{flex-direction:column;align-items:center;gap:.5rem;font-size:.95rem}
 }
 @media (max-width:480px){
   .ship-hero{padding:72px 1rem 0}
-  .ship-hero-title{font-size:1.65rem}
-  .ship-hero-eyebrow{font-size:.64rem;padding:.3rem .7rem;margin-bottom:1.2rem}
+  .ship-hero-title{font-size:1.75rem}
+  .ship-hero-eyebrow{font-size:.66rem;padding:.3rem .7rem;margin-bottom:1.2rem}
+  .ship-hero-sub{font-size:.95rem}
+  .ship-hero-desc{font-size:1rem;line-height:1.55}
   .ship-hero-cta{flex-direction:column}
-  .ship-btn-p,.ship-btn-s{justify-content:center;text-align:center;font-size:.85rem;padding:.6rem 1.4rem}
+  .ship-btn-p,.ship-btn-s{justify-content:center;text-align:center;font-size:.9rem;padding:.7rem 1.4rem}
   .ship-hero-visual dotlottie-wc{max-width:120px;height:80px}
   .ship-sec{padding:2rem 1rem}
   .ship-sec-cta{padding:2rem 1rem 3.5rem}
-  .ship-st{font-size:1.5rem}
-  .ship-st-dark{font-size:1.5rem}
+  .ship-st{font-size:1.6rem}
+  .ship-st-dark{font-size:1.6rem}
   .ship-service-card{padding:1.2rem 1rem}
+  .ship-service-name{font-size:1.05rem}
+  .ship-service-desc{font-size:.92rem}
   .ship-pricing-card{padding:1rem 1rem}
   .ship-pricing-grid{grid-template-columns:1fr}
-  .ship-pricing-note{flex-direction:column}
+  .ship-pricing-zone{font-size:1rem}
+  .ship-pricing-rate-num{font-size:1.7rem}
+  .ship-pricing-note{flex-direction:column;font-size:.9rem}
   .ship-cta-card{padding:1.5rem 1rem}
-  .ship-cta-title{font-size:1.3rem}
-  .ship-cta-btn-p,.ship-cta-btn-s{font-size:.82rem}
+  .ship-cta-title{font-size:1.4rem}
+  .ship-cta-desc{font-size:.95rem}
+  .ship-cta-btn-p,.ship-cta-btn-s{font-size:.9rem}
 }
 
 @media (min-width:768px){
