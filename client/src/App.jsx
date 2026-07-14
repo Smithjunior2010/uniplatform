@@ -8,6 +8,7 @@ import WiFi from './pages/WiFi';
 import Shipping from './pages/Shipping';
 import Shop from './pages/Shop';
 import Energy from './pages/Energy';
+import FinanceAgro from './pages/FinanceAgro';
 
 function Footer() {
   const { t, lang } = useLang();
@@ -104,6 +105,7 @@ function AppContent() {
           <li><Link to="/shipping" onClick={() => setMenuOpen(false)}>Unidev Shipping</Link></li>
           <li><Link to="/shop" onClick={() => setMenuOpen(false)}>Unidev Shop</Link></li>
           <li><Link to="/energy" onClick={() => setMenuOpen(false)}>Unidev Energy</Link></li>
+          <li><Link to="/finance-agro" onClick={() => setMenuOpen(false)}>Unidev Finance & Agro</Link></li>
           <li><a href="#about" onClick={() => setMenuOpen(false)}>{t.nav.about}</a></li>
           <li><a href="#team" onClick={() => setMenuOpen(false)}>{t.nav.team}</a></li>
           <li><a href="#contact" onClick={() => setMenuOpen(false)}>{t.nav.contact}</a></li>
@@ -129,6 +131,7 @@ function AppContent() {
         <Route path="/shipping" element={<Shipping />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/energy" element={<Energy />} />
+        <Route path="/finance-agro" element={<FinanceAgro />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>

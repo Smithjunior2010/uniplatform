@@ -209,7 +209,7 @@ export default function Home() {
             <span className="biz-link">{t.biz.discover}</span>
           </a>
 
-          <a href="#" className="biz-card" style={{'--bc':'var(--c-fin)'}}>
+          <a href="/finance-agro" className="biz-card" style={{'--bc':'var(--c-fin)'}}>
             <div className="biz-top">
               <div className="biz-ico" style={{background:'rgba(107,63,160,.1)',border:'1px solid rgba(107,63,160,.2)'}}>
                 <span className="biz-emoji">🥭</span>
