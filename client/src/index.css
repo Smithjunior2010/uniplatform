@@ -953,7 +953,7 @@ footer{background:white;padding:4rem 3.5rem 0;display:grid;grid-template-columns
   .ship-hero{padding:82px 2rem 0;gap:1.5rem;min-height:auto}
   .ship-hero-content{max-width:50%;padding:1.5rem 0 2rem}
   .ship-hero-visual{flex:0 0 45%}
-  .ship-hero-visual dotlottie-wc{max-width:100%;height:400px}
+  .ship-hero-visual dotlottie-wc{max-width:220px;height:auto;aspect-ratio:1/1}
   .ship-hero-title{font-size:clamp(2.2rem,3.6vw,3rem)}
   .ship-hero-sub{font-size:1.05rem}
   .ship-hero-desc{font-size:1.05rem;margin-bottom:1.5rem}
@@ -981,7 +981,7 @@ footer{background:white;padding:4rem 3.5rem 0;display:grid;grid-template-columns
   .ship-hero-desc{font-size:1.02rem;line-height:1.65;margin-bottom:1.2rem}
   .ship-hero-content{max-width:100%;padding:1.5rem 0 0}
   .ship-hero-visual{display:flex;flex:0 0 auto;padding:0;max-width:100%;margin-bottom:0}
-  .ship-hero-visual dotlottie-wc{max-width:120px;height:auto;aspect-ratio:1/1}
+  .ship-hero-visual dotlottie-wc{max-width:50px;height:auto;aspect-ratio:1/1}
   .ship-hero-stats{flex-wrap:wrap;gap:.8rem;justify-content:center}
   .ship-stat-div{display:none}
   .ship-stat-num{font-size:1rem}
@@ -1040,7 +1040,7 @@ footer{background:white;padding:4rem 3.5rem 0;display:grid;grid-template-columns
   .ship-hero-desc{font-size:.92rem;line-height:1.5;margin-bottom:1rem}
   .ship-hero-cta{flex-direction:column;margin-bottom:1.5rem}
   .ship-btn-p,.ship-btn-s{justify-content:center;text-align:center;font-size:.9rem;padding:.7rem 1.4rem}
-  .ship-hero-visual dotlottie-wc{max-width:90px;height:auto;aspect-ratio:1/1}
+  .ship-hero-visual dotlottie-wc{max-width:40px;height:auto;aspect-ratio:1/1}
   .ship-hero-stats{flex-wrap:wrap;gap:.6rem;justify-content:center}
   .ship-stat-num{font-size:.9rem}
   .ship-stat-label{font-size:.65rem}
