@@ -6,6 +6,8 @@ import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import WiFi from './pages/WiFi';
 import Shipping from './pages/Shipping';
+import Shop from './pages/Shop';
+import Energy from './pages/Energy';
 
 function Footer() {
   const { t, lang } = useLang();
@@ -100,6 +102,8 @@ function AppContent() {
           <li><a href="/#home" onClick={() => setMenuOpen(false)}>{t.nav.home}</a></li>
           <li><Link to="/wifi" onClick={() => setMenuOpen(false)}>Unidev WiFi</Link></li>
           <li><Link to="/shipping" onClick={() => setMenuOpen(false)}>Unidev Shipping</Link></li>
+          <li><Link to="/shop" onClick={() => setMenuOpen(false)}>Unidev Shop</Link></li>
+          <li><Link to="/energy" onClick={() => setMenuOpen(false)}>Unidev Energy</Link></li>
           <li><a href="#about" onClick={() => setMenuOpen(false)}>{t.nav.about}</a></li>
           <li><a href="#team" onClick={() => setMenuOpen(false)}>{t.nav.team}</a></li>
           <li><a href="#contact" onClick={() => setMenuOpen(false)}>{t.nav.contact}</a></li>
@@ -123,6 +127,8 @@ function AppContent() {
         <Route path="/" element={<Home />} />
         <Route path="/wifi" element={<WiFi />} />
         <Route path="/shipping" element={<Shipping />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/energy" element={<Energy />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
