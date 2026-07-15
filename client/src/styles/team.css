@@ -38,11 +38,11 @@
   #team.sec{padding-top:2.5rem}
 }
 @media (max-width:768px){
-  .tgrid{grid-template-columns:repeat(4,260px);gap:1rem;min-width:0}
+  .tgrid{grid-template-columns:repeat(4,320px);gap:1.3rem;min-width:0}
   .tscroll-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch}
   #team .st{font-size:1.75rem}
   #team.sec{padding-top:2rem}
-  .tmc{padding:1rem}
+  .tmc{padding:1.5rem}
   .tmc-avatar{width:130px;height:130px}
   .tmc-name{font-size:.95rem}
   .tmc-title{font-size:.72rem}
@@ -51,10 +51,10 @@
   .tmc-tag{font-size:.62rem;padding:.18rem .45rem}
 }
 @media (max-width:480px){
-  .tgrid{grid-template-columns:repeat(4,240px);gap:.8rem}
+  .tgrid{grid-template-columns:repeat(4,300px);gap:1.15rem}
   #team .st{font-size:1.5rem}
   #team.sec{padding-top:1.5rem}
-  .tmc{padding:.9rem}
+  .tmc{padding:1.35rem}
   .tmc-avatar{width:140px;height:140px}
   .tmc-name{font-size:.9rem}
   .tmc-title{font-size:.7rem}
