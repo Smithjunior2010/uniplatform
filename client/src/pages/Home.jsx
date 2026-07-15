@@ -251,62 +251,91 @@ export default function Home() {
             <p className="sb">{t.team.subtitle}</p>
           </div>
         </div>
-        <div className="tgrid">
-          <div className="tmc tmc-founder">
-            <div className="tmc-avatar">
-              <img src="https://i.postimg.cc/528rV460/incognito.jpg" alt="The Founder" />
+        <div className="tscroll-wrapper">
+          <div className="tgrid">
+            <div className="tmc tmc-founder">
+              <div className="tmc-glow"></div>
+              <div className="tmc-top">
+                <div className="tmc-avatar">
+                  <div className="tmc-avatar-ring">★</div>
+                  <img src="https://i.postimg.cc/528rV460/incognito.jpg" alt="The Founder" />
+                </div>
+                <div className="tmc-name">{t.team.members.founder.name}</div>
+                <div className="tmc-title">{t.team.members.founder.title}</div>
+                <div className="tmc-loc">📍 {t.team.members.founder.loc}</div>
+              </div>
+              <div className="tmc-body">
+                <div className="tmc-divider"></div>
+                <div className="tmc-bio">{t.team.members.founder.bio}</div>
+                <div className="tmc-tags">
+                  {t.team.members.founder.tags.map((tag, i) => (
+                    <span key={i} className={`tmc-tag ${i === 1 ? 'tmc-tag-alt' : ''}`}>{tag}</span>
+                  ))}
+                </div>
+              </div>
             </div>
-            <div className="tmc-name">{t.team.members.founder.name}</div>
-            <div className="tmc-title">{t.team.members.founder.title}</div>
-            <div className="tmc-loc">📍 {t.team.members.founder.loc}</div>
-            <div className="tmc-bio">{t.team.members.founder.bio}</div>
-            <div className="tmc-tags">
-              {t.team.members.founder.tags.map((tag, i) => (
-                <span key={i} className={`tmc-tag ${i === 1 ? 'tmc-tag-alt' : ''}`}>{tag}</span>
-              ))}
+            <div className="tmc">
+              <div className="tmc-glow"></div>
+              <div className="tmc-top">
+                <div className="tmc-avatar">
+                  <img src="/images/team/alfred.jpg" alt="Alfred Patrice" />
+                </div>
+                <div className="tmc-name">{t.team.members.alfred.name}</div>
+                <div className="tmc-title">{t.team.members.alfred.title}</div>
+                <div className="tmc-loc">📍 {t.team.members.alfred.loc}</div>
+              </div>
+              <div className="tmc-body">
+                <div className="tmc-divider"></div>
+                <div className="tmc-bio">{t.team.members.alfred.bio}</div>
+                <div className="tmc-tags">
+                  {t.team.members.alfred.tags.map((tag, i) => (
+                    <span key={i} className="tmc-tag">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="tmc">
+              <div className="tmc-glow"></div>
+              <div className="tmc-top">
+                <div className="tmc-avatar">
+                  <img src="https://i.postimg.cc/jjdQDZ3S/profile-picture.jpg" alt="Prud'homme Smith Junior" />
+                </div>
+                <div className="tmc-name">{t.team.members.smith.name}</div>
+                <div className="tmc-title">{t.team.members.smith.title} · <a href="#" target="_blank" rel="noopener noreferrer">Portfolio</a></div>
+                <div className="tmc-loc">📍 {t.team.members.smith.loc}</div>
+              </div>
+              <div className="tmc-body">
+                <div className="tmc-divider"></div>
+                <div className="tmc-bio">{t.team.members.smith.bio}</div>
+                <div className="tmc-tags">
+                  {t.team.members.smith.tags.map((tag, i) => (
+                    <span key={i} className="tmc-tag">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="tmc">
+              <div className="tmc-glow"></div>
+              <div className="tmc-top">
+                <div className="tmc-avatar">
+                  <img src="/images/team/castra.jpg" alt="Castra" />
+                </div>
+                <div className="tmc-name">{t.team.members.castra.name}</div>
+                <div className="tmc-title">{t.team.members.castra.title}</div>
+                <div className="tmc-loc">📍 {t.team.members.castra.loc}</div>
+              </div>
+              <div className="tmc-body">
+                <div className="tmc-divider"></div>
+                <div className="tmc-bio">{t.team.members.castra.bio}</div>
+                <div className="tmc-tags">
+                  {t.team.members.castra.tags.map((tag, i) => (
+                    <span key={i} className="tmc-tag">{tag}</span>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
-          <div className="tmc">
-            <div className="tmc-avatar">
-              <img src="/images/team/alfred.jpg" alt="Alfred Patrice" />
-            </div>
-            <div className="tmc-name">{t.team.members.alfred.name}</div>
-            <div className="tmc-title">{t.team.members.alfred.title}</div>
-            <div className="tmc-loc">📍 {t.team.members.alfred.loc}</div>
-            <div className="tmc-bio">{t.team.members.alfred.bio}</div>
-            <div className="tmc-tags">
-              {t.team.members.alfred.tags.map((tag, i) => (
-                <span key={i} className="tmc-tag">{tag}</span>              ))}
-            </div>
-          </div>
-          <div className="tmc">
-            <div className="tmc-avatar">
-              <img src="https://i.postimg.cc/jjdQDZ3S/profile-picture.jpg" alt="Prud'homme Smith Junior" />
-            </div>
-            <div className="tmc-name">{t.team.members.smith.name}</div>
-            <div className="tmc-title">{t.team.members.smith.title} · <a href="#" target="_blank" rel="noopener noreferrer" style={{textDecoration:'underline',color:'var(--blue)',fontWeight:600}}>Portfolio</a></div>
-            <div className="tmc-loc">📍 {t.team.members.smith.loc}</div>
-            <div className="tmc-bio">{t.team.members.smith.bio}</div>
-            <div className="tmc-tags">
-              {t.team.members.smith.tags.map((tag, i) => (
-                <span key={i} className="tmc-tag">{tag}</span>
-              ))}
-            </div>
-          </div>
-          <div className="tmc">
-            <div className="tmc-avatar">
-              <img src="/images/team/castra.jpg" alt="Castra" />
-            </div>
-            <div className="tmc-name">{t.team.members.castra.name}</div>
-            <div className="tmc-title">{t.team.members.castra.title}</div>
-            <div className="tmc-loc">📍 {t.team.members.castra.loc}</div>
-            <div className="tmc-bio">{t.team.members.castra.bio}</div>
-            <div className="tmc-tags">
-              {t.team.members.castra.tags.map((tag, i) => (
-                <span key={i} className="tmc-tag">{tag}</span>
-              ))}
-            </div>
-          </div>
+          <div className="tscroll-indicator"></div>
         </div>
       </section>
 
