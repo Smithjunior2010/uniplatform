@@ -9,6 +9,7 @@ import Shipping from './pages/Shipping';
 import Shop from './pages/Shop';
 import Energy from './pages/Energy';
 import FinanceAgro from './pages/FinanceAgro';
+import Loan from './pages/Loan';
 
 function Footer() {
   const { t, lang } = useLang();
@@ -101,14 +102,12 @@ function AppContent() {
         </Link>
         <ul className={`nl ${menuOpen ? 'open' : ''}`}>
           <li><a href="/#home" onClick={() => setMenuOpen(false)}>{t.nav.home}</a></li>
-          <li><Link to="/wifi" onClick={() => setMenuOpen(false)}>Unidev WiFi</Link></li>
-          <li><Link to="/shipping" onClick={() => setMenuOpen(false)}>Unidev Shipping</Link></li>
-          <li><Link to="/shop" onClick={() => setMenuOpen(false)}>Unidev Shop</Link></li>
-          <li><Link to="/energy" onClick={() => setMenuOpen(false)}>Unidev Energy</Link></li>
-          <li><Link to="/finance-agro" onClick={() => setMenuOpen(false)}>Unidev Finance & Agro</Link></li>
           <li><a href="#about" onClick={() => setMenuOpen(false)}>{t.nav.about}</a></li>
           <li><a href="#team" onClick={() => setMenuOpen(false)}>{t.nav.team}</a></li>
           <li><a href="#contact" onClick={() => setMenuOpen(false)}>{t.nav.contact}</a></li>
+          <li><Link to="/wifi" onClick={() => setMenuOpen(false)}>Unidev WiFi</Link></li>
+          <li><Link to="/shipping" onClick={() => setMenuOpen(false)}>Unidev Shipping</Link></li>
+          <li><Link to="/shop" onClick={() => setMenuOpen(false)}>Unidev Shop</Link></li>
           <li className="nm-cta">
             <Link to="/login" className="ncta" onClick={() => setMenuOpen(false)}>{t.nav.login}</Link>
           </li>
@@ -132,6 +131,7 @@ function AppContent() {
         <Route path="/shop" element={<Shop />} />
         <Route path="/energy" element={<Energy />} />
         <Route path="/finance-agro" element={<FinanceAgro />} />
+        <Route path="/loan" element={<Loan />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>

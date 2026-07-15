@@ -1,0 +1,78 @@
+/* ═══════════════════════════════════════════════
+   DESIGN TOKENS & VARIABLES
+   ═══════════════════════════════════════════════ */
+
+:root {
+  /* PRIMARY COLORS */
+  --blue: #1A56DB;
+  --blue-h: #1648C0;
+  --blue-l: #EBF1FF;
+  --blue-m: #C7D9FF;
+  --orange: #E8400A;
+  --orange-l: #FFF0EB;
+  --orange-m: #FFD4C2;
+
+  /* GRADIENTS */
+  --grad: linear-gradient(135deg, #1A56DB 0%, #E8400A 100%);
+  --grad-r: linear-gradient(90deg, #1A56DB 0%, #E8400A 100%);
+
+  /* SECTOR COLORS */
+  --c-wifi: #1A56DB;
+  --c-ship: #0F4C75;
+  --c-shop: #0D7A5F;
+  --c-energy: #C47A00;
+  --c-fin: #6B3FA0;
+  --c-mango: #D97706;
+
+  /* NEUTRAL COLORS */
+  --ink: #080F1E;
+  --ink2: #2D3A52;
+  --ink3: #64748B;
+  --ink4: #94A3B8;
+  --wh: #FFFFFF;
+  --off: #F8FAFD;
+  --bdr: #E4EBF5;
+  --bdr2: #C9D8EE;
+
+  /* SHADOWS */
+  --s1: 0 1px 2px rgba(8, 15, 30, 0.06);
+  --s2: 0 2px 8px rgba(8, 15, 30, 0.07), 0 1px 3px rgba(8, 15, 30, 0.04);
+  --s3: 0 6px 24px rgba(8, 15, 30, 0.09), 0 2px 8px rgba(8, 15, 30, 0.05);
+  --s4: 0 16px 48px rgba(8, 15, 30, 0.12), 0 4px 16px rgba(8, 15, 30, 0.06);
+  --s5: 0 24px 64px rgba(8, 15, 30, 0.14), 0 8px 24px rgba(8, 15, 30, 0.07);
+
+  /* TYPOGRAPHY */
+  --fs-h1: 2.441rem;
+  --fs-h2: 1.953rem;
+  --fs-h3: 1.563rem;
+  --fs-h4: 1.25rem;
+  --fs-body: 1rem;
+  --lh-heading: 1.2;
+  --lh-body: 1.6;
+}
+
+/* ═══════════════════════════════════════════════
+   GLOBAL STYLES & RESET
+   ═══════════════════════════════════════════════ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  background: var(--wh);
+  color: var(--ink);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}

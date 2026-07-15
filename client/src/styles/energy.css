@@ -1,0 +1,176 @@
+/* ══════════════════════════════════════
+   ENERGY PAGE
+   ══════════════════════════════════════ */
+.energy-hero{position:relative;min-height:100vh;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;padding:82px 3.5rem 0;overflow:hidden}
+.energy-hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#FFF8EB 0%,#FFF0D4 50%,#FFE4B8 100%);z-index:0}
+.energy-hero-bg::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C47A00' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");opacity:.5}
+.energy-orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.35}
+.energy-orb:nth-child(1){width:400px;height:400px;background:#FFD700;top:-100px;right:-100px;animation:float 8s ease-in-out infinite}
+.energy-orb:nth-child(2){width:300px;height:300px;background:#FFA500;bottom:-80px;left:-80px;animation:float 10s ease-in-out infinite 2s}
+.energy-orb:nth-child(3){width:250px;height:250px;background:#FF8C00;top:40%;left:30%;animation:float 12s ease-in-out infinite 4s}
+.energy-hero-grid{position:absolute;inset:0;background:linear-gradient(90deg,transparent 49.5%,rgba(196,122,0,.04) 49.5%,rgba(196,122,0,.04) 50.5%,transparent 50.5%),linear-gradient(0deg,transparent 49.5%,rgba(196,122,0,.04) 49.5%,rgba(196,122,0,.04) 50.5%,transparent 50.5%);background-size:80px 80px;z-index:1;pointer-events:none}
+.energy-hero-content{position:relative;z-index:2;max-width:560px;padding:2rem 0 3rem}
+.energy-hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--c-energy);background:rgba(196,122,0,.08);padding:.35rem .85rem;border-radius:100px;margin-bottom:1.2rem;border:1px solid rgba(196,122,0,.15)}
+.energy-dot{width:6px;height:6px;border-radius:50%;background:var(--c-energy);animation:pulse 2s infinite}
+.energy-hero-title{font-family:'Manrope',sans-serif;font-size:var(--fs-h1);font-weight:800;line-height:var(--lh-heading);letter-spacing:-.03em;color:var(--ink);margin-bottom:1.2rem}
+.energy-gt{background:linear-gradient(135deg,var(--c-energy) 0%,#E8A838 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.energy-hero-sub{font-family:'Manrope',sans-serif;font-size:1.25rem;font-weight:600;color:var(--ink2);margin-bottom:.6rem;line-height:1.4}
+.energy-hero-desc{font-size:1.1rem;color:var(--ink3);line-height:1.65;margin-bottom:1.8rem;max-width:480px}
+.energy-hero-cta{display:flex;gap:.8rem;margin-bottom:2.2rem;flex-wrap:wrap}
+.energy-btn-p{display:inline-flex;align-items:center;gap:.5rem;background:var(--c-energy);color:white;font-size:.95rem;font-weight:700;padding:.85rem 1.8rem;border-radius:12px;text-decoration:none;transition:all .2s;box-shadow:0 4px 16px rgba(196,122,0,.3)}
+.energy-btn-p:hover{background:#B06D00;transform:translateY(-2px);box-shadow:0 8px 24px rgba(196,122,0,.35)}
+.energy-btn-s{display:inline-flex;align-items:center;gap:.5rem;background:white;color:var(--ink2);font-size:.95rem;font-weight:700;padding:.85rem 1.8rem;border-radius:12px;text-decoration:none;border:1px solid var(--bdr);transition:all .2s}
+.energy-btn-s:hover{border-color:var(--c-energy);color:var(--c-energy);transform:translateY(-2px)}
+.energy-hero-stats{display:flex;gap:2rem;padding-top:1.5rem;border-top:1px solid rgba(196,122,0,.15)}
+.energy-stat{display:flex;flex-direction:column;gap:.15rem}
+.energy-stat-num{font-family:'Manrope',sans-serif;font-size:1.35rem;font-weight:800;color:var(--c-energy)}
+.energy-stat-label{font-size:.78rem;font-weight:600;color:var(--ink4);text-transform:uppercase;letter-spacing:.04em}
+.energy-stat-div{width:1px;background:rgba(196,122,0,.2)}
+.energy-hero-visual{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;padding:2rem 0}
+
+.energy-sec{position:relative;padding:5rem 3.5rem;max-width:1200px;margin:0 auto}
+.energy-ey{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--c-energy);background:rgba(196,122,0,.08);padding:.35rem .9rem;border-radius:100px;margin-bottom:1rem;border:1px solid rgba(196,122,0,.15)}
+.energy-st{font-family:'Manrope',sans-serif;font-size:var(--fs-h2);font-weight:800;line-height:var(--lh-heading);letter-spacing:-.02em;color:var(--ink);margin-bottom:.8rem}
+.energy-st-i{background:linear-gradient(135deg,var(--c-energy) 0%,#E8A838 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.energy-sb{font-size:1.15rem;color:var(--ink3);line-height:1.6;margin-bottom:2.5rem;max-width:560px}
+
+.energy-services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.energy-service-card{background:white;border:1px solid var(--bdr);border-radius:16px;padding:2rem;box-shadow:var(--s2);transition:all .28s cubic-bezier(.4,0,.2,1);position:relative;overflow:hidden}
+.energy-service-card:hover{transform:translateY(-6px);box-shadow:var(--s4);border-color:var(--c-energy)}
+.energy-service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--sc);opacity:0;transition:opacity .2s}
+.energy-service-card:hover::before{opacity:1}
+.energy-service-ico{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:1.2rem}
+.energy-service-name{font-family:'Manrope',sans-serif;font-size:1.15rem;font-weight:700;color:var(--ink);margin-bottom:.5rem}
+.energy-service-desc{font-size:.92rem;color:var(--ink3);line-height:1.55;margin-bottom:1.2rem}
+.energy-service-features{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.energy-service-features li{display:flex;align-items:center;gap:.6rem;font-size:.88rem;color:var(--ink2)}
+.energy-service-features li svg{color:var(--c-energy);flex-shrink:0}
+
+.energy-pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.energy-pricing-card{background:white;border:1px solid var(--bdr);border-radius:16px;padding:2rem;box-shadow:var(--s2);transition:all .28s;position:relative}
+.energy-pricing-card:hover{transform:translateY(-4px);box-shadow:var(--s4);border-color:var(--c-energy)}
+.energy-pricing-card:nth-child(2){border-color:var(--c-energy);box-shadow:0 4px 20px rgba(196,122,0,.12)}
+.energy-pricing-card:nth-child(2)::before{content:'Most Popular';position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--c-energy);color:white;font-size:.65rem;font-weight:700;padding:.25rem 1rem;border-radius:0 0 8px 8px;text-transform:uppercase;letter-spacing:.05em}
+.energy-pricing-name{font-family:'Manrope',sans-serif;font-size:1.1rem;font-weight:700;color:var(--ink);margin-bottom:.5rem}
+.energy-pricing-price{margin-bottom:.8rem}
+.energy-pricing-currency{font-size:.9rem;font-weight:600;color:var(--ink3)}
+.energy-pricing-amount{font-family:'Manrope',sans-serif;font-size:2.2rem;font-weight:800;color:var(--c-energy);line-height:1}
+.energy-pricing-period{font-size:.9rem;color:var(--ink4);font-weight:500}
+.energy-pricing-desc{font-size:.9rem;color:var(--ink3);line-height:1.5;margin-bottom:1.2rem}
+.energy-pricing-features{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.energy-pricing-features li{display:flex;align-items:center;gap:.6rem;font-size:.88rem;color:var(--ink2)}
+.energy-pricing-features li svg{color:var(--c-energy);flex-shrink:0}
+.energy-pricing-note{grid-column:1/-1;text-align:center;font-size:.88rem;color:var(--ink4);margin-top:1.5rem;font-style:italic}
+
+.energy-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;position:relative}
+.energy-step{background:white;border:1px solid var(--bdr);border-radius:16px;padding:2rem;text-align:center;box-shadow:var(--s2);transition:all .28s;position:relative;z-index:2}
+.energy-step:hover{transform:translateY(-4px);box-shadow:var(--s4)}
+.energy-step-ico{width:64px;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin:0 auto 1.2rem;color:white}
+.energy-step-num{font-family:'Manrope',sans-serif;font-size:.8rem;font-weight:700;color:var(--c-energy);margin-bottom:.5rem;letter-spacing:.05em}
+.energy-step-title{font-family:'Manrope',sans-serif;font-size:1.1rem;font-weight:700;color:var(--ink);margin-bottom:.5rem}
+.energy-step-desc{font-size:.9rem;color:var(--ink3);line-height:1.55}
+.energy-step-line{position:absolute;top:50%;left:10%;right:10%;height:2px;background:linear-gradient(90deg,var(--c-energy) 0%,#E8A838 100%);opacity:.2;z-index:1;transform:translateY(-50%)}
+
+.energy-devices-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.energy-device-card{background:white;border:1px solid var(--bdr);border-radius:16px;padding:2rem;text-align:center;box-shadow:var(--s2);transition:all .28s}
+.energy-device-card:hover{transform:translateY(-4px);box-shadow:var(--s4);border-color:var(--c-energy)}
+.energy-device-ico{font-size:2.5rem;margin-bottom:1rem}
+.energy-device-name{font-family:'Manrope',sans-serif;font-size:1.1rem;font-weight:700;color:var(--ink);margin-bottom:.4rem}
+.energy-device-desc{font-size:.9rem;color:var(--ink3);line-height:1.5}
+
+.energy-why-sec{background:linear-gradient(135deg,#1a1508 0%,#2d240f 100%);border-radius:24px;margin:2rem 3.5rem 5rem;padding:4rem;max-width:1200px}
+.energy-why-sec .energy-ey{background:rgba(255,215,0,.1);color:#FFD700;border-color:rgba(255,215,0,.2)}
+.energy-why-sec .energy-st{color:white}
+.energy-why-sec .energy-sb{color:rgba(255,255,255,.6)}
+.energy-why-wrap{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.energy-why-pts{display:flex;flex-direction:column;gap:1rem}
+.energy-why-pt{display:flex;gap:1rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1.2rem;transition:all .2s}
+.energy-why-pt:hover{background:rgba(255,255,255,.08);border-color:rgba(255,215,0,.2)}
+.energy-why-ico{font-size:1.6rem;flex-shrink:0}
+.energy-why-pt-title{font-family:'Manrope',sans-serif;font-size:1.05rem;font-weight:700;color:white;margin-bottom:.3rem}
+.energy-why-pt-desc{font-size:.9rem;color:rgba(255,255,255,.6);line-height:1.5}
+.energy-why-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:2rem}
+.energy-why-card-title{font-family:'Manrope',sans-serif;font-size:1.3rem;font-weight:700;color:white;margin-bottom:.8rem}
+.energy-why-card-desc{font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.6;margin-bottom:1.5rem}
+.energy-why-card-stats{display:flex;gap:1.5rem}
+.energy-why-cs{display:flex;flex-direction:column;gap:.2rem}
+.energy-why-cs-num{font-family:'Manrope',sans-serif;font-size:1.4rem;font-weight:800;color:#FFD700}
+.energy-why-cs-label{font-size:.75rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.04em;font-weight:600}
+
+.energy-faq-grid{display:flex;flex-direction:column;gap:1rem}
+.energy-faq-item{background:white;border:1px solid var(--bdr);border-radius:12px;overflow:hidden;box-shadow:var(--s1);transition:all .2s}
+.energy-faq-item:hover{box-shadow:var(--s2)}
+.energy-faq-item summary{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 1.5rem;font-family:'Manrope',sans-serif;font-size:1rem;font-weight:600;color:var(--ink);cursor:pointer;list-style:none;gap:1rem}
+.energy-faq-item summary::-webkit-details-marker{display:none}
+.energy-faq-item summary svg{flex-shrink:0;transition:transform .2s;color:var(--c-energy)}
+.energy-faq-item[open] summary svg{transform:rotate(180deg)}
+.energy-faq-item p{padding:0 1.5rem 1.2rem;font-size:.95rem;color:var(--ink3);line-height:1.6}
+
+.energy-cta-card{background:linear-gradient(135deg,#FFF8EB 0%,#FFF0D4 100%);border:1px solid rgba(196,122,0,.2);border-radius:24px;padding:3.5rem;text-align:center;max-width:800px;margin:0 auto}
+.energy-cta-badge{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--c-energy);background:rgba(196,122,0,.1);padding:.35rem 1rem;border-radius:100px;margin-bottom:1.2rem;border:1px solid rgba(196,122,0,.2)}
+.energy-cta-title{font-family:'Manrope',sans-serif;font-size:var(--fs-h2);font-weight:800;color:var(--ink);margin-bottom:1rem;line-height:var(--lh-heading)}
+.energy-cta-desc{font-size:1.1rem;color:var(--ink3);line-height:1.6;margin-bottom:2rem;max-width:520px;margin-left:auto;margin-right:auto}
+.energy-cta-btns{display:flex;gap:1rem;justify-content:center;margin-bottom:2rem;flex-wrap:wrap}
+.energy-cta-btn-p{display:inline-flex;align-items:center;gap:.6rem;background:var(--c-energy);color:white;font-size:1rem;font-weight:700;padding:1rem 2rem;border-radius:12px;text-decoration:none;transition:all .2s;box-shadow:0 4px 16px rgba(196,122,0,.3)}
+.energy-cta-btn-p:hover{background:#B06D00;transform:translateY(-2px);box-shadow:0 8px 24px rgba(196,122,0,.35)}
+.energy-cta-btn-s{display:inline-flex;align-items:center;gap:.6rem;background:white;color:var(--ink2);font-size:1rem;font-weight:700;padding:1rem 2rem;border-radius:12px;text-decoration:none;border:1px solid var(--bdr);transition:all .2s}
+.energy-cta-btn-s:hover{border-color:var(--c-energy);color:var(--c-energy);transform:translateY(-2px)}
+.energy-cta-info{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap}
+.energy-cta-info-item{display:flex;align-items:center;gap:.5rem;font-size:.9rem;color:var(--ink3)}
+.energy-cta-info-item svg{color:var(--c-energy)}
+
+@media (max-width:1024px){
+  .energy-hero{padding:82px 2rem 0;gap:1.5rem;min-height:auto}
+  .energy-hero-content{max-width:50%;padding:1.5rem 0 2rem}
+  .energy-hero-visual{flex:0 0 45%}
+  .energy-hero-sub{font-size:1.05rem}
+  .energy-hero-desc{font-size:1.05rem;margin-bottom:1.5rem}
+  .energy-hero-stats{gap:1.2rem}
+  .energy-sec{padding:3.5rem 2rem;min-height:auto}
+  .energy-services-grid{grid-template-columns:repeat(2,1fr);gap:1.2rem}
+  .energy-pricing-grid{grid-template-columns:repeat(2,1fr);gap:1.2rem}
+  .energy-steps{grid-template-columns:1fr;gap:1.5rem}
+  .energy-step-line{display:none}
+  .energy-devices-grid{grid-template-columns:repeat(2,1fr)}
+  .energy-why-wrap{grid-template-columns:1fr;gap:2rem}
+  .energy-why-card{max-width:100%}
+  .energy-why-sec{margin:2rem 2rem 4rem;padding:3rem}
+  .energy-cta-card{padding:2.5rem 2rem}
+}
+@media (max-width:768px){
+  .energy-hero{padding:76px 1.5rem 0;gap:0;grid-template-columns:1fr;min-height:auto}
+  .energy-hero-bg{clip-path:polygon(0 55%,100% 45%,100% 100%,0 100%);height:60%}
+  .energy-hero-content{padding:1.5rem 0 0;text-align:center;max-width:100%;display:flex;flex-direction:column;align-items:center}
+  .energy-hero-sub,.energy-hero-desc{max-width:100%}
+  .energy-hero-visual{padding:1rem 0 2rem}
+  .energy-hero-stats{justify-content:center}
+  .energy-sec{padding:2.5rem 1.2rem}
+  .energy-services-grid{grid-template-columns:1fr}
+  .energy-pricing-grid{grid-template-columns:1fr}
+  .energy-pricing-note{grid-column:1}
+  .energy-devices-grid{grid-template-columns:1fr}
+  .energy-why-sec{margin:1.5rem 1.2rem 3rem;padding:2rem}
+  .energy-cta-card{padding:2rem 1.5rem}
+  .energy-cta-btns{flex-direction:column;gap:.6rem}
+  .energy-cta-btn-p,.energy-cta-btn-s{width:100%;justify-content:center}
+  .energy-cta-info{gap:1rem}
+}
+@media (max-width:480px){
+  .energy-hero{padding:68px 1rem 0}
+  .energy-hero-eyebrow{font-size:.66rem;padding:.3rem .7rem;margin-bottom:1rem}
+  .energy-hero-sub{font-size:1rem}
+  .energy-hero-desc{font-size:.92rem;margin-bottom:1rem}
+  .energy-hero-cta{flex-direction:column;margin-bottom:1.5rem}
+  .energy-btn-p,.energy-btn-s{justify-content:center;text-align:center;font-size:.9rem;padding:.7rem 1.4rem}
+  .energy-hero-stats{gap:1rem;padding-top:1.2rem}
+  .energy-stat-num{font-size:1.15rem}
+  .energy-stat-label{font-size:.65rem}
+  .energy-sec{padding:2rem 1rem}
+  .energy-service-card{padding:1.5rem}
+  .energy-pricing-card{padding:1.5rem}
+  .energy-pricing-amount{font-size:1.8rem}
+  .energy-why-pt{padding:.8rem}
+  .energy-why-card{padding:1.5rem}
+  .energy-cta-card{padding:1.5rem 1rem}
+  .energy-cta-desc{font-size:1rem}
+}

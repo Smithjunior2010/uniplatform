@@ -1,0 +1,67 @@
+/* ══════════════════════════════════════
+   BUSINESS SECTORS (Post-Hero)
+   ══════════════════════════════════════ */
+.biz-sec{padding-top:3rem;padding-bottom:3rem}
+.biz-sec .st{font-family:'Manrope',sans-serif;font-size:var(--fs-h1);font-weight:800;line-height:var(--lh-heading);letter-spacing:-.03em}
+.biz-sec .st .i{font-style:normal;background:var(--grad-r);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.biz-sec .sb{font-size:clamp(.95rem,1.4vw,1.15rem);font-weight:500;line-height:1.55;color:var(--ink2);max-width:52ch;border-left:3px solid var(--blue);padding-left:1rem;margin-bottom:2rem}
+
+.biz-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.8rem}
+.biz-card{background:#fff;border:1px solid var(--bdr);border-radius:12px;padding:1.2rem;position:relative;overflow:hidden;box-shadow:var(--s2);text-decoration:none;color:inherit;display:block;transition:transform .28s cubic-bezier(.4,0,.2,1),box-shadow .28s,border-color .28s}
+.biz-card:hover{transform:translateY(-4px);box-shadow:var(--s5)}
+.biz-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:12px 12px 0 0;background:var(--cc,var(--blue));transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
+.biz-card:hover::before{transform:scaleX(1)}
+.biz-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.7rem}
+.biz-ico{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;background:var(--off);border:1px solid var(--bdr)}
+.biz-pill{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .5rem;border-radius:100px}
+.biz-br{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--cc,var(--blue));margin-bottom:.1rem}
+.biz-name{font-weight:800;font-size:.85rem;color:var(--ink);margin-bottom:.2rem}
+.biz-cat{font-size:.72rem;font-weight:400;line-height:1.4;color:var(--ink3);margin-bottom:0.5rem}
+.biz-desc{font-size:.72rem;font-weight:400;line-height:1.4;color:var(--ink3);margin-bottom:0.5rem}
+.biz-tags{display:flex;flex-wrap:wrap;gap:.2rem}
+.biz-tag{font-size:.6rem;font-weight:600;letter-spacing:.06em;padding:.15rem .45rem;border-radius:100px;background:var(--off);color:var(--ink3);border:1px solid var(--bdr)}
+.biz-link{display:inline-flex;align-items:center;gap:.35rem;font-size:.72rem;font-weight:700;color:var(--cc,var(--blue));margin-top:0.7rem;text-decoration:none;border-top:1px solid var(--bdr);padding-top:0.6rem;width:100%;transition:gap .2s}
+.biz-link:hover{gap:.6rem}
+.biz-card:last-child{background:linear-gradient(145deg,#0a1628 0%,#1A2D4D 100%);border-color:#1A3A6B}
+.biz-card:last-child .biz-name{color:#fff}
+.biz-card:last-child .biz-cat,.biz-card:last-child .biz-desc{color:rgba(255,255,255,.6)}
+.biz-card:last-child .biz-ico{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.1)}
+.biz-card:last-child .biz-tag{background:rgba(255,255,255,.08);color:rgba(255,255,255,.6);border-color:rgba(255,255,255,.1)}
+.biz-card:last-child .biz-link{color:var(--cc,var(--blue));border-top-color:rgba(255,255,255,.1)}
+.biz-card-cta{background:#0d1c33;border:2px solid rgba(255,255,255,.12);cursor:default}
+.biz-card-cta:hover{transform:translateY(-6px);box-shadow:var(--s5)}
+.biz-card-cta::before{display:none}
+.biz-cta-content{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center;padding:.6rem}
+.biz-cta-heading{font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.35rem}
+.biz-cta-flag{font-size:1.2rem;margin-bottom:.25rem}
+.biz-cta-title{font-family:'Manrope',sans-serif;font-size:1.15rem;font-weight:800;color:white;line-height:1.2;margin-bottom:.25rem}
+.biz-cta-desc{font-size:.78rem;color:rgba(255,255,255,.6);margin-bottom:.8rem;max-width:28ch}
+.biz-cta-btn{background:white;color:var(--ink);font-size:.8rem;font-weight:700;padding:.5rem 1.4rem;border:none;border-radius:8px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:.4rem;transition:all .2s}
+.biz-cta-btn:hover{background:var(--blue-l);transform:translateY(-2px)}
+
+/* ══════════════════════════════════════
+   RESPONSIVE - BUSINESS
+   ══════════════════════════════════════ */
+@media (max-width:1024px){
+  .biz-grid{grid-template-columns:repeat(2,1fr);gap:1.2rem}
+  .biz-sec .st{font-size:2rem}
+}
+@media (max-width:768px){
+  .biz-grid{grid-template-columns:1fr;gap:1rem}
+  .biz-card{padding:1rem}
+  .biz-name{font-size:.8rem}
+  .biz-cat,.biz-desc{font-size:.7rem}
+  .biz-sec .st{font-size:1.5rem}
+  .biz-sec .sb{font-size:.9rem;max-width:100%}
+}
+@media (max-width:480px){
+  .biz-grid{gap:.8rem}
+  .biz-card{padding:.8rem}
+  .biz-name{font-size:.75rem}
+  .biz-ico{width:32px;height:32px;border-radius:8px}
+  .biz-cta-content{padding:.4rem}
+  .biz-cta-title{font-size:1rem}
+  .biz-cta-desc{font-size:.7rem}
+  .biz-cta-btn{font-size:.72rem;padding:.4rem .9rem}
+  .biz-sec .st{font-size:1.25rem}
+}

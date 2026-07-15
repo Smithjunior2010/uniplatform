@@ -1,0 +1,42 @@
+/* ══════════════════════════════════════
+   AUTH PAGES
+   ══════════════════════════════════════ */
+.auth-page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem;background:var(--off)}
+.auth-container{background:white;border-radius:16px;box-shadow:var(--s4);max-width:420px;width:100%;overflow:hidden}
+.auth-header{padding:2rem 2rem 1.5rem;text-align:center}
+.auth-header h1{font-family:'Manrope',sans-serif;font-size:1.5rem;font-weight:800;color:var(--ink);margin-bottom:.4rem}
+.auth-header p{font-size:.9rem;color:var(--ink3)}
+.auth-body{padding:1.5rem 2rem 2rem}
+.auth-form{display:flex;flex-direction:column;gap:1rem}
+.auth-form input{padding:.75rem 1rem;border:1px solid var(--bdr);border-radius:8px;font-family:'Manrope',sans-serif;font-size:.9rem;transition:border-color .2s}
+.auth-form input:focus{outline:none;border-color:var(--blue)}
+.auth-form button{background:var(--ink);color:white;padding:.75rem;border:none;border-radius:8px;font-family:'Manrope',sans-serif;font-size:.9rem;font-weight:700;cursor:pointer;transition:opacity .2s}
+.auth-form button:hover{opacity:.9}
+.auth-divider{text-align:center;color:var(--ink4);font-size:.85rem;margin:.5rem 0}
+.auth-social{display:flex;gap:.8rem}
+.auth-social button{flex:1;padding:.7rem;border:1px solid var(--bdr);border-radius:8px;background:white;font-family:'Manrope',sans-serif;font-size:.85rem;font-weight:600;cursor:pointer;transition:all .2s}
+.auth-social button:hover{border-color:var(--blue);color:var(--blue)}
+.auth-footer{text-align:center;margin-top:1.5rem;font-size:.85rem;color:var(--ink3)}
+.auth-footer a{color:var(--blue);font-weight:600;text-decoration:none}
+.auth-footer a:hover{text-decoration:underline}
+
+/* ══════════════════════════════════════
+   RESPONSIVE - AUTH
+   ══════════════════════════════════════ */
+@media (max-width:1024px){
+  .auth-page{padding:1.5rem}
+}
+@media (max-width:768px){
+  .auth-container{max-width:100%}
+  .auth-header{padding:1.5rem 1.5rem 1rem}
+  .auth-body{padding:1rem 1.5rem 1.5rem}
+}
+@media (max-width:480px){
+  .auth-page{padding:1rem}
+  .auth-header{padding:1.2rem 1rem .8rem}
+  .auth-header h1{font-size:1.25rem}
+  .auth-body{padding:.8rem 1rem 1.2rem}
+  .auth-form input{padding:.65rem .8rem;font-size:.85rem}
+  .auth-form button{padding:.65rem;font-size:.85rem}
+  .auth-social{flex-direction:column}
+}

@@ -62,7 +62,7 @@ export default function Home() {
               </div>
             </div>
           </a>
-          <a href="#" className="hero-bcard" style={{'--hc':'var(--c-shop)'}}>
+          <a href="/shop" className="hero-bcard" style={{'--hc':'var(--c-shop)'}}>
             <div className="brow">
               <div className="bico" style={{background:'rgba(13,122,95,.15)',border:'1px solid rgba(13,122,95,.25)'}}>
                 <span style={{fontSize:'1.1rem'}}>🛍️</span>
@@ -73,7 +73,7 @@ export default function Home() {
               </div>
             </div>
           </a>
-          <a href="#" className="hero-bcard hero-bcard-hide" style={{'--hc':'var(--c-energy)'}}>
+          <a href="/energy" className="hero-bcard hero-bcard-hide" style={{'--hc':'var(--c-energy)'}}>
             <div className="brow">
               <div className="bico" style={{background:'rgba(196,122,0,.15)',border:'1px solid rgba(196,122,0,.25)'}}>
                 <span style={{fontSize:'1.1rem'}}>⚡</span>
@@ -84,7 +84,7 @@ export default function Home() {
               </div>
             </div>
           </a>
-          <a href="#" className="hero-bcard hero-bcard-hide" style={{'--hc':'var(--c-fin)'}}>
+          <a href="/finance-agro" className="hero-bcard hero-bcard-hide" style={{'--hc':'var(--c-fin)'}}>
             <div className="brow">
               <div className="bico" style={{background:'rgba(107,63,160,.15)',border:'1px solid rgba(107,63,160,.25)'}}>
                 <span style={{fontSize:'1.1rem'}}>🏦</span>
@@ -95,7 +95,7 @@ export default function Home() {
               </div>
             </div>
           </a>
-          <a href="#" className="hero-bcard hero-bcard-hide" style={{'--hc':'var(--c-mango)'}}>
+          <a href="/loan" className="hero-bcard hero-bcard-hide" style={{'--hc':'var(--c-mango)'}}>
             <div className="brow">
               <div className="bico" style={{background:'rgba(217,119,6,.15)',border:'1px solid rgba(217,119,6,.25)'}}>
                 <span style={{fontSize:'1.1rem'}}>🌱</span>
@@ -177,7 +177,7 @@ export default function Home() {
             <span className="biz-link">{t.biz.discover}</span>
           </a>
 
-          <a href="#" className="biz-card" style={{'--bc':'var(--c-shop)'}}>
+          <a href="/shop" className="biz-card" style={{'--bc':'var(--c-shop)'}}>
             <div className="biz-top">
               <div className="biz-ico" style={{background:'rgba(13,122,95,.1)',border:'1px solid rgba(13,122,95,.2)'}}>
                 <span className="biz-emoji">🛍️</span>
@@ -193,7 +193,7 @@ export default function Home() {
             <span className="biz-link">{t.biz.discover}</span>
           </a>
 
-          <a href="#" className="biz-card" style={{'--bc':'var(--c-energy)'}}>
+          <a href="/energy" className="biz-card" style={{'--bc':'var(--c-energy)'}}>
             <div className="biz-top">
               <div className="biz-ico" style={{background:'rgba(196,122,0,.1)',border:'1px solid rgba(196,122,0,.2)'}}>
                 <span className="biz-emoji">⚡</span>
@@ -254,84 +254,60 @@ export default function Home() {
         <div className="tscroll-wrapper">
           <div className="tgrid">
             <div className="tmc tmc-founder">
-              <div className="tmc-glow"></div>
-              <div className="tmc-top">
-                <div className="tmc-avatar">
-                  <div className="tmc-avatar-ring">★</div>
-                  <img src="https://i.postimg.cc/528rV460/incognito.jpg" alt="The Founder" />
-                </div>
-                <div className="tmc-name">{t.team.members.founder.name}</div>
-                <div className="tmc-title">{t.team.members.founder.title}</div>
-                <div className="tmc-loc">📍 {t.team.members.founder.loc}</div>
+              <div className="tmc-avatar">
+                <div className="tmc-avatar-ring">★</div>
+                <img src="https://i.postimg.cc/528rV460/incognito.jpg" alt="The Founder" />
               </div>
-              <div className="tmc-body">
-                <div className="tmc-divider"></div>
-                <div className="tmc-bio">{t.team.members.founder.bio}</div>
-                <div className="tmc-tags">
-                  {t.team.members.founder.tags.map((tag, i) => (
-                    <span key={i} className={`tmc-tag ${i === 1 ? 'tmc-tag-alt' : ''}`}>{tag}</span>
-                  ))}
-                </div>
+              <div className="tmc-name">{t.team.members.founder.name}</div>
+              <div className="tmc-title">{t.team.members.founder.title}</div>
+              <div className="tmc-loc">📍 {t.team.members.founder.loc}</div>
+              <div className="tmc-bio">{t.team.members.founder.bio}</div>
+              <div className="tmc-tags">
+                {t.team.members.founder.tags.map((tag, i) => (
+                  <span key={i} className={`tmc-tag ${i === 1 ? 'tmc-tag-alt' : ''}`}>{tag}</span>
+                ))}
               </div>
             </div>
             <div className="tmc">
-              <div className="tmc-glow"></div>
-              <div className="tmc-top">
-                <div className="tmc-avatar">
-                  <img src="/images/team/alfred.jpg" alt="Alfred Patrice" />
-                </div>
-                <div className="tmc-name">{t.team.members.alfred.name}</div>
-                <div className="tmc-title">{t.team.members.alfred.title}</div>
-                <div className="tmc-loc">📍 {t.team.members.alfred.loc}</div>
+              <div className="tmc-avatar">
+                <img src="/images/team/alfred.jpg" alt="Alfred Patrice" />
               </div>
-              <div className="tmc-body">
-                <div className="tmc-divider"></div>
-                <div className="tmc-bio">{t.team.members.alfred.bio}</div>
-                <div className="tmc-tags">
-                  {t.team.members.alfred.tags.map((tag, i) => (
-                    <span key={i} className="tmc-tag">{tag}</span>
-                  ))}
-                </div>
+              <div className="tmc-name">{t.team.members.alfred.name}</div>
+              <div className="tmc-title">{t.team.members.alfred.title}</div>
+              <div className="tmc-loc">📍 {t.team.members.alfred.loc}</div>
+              <div className="tmc-bio">{t.team.members.alfred.bio}</div>
+              <div className="tmc-tags">
+                {t.team.members.alfred.tags.map((tag, i) => (
+                  <span key={i} className="tmc-tag">{tag}</span>
+                ))}
               </div>
             </div>
             <div className="tmc">
-              <div className="tmc-glow"></div>
-              <div className="tmc-top">
-                <div className="tmc-avatar">
-                  <img src="https://i.postimg.cc/jjdQDZ3S/profile-picture.jpg" alt="Prud'homme Smith Junior" />
-                </div>
-                <div className="tmc-name">{t.team.members.smith.name}</div>
-                <div className="tmc-title">{t.team.members.smith.title} · <a href="#" target="_blank" rel="noopener noreferrer">Portfolio</a></div>
-                <div className="tmc-loc">📍 {t.team.members.smith.loc}</div>
+              <div className="tmc-avatar">
+                <img src="https://i.postimg.cc/jjdQDZ3S/profile-picture.jpg" alt="Prud'homme Smith Junior" />
               </div>
-              <div className="tmc-body">
-                <div className="tmc-divider"></div>
-                <div className="tmc-bio">{t.team.members.smith.bio}</div>
-                <div className="tmc-tags">
-                  {t.team.members.smith.tags.map((tag, i) => (
-                    <span key={i} className="tmc-tag">{tag}</span>
-                  ))}
-                </div>
+              <div className="tmc-name">{t.team.members.smith.name}</div>
+              <div className="tmc-title">{t.team.members.smith.title} · <a href="#" target="_blank" rel="noopener noreferrer">Portfolio</a></div>
+              <div className="tmc-loc">📍 {t.team.members.smith.loc}</div>
+              <div className="tmc-bio">{t.team.members.smith.bio}</div>
+              <div className="tmc-tags">
+                {t.team.members.smith.tags.map((tag, i) => (
+                  <span key={i} className="tmc-tag">{tag}</span>
+                ))}
               </div>
             </div>
             <div className="tmc">
-              <div className="tmc-glow"></div>
-              <div className="tmc-top">
-                <div className="tmc-avatar">
-                  <img src="/images/team/castra.jpg" alt="Castra" />
-                </div>
-                <div className="tmc-name">{t.team.members.castra.name}</div>
-                <div className="tmc-title">{t.team.members.castra.title}</div>
-                <div className="tmc-loc">📍 {t.team.members.castra.loc}</div>
+              <div className="tmc-avatar">
+                <img src="/images/team/castra.jpg" alt="Castra" />
               </div>
-              <div className="tmc-body">
-                <div className="tmc-divider"></div>
-                <div className="tmc-bio">{t.team.members.castra.bio}</div>
-                <div className="tmc-tags">
-                  {t.team.members.castra.tags.map((tag, i) => (
-                    <span key={i} className="tmc-tag">{tag}</span>
-                  ))}
-                </div>
+              <div className="tmc-name">{t.team.members.castra.name}</div>
+              <div className="tmc-title">{t.team.members.castra.title}</div>
+              <div className="tmc-loc">📍 {t.team.members.castra.loc}</div>
+              <div className="tmc-bio">{t.team.members.castra.bio}</div>
+              <div className="tmc-tags">
+                {t.team.members.castra.tags.map((tag, i) => (
+                  <span key={i} className="tmc-tag">{tag}</span>
+                ))}
               </div>
             </div>
           </div>
@@ -372,30 +348,18 @@ export default function Home() {
             </div>
             <form onSubmit={(e) => e.preventDefault()}>
               <div className="frow">
-                <div className="fiw">
-                  <input type="text" className="fi" placeholder={t.contact.form.firstName} />
-                </div>
-                <div className="fiw">
-                  <input type="text" className="fi" placeholder={t.contact.form.lastName} />
-                </div>
+                <input type="text" className="fi" placeholder={t.contact.form.firstName} />
+                <input type="text" className="fi" placeholder={t.contact.form.lastName} />
               </div>
-              <div className="fiw">
-                <input type="email" className="fi" placeholder={t.contact.form.email} />
-              </div>
-              <div className="fiw">
-                <input type="tel" className="fi" placeholder={t.contact.form.whatsapp} />
-              </div>
-              <div className="fiw">
-                <select className="fi fisel">
-                  <option value="">{t.contact.form.interest}</option>
-                  {t.contact.form.interestOptions.map((opt, i) => (
-                    <option key={i}>{opt}</option>
-                  ))}
-                </select>
-              </div>
-              <div className="fiw">
-                <textarea className="fta" placeholder={t.contact.form.message}></textarea>
-              </div>
+              <input type="email" className="fi" placeholder={t.contact.form.email} />
+              <input type="tel" className="fi" placeholder={t.contact.form.whatsapp} />
+              <select className="fisel">
+                <option value="">{t.contact.form.interest}</option>
+                {t.contact.form.interestOptions.map((opt, i) => (
+                  <option key={i}>{opt}</option>
+                ))}
+              </select>
+              <textarea className="fta" placeholder={t.contact.form.message}></textarea>
               <button type="submit" className="fsub">
                 {t.contact.form.submit}
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
