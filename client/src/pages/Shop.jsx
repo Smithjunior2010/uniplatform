@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useLang } from '../i18n/LanguageContext';
+import '../styles/shop.css';
 
 const PRODUCTS = [
   {
