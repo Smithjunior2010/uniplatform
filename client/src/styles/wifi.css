@@ -54,22 +54,22 @@
 .wifi-sb-dark{font-size:clamp(.9rem,1.3vw,1.05rem);font-weight:400;line-height:1.82;color:rgba(255,255,255,.48);max-width:58ch;margin-bottom:3.5rem}
 
 /* PLANS */
-.wifi-plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1000px;margin:0 auto}
-.wifi-plan-card{background:white;border:1px solid var(--bdr);border-radius:16px;padding:2rem;position:relative;overflow:hidden;box-shadow:var(--s2);transition:transform .28s cubic-bezier(.4,0,.2,1),box-shadow .28s;display:flex;flex-direction:column}
-.wifi-plan-card:hover{transform:translateY(-6px);box-shadow:var(--s5)}
+.wifi-plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:950px;margin:0 auto}
+.wifi-plan-card{background:white;border:1px solid var(--bdr);border-radius:12px;padding:1.2rem;position:relative;overflow:hidden;box-shadow:var(--s2);transition:transform .28s cubic-bezier(.4,0,.2,1),box-shadow .28s;display:flex;flex-direction:column}
+.wifi-plan-card:hover{transform:translateY(-5px);box-shadow:var(--s5)}
 .wifi-plan-featured{border-color:var(--pc,var(--blue));box-shadow:0 0 0 1px var(--pc,var(--blue)),var(--s3)}
-.wifi-plan-badge{position:absolute;top:12px;right:12px;font-size:.65rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.3rem .7rem;border-radius:100px;background:var(--pc,var(--blue));color:white}
-.wifi-plan-ico{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:1rem}
-.wifi-plan-name{font-family:'Manrope',sans-serif;font-size:1rem;font-weight:800;color:var(--ink);margin-bottom:.3rem}
-.wifi-plan-price{display:flex;align-items:baseline;gap:.2rem;margin-bottom:.5rem}
-.wifi-plan-currency{font-size:.85rem;font-weight:600;color:var(--ink4)}
-.wifi-plan-amount{font-size:2rem;font-weight:800;color:var(--ink);line-height:1}
-.wifi-plan-period{font-size:.8rem;color:var(--ink4);font-weight:500}
-.wifi-plan-desc{font-size:.82rem;color:var(--ink3);margin-bottom:1.2rem;line-height:1.5}
-.wifi-plan-features{list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.5rem;flex:1}
-.wifi-plan-features li{display:flex;align-items:center;gap:.5rem;font-size:.82rem;color:var(--ink2)}
+.wifi-plan-badge{position:absolute;top:8px;right:8px;font-size:.58rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:.2rem .55rem;border-radius:100px;background:var(--pc,var(--blue));color:white}
+.wifi-plan-ico{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;margin-bottom:.6rem}
+.wifi-plan-name{font-family:'Manrope',sans-serif;font-size:.88rem;font-weight:800;color:var(--ink);margin-bottom:.2rem}
+.wifi-plan-price{display:flex;align-items:baseline;gap:.12rem;margin-bottom:.35rem}
+.wifi-plan-currency{font-size:.72rem;font-weight:600;color:var(--ink4)}
+.wifi-plan-amount{font-size:1.5rem;font-weight:800;color:var(--ink);line-height:1}
+.wifi-plan-period{font-size:.7rem;color:var(--ink4);font-weight:500}
+.wifi-plan-desc{font-size:.72rem;color:var(--ink3);margin-bottom:.8rem;line-height:1.4}
+.wifi-plan-features{list-style:none;display:flex;flex-direction:column;gap:.4rem;margin-bottom:1.2rem;flex:1}
+.wifi-plan-features li{display:flex;align-items:center;gap:.4rem;font-size:.75rem;color:var(--ink2)}
 .wifi-plan-features li svg{color:var(--pc,var(--blue));flex-shrink:0}
-.wifi-plan-btn{width:100%;padding:.75rem 1rem;border-radius:10px;font-family:'Manrope',sans-serif;font-size:.9rem;font-weight:700;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:.4rem;transition:all .2s;cursor:pointer;border:none}
+.wifi-plan-btn{width:100%;padding:.65rem .9rem;border-radius:9px;font-family:'Manrope',sans-serif;font-size:.82rem;font-weight:700;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:.35rem;transition:all .2s;cursor:pointer;border:none}
 .wifi-plan-btn:hover{transform:translateY(-2px);opacity:.9}
 
 /* COVERAGE */
@@ -118,15 +118,15 @@
 .wifi-why-pt-title{font-family:'Manrope',sans-serif;font-size:1.05rem;font-weight:700;color:white;margin-bottom:.15rem}
 .wifi-why-pt-desc{font-family:'Manrope',sans-serif;font-size:.92rem;line-height:1.6;color:rgba(255,255,255,.65)}
 .wifi-why-right{display:flex;justify-content:center}
-.wifi-why-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:2.5rem 2rem;text-align:center;max-width:380px;backdrop-filter:blur(12px)}
+.wifi-why-card{background:white;border:1px solid var(--bdr);border-radius:20px;padding:2.5rem 2rem;text-align:center;max-width:380px;box-shadow:var(--s3)}
 .wifi-why-card-icon{font-size:3.2rem;margin-bottom:1rem}
-.wifi-why-card-title{font-family:'Manrope',sans-serif;font-size:1.35rem;font-weight:800;color:white;margin-bottom:.6rem}
-.wifi-why-card-desc{font-family:'Manrope',sans-serif;font-size:.95rem;line-height:1.6;color:rgba(255,255,255,.65);margin-bottom:1.5rem}
-.wifi-why-card-stats{display:flex;gap:0;justify-content:center;border-top:1px solid rgba(255,255,255,.1);padding-top:1.2rem}
-.wifi-why-cs{flex:1;display:flex;flex-direction:column;gap:.15rem;padding:0 .8rem;border-right:1px solid rgba(255,255,255,.08)}
+.wifi-why-card-title{font-family:'Manrope',sans-serif;font-size:1.35rem;font-weight:800;color:var(--ink);margin-bottom:.6rem}
+.wifi-why-card-desc{font-family:'Manrope',sans-serif;font-size:.95rem;line-height:1.6;color:var(--ink3);margin-bottom:1.5rem}
+.wifi-why-card-stats{display:flex;gap:0;justify-content:center;border-top:1px solid var(--bdr);padding-top:1.2rem}
+.wifi-why-cs{flex:1;display:flex;flex-direction:column;gap:.15rem;padding:0 .8rem;border-right:1px solid var(--bdr)}
 .wifi-why-cs:last-child{border-right:none}
-.wifi-why-cs-num{font-size:1.35rem;font-weight:800;color:white;font-family:'Manrope',sans-serif}
-.wifi-why-cs-label{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:rgba(255,255,255,.45)}
+.wifi-why-cs-num{font-size:1.35rem;font-weight:800;color:var(--ink);font-family:'Manrope',sans-serif}
+.wifi-why-cs-label{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink4)}
 
 /* FAQ */
 .wifi-faq-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:1.2rem}
@@ -160,7 +160,7 @@
   .wifi-hero-desc{font-size:1.05rem;margin-bottom:1.5rem}
   .wifi-hero-stats{gap:1.2rem}
   .wifi-sec{padding:3.5rem 2rem;min-height:auto}
-  .wifi-plans-grid{grid-template-columns:repeat(2,1fr);gap:1.2rem}
+  .wifi-plans-grid{grid-template-columns:repeat(2,1fr);gap:.85rem}
   .wifi-coverage-wrap{grid-template-columns:1fr;gap:2rem}
   .wifi-coverage-visual{max-width:300px}
   .wifi-steps{grid-template-columns:1fr;gap:1.5rem}
@@ -187,6 +187,18 @@
   .wifi-cta-btns{flex-direction:column;gap:.6rem}
   .wifi-cta-btn-p,.wifi-cta-btn-s{width:100%;justify-content:center}
   .wifi-cta-info{gap:1rem}
+  .wifi-steps{grid-template-columns:repeat(3,1fr);gap:.6rem}
+  .wifi-step{padding:1rem .5rem}
+  .wifi-step-num{width:34px;height:34px;font-size:.85rem;margin:0 auto .6rem}
+  .wifi-step-ico{font-size:1.8rem;margin-bottom:.4rem}
+  .wifi-step-title{font-size:.95rem;margin-bottom:.25rem}
+  .wifi-step-desc{font-size:.78rem;line-height:1.45}
+  .wifi-step-line{display:none}
+  .wifi-devices-grid{grid-template-columns:repeat(2,1fr);gap:.8rem}
+  .wifi-device-card{padding:1.3rem 1rem}
+  .wifi-device-ico{font-size:1.9rem;margin-bottom:.5rem}
+  .wifi-device-name{font-size:.88rem;margin-bottom:.2rem}
+  .wifi-device-desc{font-size:.72rem;line-height:1.4}
 }
 @media (max-width:480px){
   .wifi-hero{padding:68px 1rem 0}
@@ -199,7 +211,18 @@
   .wifi-stat-num{font-size:1.15rem}
   .wifi-stat-label{font-size:.65rem}
   .wifi-sec{padding:2rem 1rem}
-  .wifi-plan-card{padding:1.5rem}
+  .wifi-plan-card{padding:1rem}
+  .wifi-steps{grid-template-columns:repeat(3,1fr);gap:.4rem}
+  .wifi-devices-grid{grid-template-columns:repeat(2,1fr);gap:.7rem}
+  .wifi-device-card{padding:.9rem .7rem}
+  .wifi-device-ico{font-size:1.6rem;margin-bottom:.4rem}
+  .wifi-device-name{font-size:.82rem;margin-bottom:.15rem}
+  .wifi-device-desc{font-size:.68rem;line-height:1.35}
+  .wifi-step{padding:.8rem .35rem}
+  .wifi-step-num{width:30px;height:30px;font-size:.78rem;margin:0 auto .5rem}
+  .wifi-step-ico{font-size:1.5rem;margin-bottom:.35rem}
+  .wifi-step-title{font-size:.85rem;margin-bottom:.2rem}
+  .wifi-step-desc{font-size:.7rem;line-height:1.4}
   .wifi-why-pt{padding:.8rem}
   .wifi-why-card{padding:1.5rem}
   .wifi-cta-card{padding:1.5rem 1rem}
