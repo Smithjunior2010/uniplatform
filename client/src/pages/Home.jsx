@@ -270,7 +270,7 @@ export default function Home() {
             </div>
             <div className="tmc">
               <div className="tmc-avatar">
-                <img src="/images/team/alfred.jpg" alt="Alfred Patrice" />
+                <img src="https://i.postimg.cc/Fstsjdwy/babypic.jpg" alt="Alfred Patrice" style={{objectPosition: 'center 30%'}} />
               </div>
               <div className="tmc-name">{t.team.members.alfred.name}</div>
               <div className="tmc-title">{t.team.members.alfred.title}</div>
@@ -298,7 +298,7 @@ export default function Home() {
             </div>
             <div className="tmc">
               <div className="tmc-avatar">
-                <img src="/images/team/castra.jpg" alt="Castra" />
+                <img src="https://i.postimg.cc/X704ZMyt/castra.jpg" alt="Castra" />
               </div>
               <div className="tmc-name">{t.team.members.castra.name}</div>
               <div className="tmc-title">{t.team.members.castra.title}</div>
