@@ -85,7 +85,8 @@
 .shop-cart-btn:hover{border-color:#e8540a;color:#e8540a}
 .shop-cart-count{position:absolute;top:-6px;right:-6px;background:#e8540a;color:white;font-size:.62rem;font-weight:700;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center}
 
-.shop-products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.3rem}
+.shop-products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.3rem}
+@media (min-width: 1600px){.shop-products-grid{grid-template-columns:repeat(5,1fr)}}
 
 /* PRODUCT CARD */
 .shop-product-card{background:white;border:1px solid var(--bdr);border-radius:14px;overflow:hidden;transition:transform .28s cubic-bezier(.4,0,.2,1),box-shadow .28s;position:relative}
