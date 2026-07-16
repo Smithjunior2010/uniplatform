@@ -34,7 +34,8 @@
 .ship-stat-label{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink4)}
 .ship-stat-div{width:1px;background:var(--bdr)}
 
-.ship-hero-visual{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;padding:1rem 0}
+.ship-hero-visual{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;padding:.6rem 0;max-width:420px;margin:0 auto}
+.ship-hero-visual .lottie-container,.ship-hero-visual svg,.ship-hero-visual img,.ship-hero-visual canvas{max-width:100%;height:auto;transform:scale(.88);transform-origin:center}
 
 /* SECTIONS */
 .ship-sec{padding:2.8rem 3.5rem;position:relative}
