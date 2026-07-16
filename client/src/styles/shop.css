@@ -166,12 +166,32 @@
 .shop-cta-info-item{display:flex;align-items:center;gap:.38rem;font-family:'Manrope',sans-serif;font-size:.84rem;font-weight:500;color:var(--ink4)}
 .shop-cta-info-ico{font-size:1rem}
 
-/* ANIMATIONS */
-@keyframes orbFloat{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-20px) scale(1.04)}}
-@keyframes pd{0%,100%{opacity:1}50%{opacity:.4}}
-@keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-@keyframes slideInRight{from{transform:translateX(100%)}to{transform:translateX(0)}}
+/* PRODUCT MODAL */
+.shop-modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:998;animation:fadeIn .25s;backdrop-filter:blur(4px)}
+.shop-modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:90%;max-width:700px;max-height:85vh;background:white;border-radius:16px;box-shadow:var(--s6);z-index:999;overflow:hidden;animation:modalSlideUp .3s ease-out;display:flex;flex-direction:column}
+.shop-modal-close{position:absolute;top:12px;right:12px;width:38px;height:38px;display:flex;align-items:center;justify-content:center;border:none;background:rgba(0,0,0,.06);border-radius:10px;cursor:pointer;z-index:10;transition:all .2s;color:var(--ink2)}
+.shop-modal-close:hover{background:rgba(0,0,0,.12);color:#ef4444}
+.shop-modal-content{display:grid;grid-template-columns:1fr 1fr;overflow-y:auto;max-height:85vh}
+.shop-modal-img-wrap{position:relative;width:100%;height:100%;min-height:300px;overflow:hidden;background:var(--off)}
+.shop-modal-img{width:100%;height:100%;object-fit:cover}
+.shop-modal-badge{top:16px;left:16px}
+.shop-modal-body{padding:1.8rem 1.5rem;display:flex;flex-direction:column;gap:.8rem}
+.shop-modal-rating{display:flex;align-items:center;gap:.4rem}
+.shop-modal-name{font-family:'Manrope',sans-serif;font-size:1.45rem;font-weight:800;color:var(--ink);line-height:1.28;margin:0}
+.shop-modal-price{display:flex;align-items:baseline;gap:.3rem;padding:.7rem 0;border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr)}
+.shop-modal-price .shop-product-amount{font-size:1.65rem}
+.shop-modal-desc{font-size:.92rem;line-height:1.62;color:var(--ink3);margin:0}
+.shop-modal-actions{display:flex;gap:.7rem;margin-top:.3rem}
+.shop-modal-add{flex:1}
+.shop-modal-whatsapp{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.4rem;padding:.72rem 1.2rem;background:#25D366;color:white;font-family:'Manrope',sans-serif;font-size:.82rem;font-weight:700;border-radius:9px;text-decoration:none;transition:all .2s;box-shadow:0 3px 13px rgba(37,211,102,.22)}
+.shop-modal-whatsapp:hover{background:#128c7e;transform:translateY(-1px);box-shadow:0 5px 18px rgba(37,211,102,.32)}
+.shop-modal-details{margin-top:.5rem;padding-top:.8rem;border-top:1px solid var(--bdr)}
+.shop-modal-details-title{font-family:'Manrope',sans-serif;font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:.5rem}
+.shop-modal-details-list{list-style:none;display:flex;flex-direction:column;gap:.35rem}
+.shop-modal-details-list li{font-size:.82rem;color:var(--ink3);line-height:1.45}
+
+/* MODAL ANIMATIONS */
+@keyframes modalSlideUp{from{opacity:0;transform:translate(-50%,-48%) scale(.96)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
 
 /* RESPONSIVE */
 @media (max-width:1024px){
@@ -188,6 +208,13 @@
   .shop-why-card{max-width:100%}
   .shop-cta-card{padding:1.6rem 1.4rem}
   .shop-cart-sidebar{width:340px}
+  .shop-modal{width:92%;max-width:600px}
+  .shop-modal-content{grid-template-columns:1fr}
+  .shop-modal-img-wrap{min-height:240px;max-height:280px}
+  .shop-modal-body{padding:1.4rem 1.2rem}
+  .shop-modal-name{font-size:1.28rem}
+  .shop-modal-price .shop-product-amount{font-size:1.45rem}
+  .shop-modal-actions{flex-direction:column}
 }
 
 @media (max-width:768px){
@@ -234,6 +261,14 @@
   .shop-cta-info{gap:1rem;margin-top:.85rem;flex-direction:column}
   .shop-cta-info-item{font-size:.76rem}
   .shop-cart-sidebar{width:100%}
+  .shop-modal{width:95%;max-height:90vh;border-radius:14px}
+  .shop-modal-content{grid-template-columns:1fr;max-height:90vh}
+  .shop-modal-img-wrap{min-height:200px;max-height:240px}
+  .shop-modal-body{padding:1.2rem 1rem;gap:.65rem}
+  .shop-modal-name{font-size:1.18rem;line-height:1.25}
+  .shop-modal-price .shop-product-amount{font-size:1.32rem}
+  .shop-modal-desc{font-size:.84rem;line-height:1.55}
+  .shop-modal-close{top:10px;right:10px;width:34px;height:34px}
 }
 
 @media (max-width:480px){
@@ -280,4 +315,13 @@
   .shop-cta-btn-p{font-size:.68rem;padding:.55rem 1.2rem;border-radius:7px;width:100%;justify-content:center}
   .shop-cta-info{gap:.85rem;margin-top:.72rem;flex-direction:column}
   .shop-cta-info-item{font-size:.7rem}
+  .shop-modal{width:96%;max-height:92vh;border-radius:12px}
+  .shop-modal-img-wrap{min-height:180px;max-height:220px}
+  .shop-modal-body{padding:1rem .85rem;gap:.55rem}
+  .shop-modal-name{font-size:1.08rem;line-height:1.22}
+  .shop-modal-price .shop-product-amount{font-size:1.2rem}
+  .shop-modal-desc{font-size:.78rem;line-height:1.5}
+  .shop-modal-add,.shop-modal-whatsapp{padding:.62rem 1rem;font-size:.76rem}
+  .shop-modal-details-title{font-size:.82rem}
+  .shop-modal-details-list li{font-size:.76rem}
 }

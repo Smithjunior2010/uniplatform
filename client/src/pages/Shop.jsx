@@ -143,6 +143,7 @@ export default function Shop() {
   const [cart, setCart] = useState([]);
   const [showCart, setShowCart] = useState(false);
   const [addedId, setAddedId] = useState(null);
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   const categories = [
     { key: 'all', label: lang === 'fr' ? 'Tout' : 'All', labelFr: 'Tout' },
@@ -206,6 +207,14 @@ export default function Shop() {
 
   const formatPrice = (price) => {
     return price.toLocaleString();
+  };
+
+  const openProductModal = (product) => {
+    setSelectedProduct(product);
+  };
+
+  const closeProductModal = () => {
+    setSelectedProduct(null);
   };
 
   return (
@@ -327,7 +336,7 @@ export default function Shop() {
         {/* Product Grid */}
         <div className="shop-products-grid">
           {filtered.map(product => (
-            <div key={product.id} className="shop-product-card">
+            <div key={product.id} className="shop-product-card" onClick={() => openProductModal(product)} style={{cursor: 'pointer'}}>
               {product.badge && (
                 <span className={`shop-badge ${getBadgeClass(product.badge)}`}>
                   {getBadge(product.badge)}
@@ -485,6 +494,86 @@ export default function Shop() {
           </div>
         </div>
       </section>
+
+      {/* ══════════════════════════════════════
+          PRODUCT MODAL
+          ══════════════════════════════════════ */}
+      {selectedProduct && (
+        <>
+          <div className="shop-modal-overlay" onClick={closeProductModal}></div>
+          <div className="shop-modal">
+            <button className="shop-modal-close" onClick={closeProductModal}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+
+            <div className="shop-modal-content">
+              <div className="shop-modal-img-wrap">
+                <img src={selectedProduct.image} alt={lang === 'fr' ? selectedProduct.nameFr : selectedProduct.name} className="shop-modal-img" />
+                {selectedProduct.badge && (
+                  <span className={`shop-badge shop-modal-badge ${getBadgeClass(selectedProduct.badge)}`}>
+                    {getBadge(selectedProduct.badge)}
+                  </span>
+                )}
+              </div>
+
+              <div className="shop-modal-body">
+                <div className="shop-modal-rating">
+                  <span className="shop-product-stars">{'★'.repeat(Math.floor(selectedProduct.rating))}{'☆'.repeat(5 - Math.floor(selectedProduct.rating))}</span>
+                  <span className="shop-product-reviews">({selectedProduct.reviews} {lang === 'fr' ? 'avis' : 'reviews'})</span>
+                </div>
+
+                <h2 className="shop-modal-name">{lang === 'fr' ? selectedProduct.nameFr : selectedProduct.name}</h2>
+
+                <div className="shop-modal-price">
+                  <span className="shop-product-currency">HTG</span>
+                  <span className="shop-product-amount">{formatPrice(selectedProduct.price)}</span>
+                </div>
+
+                <p className="shop-modal-desc">
+                  {lang === 'fr'
+                    ? `Produit de haute qualité disponible à Ouanaminthe. Livraison rapide dans le Nord-Est.`
+                    : `High quality product available in Ouanaminthe. Fast delivery in the Nord-Est region.`}
+                </p>
+
+                <div className="shop-modal-actions">
+                  <button
+                    className={`shop-add-btn shop-modal-add ${addedId === selectedProduct.id ? 'added' : ''}`}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      addToCart(selectedProduct);
+                    }}
+                  >
+                    {addedId === selectedProduct.id
+                      ? (lang === 'fr' ? 'Ajouté !' : 'Added!')
+                      : (lang === 'fr' ? 'Ajouter au panier' : 'Add to Cart')}
+                  </button>
+
+                  <a
+                    href="https://wa.me/50900000000?text=Bonjour, je suis intéressé par: ${encodeURIComponent(lang === 'fr' ? selectedProduct.nameFr : selectedProduct.name)}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shop-modal-whatsapp"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+                    {lang === 'fr' ? 'Demander via WhatsApp' : 'Ask on WhatsApp'}
+                  </a>
+                </div>
+
+                <div className="shop-modal-details">
+                  <h3 className="shop-modal-details-title">{lang === 'fr' ? 'Détails du produit' : 'Product Details'}</h3>
+                  <ul className="shop-modal-details-list">
+                    <li>{lang === 'fr' ? '✓ Livraison locale disponible' : '✓ Local delivery available'}</li>
+                    <li>{lang === 'fr' ? '✓ Paiement à la livraison' : '✓ Cash on delivery'}</li>
+                    <li>{lang === 'fr' ? '✓ Garantie satisfaction' : '✓ Satisfaction guarantee'}</li>
+                    <li>{lang === 'fr' ? '✓ Support client 7/7' : '✓ Customer support 7/7'}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
     </>
   );
 }
