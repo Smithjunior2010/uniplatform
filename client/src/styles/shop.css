@@ -69,6 +69,18 @@
 .shop-cat-btn:hover{border-color:#e8540a;color:#e8540a;background:rgba(232,84,10,.04)}
 .shop-cat-btn.active{background:#e8540a;color:white;border-color:#e8540a}
 
+/* SEARCH BOX */
+.shop-search-wrap{margin-bottom:1.5rem}
+.shop-search-box{display:flex;align-items:center;gap:.65rem;padding:.75rem 1.1rem;background:white;border:2px solid var(--bdr);border-radius:12px;transition:all .25s;max-width:600px}
+.shop-search-box:focus-within{border-color:#e8540a;box-shadow:0 0 0 4px rgba(232,84,10,.08)}
+.shop-search-icon{color:var(--ink4);flex-shrink:0;transition:color .2s}
+.shop-search-box:focus-within .search-icon{color:#e8540a}
+.shop-search-input{flex:1;border:none;outline:none;font-family:'Manrope',sans-serif;font-size:.95rem;font-weight:500;color:var(ink);background:transparent}
+.shop-search-input::placeholder{color:var(ink4);font-weight:400}
+.shop-search-clear{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border:none;border-radius:50%;background:var(--off);color:var(ink3);cursor:pointer;transition:all .2s;flex-shrink:0}
+.shop-search-clear:hover{background:#fee2e2;color:#dc2626}
+.shop-search-results-info{margin-top:.7rem;font-size:.82rem;font-weight:600;color:var(ink3);font-family:'Manrope',sans-serif}
+
 .shop-cart-btn{position:relative;display:flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--bdr);border-radius:10px;background:white;cursor:pointer;transition:all .2s}
 .shop-cart-btn:hover{border-color:#e8540a;color:#e8540a}
 .shop-cart-count{position:absolute;top:-6px;right:-6px;background:#e8540a;color:white;font-size:.62rem;font-weight:700;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center}

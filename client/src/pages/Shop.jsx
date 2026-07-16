@@ -144,6 +144,7 @@ export default function Shop() {
   const [showCart, setShowCart] = useState(false);
   const [addedId, setAddedId] = useState(null);
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const categories = [
     { key: 'all', label: lang === 'fr' ? 'Tout' : 'All', labelFr: 'Tout' },
@@ -153,9 +154,16 @@ export default function Shop() {
     { key: 'accessories', label: 'Accessories', labelFr: 'Accessoires' },
   ];
 
-  const filtered = activeCategory === 'all'
-    ? PRODUCTS
-    : PRODUCTS.filter(p => p.category === activeCategory);
+  const filtered = PRODUCTS
+    .filter(p => activeCategory === 'all' || p.category === activeCategory)
+    .filter(p => {
+      if (!searchQuery.trim()) return true;
+      const query = searchQuery.toLowerCase();
+      const nameEn = p.name.toLowerCase();
+      const nameFr = p.nameFr.toLowerCase();
+      const category = p.category.toLowerCase();
+      return nameEn.includes(query) || nameFr.includes(query) || category.includes(query);
+    });
 
   const addToCart = (product) => {
     setCart(prev => {
@@ -318,6 +326,30 @@ export default function Shop() {
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
             {cartCount > 0 && <span className="shop-cart-count">{cartCount}</span>}
           </button>
+        </div>
+
+        {/* Search Box */}
+        <div className="shop-search-wrap">
+          <div className="shop-search-box">
+            <svg className="shop-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            <input
+              type="text"
+              className="shop-search-input"
+              placeholder={lang === 'fr' ? 'Rechercher des produits...' : 'Search products...'}
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            {searchQuery && (
+              <button className="shop-search-clear" onClick={() => setSearchQuery('')}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              </button>
+            )}
+          </div>
+          {searchQuery && (
+            <div className="shop-search-results-info">
+              {filtered.length} {lang === 'fr' ? 'produit(s) trouvé(s)' : 'product(s) found'}
+            </div>
+          )}
         </div>
 
         {/* Categories */}
