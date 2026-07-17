@@ -4,6 +4,12 @@
 
 /* HERO */
 .loan-hero{min-height:auto;padding:82px 3.5rem 1.2rem;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:2.5rem;position:relative;overflow:hidden;background:var(--wh);isolation:isolate}
+
+@media (min-width: 1024px) {
+  .loan-hero {
+    min-height: 100vh;
+  }
+}
 .loan-hero-bg{position:absolute;top:0;left:0;right:0;height:100vh;z-index:0;pointer-events:none;background:linear-gradient(135deg,#f0fdf4 0%,#dcfce7 50%,#bbf7d0 100%);clip-path:polygon(58% 0,100% 0,100% 100%,38% 100%)}
 .loan-hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,101,52,.02),transparent 60%)}
 .loan-orb{position:absolute;border-radius:50%;filter:blur(100px);opacity:.6;pointer-events:none;z-index:0;animation:orbFloat 8s ease-in-out infinite}
