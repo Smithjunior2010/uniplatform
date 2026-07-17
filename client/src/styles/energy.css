@@ -148,12 +148,27 @@
   .energy-services-grid{grid-template-columns:1fr}
   .energy-pricing-grid{grid-template-columns:1fr}
   .energy-pricing-note{grid-column:1}
-  .energy-devices-grid{grid-template-columns:1fr}
+  .energy-devices-grid{grid-template-columns:repeat(2,1fr);gap:.9rem}
+  .energy-device-card{padding:1.15rem .8rem;border-radius:12px}
+  .energy-device-ico{font-size:1.85rem;margin-bottom:.6rem}
+  .energy-device-name{font-size:.95rem;margin-bottom:.35rem;line-height:1.18}
+  .energy-device-desc{font-size:.78rem;line-height:1.38}
+  .energy-steps{grid-template-columns:repeat(3,1fr);gap:1rem}
+  .energy-step{padding:1rem .7rem;border-radius:12px}
+  .energy-step-ico{width:48px;height:48px;border-radius:12px;font-size:1.5rem;margin:0 auto .7rem}
+  .energy-step-num{font-size:.72rem;margin-bottom:.4rem}
+  .energy-step-title{font-size:.92rem;margin-bottom:.35rem;line-height:1.18}
+  .energy-step-desc{font-size:.76rem;line-height:1.35}
+  .energy-step-line{display:none}
   .energy-why-sec{margin:1.5rem 1.2rem 3rem;padding:2rem}
-  .energy-cta-card{padding:2rem 1.5rem}
-  .energy-cta-btns{flex-direction:column;gap:.6rem}
-  .energy-cta-btn-p,.energy-cta-btn-s{width:100%;justify-content:center}
-  .energy-cta-info{gap:1rem}
+  .energy-cta-card{padding:1.2rem 1.1rem;border-radius:16px}
+  .energy-cta-badge{margin-bottom:.6rem;padding:.22rem .7rem;font-size:.62rem}
+  .energy-cta-title{font-size:1.25rem;margin-bottom:.5rem;line-height:1.25}
+  .energy-cta-desc{font-size:.82rem;margin-bottom:1rem;line-height:1.45;max-width:100%}
+  .energy-cta-btns{flex-direction:column;gap:.5rem;margin-bottom:1rem}
+  .energy-cta-btn-p,.energy-cta-btn-s{width:100%;justify-content:center;padding:.7rem 1.3rem;font-size:.84rem}
+  .energy-cta-info{gap:.8rem;flex-direction:column;align-items:center}
+  .energy-cta-info-item{font-size:.76rem}
 }
 @media (max-width:480px){
   .energy-hero{padding:68px 1rem 0}
@@ -169,8 +184,25 @@
   .energy-service-card{padding:1.5rem}
   .energy-pricing-card{padding:1.5rem}
   .energy-pricing-amount{font-size:1.8rem}
+  .energy-devices-grid{grid-template-columns:repeat(2,1fr);gap:.7rem}
+  .energy-device-card{padding:.95rem .65rem;border-radius:10px}
+  .energy-device-ico{font-size:1.6rem;margin-bottom:.5rem}
+  .energy-device-name{font-size:.84rem;margin-bottom:.3rem;line-height:1.14}
+  .energy-device-desc{font-size:.70rem;line-height:1.30}
+  .energy-steps{grid-template-columns:repeat(3,1fr);gap:.7rem}
+  .energy-step{padding:.75rem .5rem;border-radius:10px}
+  .energy-step-ico{width:40px;height:40px;border-radius:10px;font-size:1.28rem;margin:0 auto .55rem}
+  .energy-step-num{font-size:.66rem;margin-bottom:.32rem}
+  .energy-step-title{font-size:.80rem;margin-bottom:.28rem;line-height:1.14}
+  .energy-step-desc{font-size:.67rem;line-height:1.28}
   .energy-why-pt{padding:.8rem}
   .energy-why-card{padding:1.5rem}
-  .energy-cta-card{padding:1.5rem 1rem}
-  .energy-cta-desc{font-size:1rem}
+  .energy-cta-card{padding:1rem .85rem;border-radius:14px}
+  .energy-cta-badge{margin-bottom:.5rem;padding:.18rem .65rem;font-size:.58rem}
+  .energy-cta-title{font-size:1.12rem;margin-bottom:.45rem;line-height:1.2}
+  .energy-cta-desc{font-size:.78rem;margin-bottom:.9rem;line-height:1.4}
+  .energy-cta-btns{flex-direction:column;gap:.4rem;margin-bottom:.85rem}
+  .energy-cta-btn-p,.energy-cta-btn-s{width:100%;justify-content:center;padding:.62rem 1.2rem;font-size:.8rem;border-radius:8px}
+  .energy-cta-info{gap:.65rem;flex-direction:column;align-items:center}
+  .energy-cta-info-item{font-size:.72rem;gap:.35rem}
 }
