@@ -1,0 +1,174 @@
+/* ═══════════════════════════════════════════════
+   UNIDEV LOAN STYLES
+   ═══════════════════════════════════════════════ */
+
+/* HERO */
+.loan-hero{min-height:auto;padding:82px 3.5rem 1.2rem;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:2.5rem;position:relative;overflow:hidden;background:var(--wh);isolation:isolate}
+.loan-hero-bg{position:absolute;top:0;left:0;right:0;height:100vh;z-index:0;pointer-events:none;background:linear-gradient(135deg,#f0fdf4 0%,#dcfce7 50%,#bbf7d0 100%);clip-path:polygon(58% 0,100% 0,100% 100%,38% 100%)}
+.loan-hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,101,52,.02),transparent 60%)}
+.loan-orb{position:absolute;border-radius:50%;filter:blur(100px);opacity:.6;pointer-events:none;z-index:0;animation:orbFloat 8s ease-in-out infinite}
+.loan-orb:nth-child(1){width:420px;height:420px;top:-15%;right:-8%;background:radial-gradient(circle,rgba(22,101,52,.18),transparent 70%);animation-delay:0s}
+.loan-orb:nth-child(2){width:320px;height:320px;bottom:-10%;left:-5%;background:radial-gradient(circle,rgba(34,197,94,.12),transparent 70%);animation-delay:-3s;animation-duration:10s}
+.loan-orb:nth-child(3){width:260px;height:260px;top:30%;left:45%;background:radial-gradient(circle,rgba(16,185,129,.1),transparent 70%);animation-delay:-5s;animation-duration:12s}
+.loan-hero-grid{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.06;background-image:linear-gradient(rgba(22,101,52,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(22,101,52,.12) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,black 30%,transparent 70%)}
+
+.loan-hero-content{position:relative;z-index:2;padding:.8rem 0}
+.loan-hero-eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#16a34a;margin-bottom:1.6rem;padding:.38rem .95rem;background:rgba(22,163,74,.08);border:1px solid rgba(22,163,74,.2);border-radius:100px}
+.loan-dot{width:7px;height:7px;background:#16a34a;border-radius:50%;box-shadow:0 0 8px rgba(22,163,74,.4);animation:pd 2.2s ease-in-out infinite}
+.loan-hero-title{font-family:'Manrope',sans-serif;font-size:var(--fs-h1);font-weight:800;line-height:var(--lh-heading);letter-spacing:-.03em;color:var(--ink);margin-bottom:.9rem}
+.loan-hero-title .loan-gt{background:linear-gradient(90deg,#16a34a 0%,#22c55e 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:800;font-style:normal}
+.loan-hero-sub{font-size:clamp(1.05rem,1.55vw,1.22rem);font-weight:500;line-height:1.52;color:var(--ink2);max-width:48ch;margin-bottom:.75rem;padding-left:1rem;border-left:3px solid #16a34a}
+.loan-hero-desc{font-size:clamp(.9rem,1.25vw,1.05rem);font-weight:400;line-height:1.72;color:var(--ink3);max-width:50ch;margin-bottom:2rem}
+
+.loan-hero-cta{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:2rem}
+.loan-btn-p{display:inline-flex;align-items:center;gap:.45rem;font-family:'Manrope',sans-serif;font-size:.88rem;font-weight:700;color:white;background:#16a34a;border:none;padding:.82rem 1.65rem;border-radius:10px;cursor:pointer;text-decoration:none;transition:transform .18s,box-shadow .18s;box-shadow:0 4px 16px rgba(22,163,74,.25)}
+.loan-btn-p:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(22,163,74,.35)}
+
+.loan-hero-stats{display:flex;gap:1.5rem;align-items:center}
+.loan-stat{display:flex;flex-direction:column;gap:.14rem}
+.loan-stat-num{font-family:'Manrope',sans-serif;font-size:1.32rem;font-weight:800;color:var(--ink)}
+.loan-stat-label{font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink4)}
+.loan-stat-div{width:1px;background:var(--bdr)}
+
+.loan-hero-visual{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;padding:.6rem 0;max-width:420px;margin:0 auto}
+.loan-hero-img-wrap{position:relative;width:100%;max-width:420px}
+.loan-hero-img{width:100%;height:auto;border-radius:16px;object-fit:cover;box-shadow:var(--s4)}
+.loan-hero-float-card{position:absolute;bottom:-12px;right:-20px;background:white;padding:.7rem 1rem;border-radius:12px;display:flex;align-items:center;gap:.55rem;box-shadow:var(--s4);z-index:3;animation:floatCard 3s ease-in-out infinite}
+.loan-hero-float-ico{font-size:1.5rem}
+.loan-hero-float-title{font-family:'Manrope',sans-serif;font-size:.78rem;font-weight:700;color:var(--ink)}
+.loan-hero-float-sub{font-size:.68rem;color:var(--ink4)}
+
+/* SECTIONS */
+.loan-sec{padding:2.8rem 3.5rem;position:relative}
+.loan-sec-alt{background:var(--off)}
+.loan-sec-dark{background:#14532d;color:white}
+.loan-sec-cta{background:linear-gradient(135deg,#f0fdf4 0%,#dcfce7 100%)}
+
+/* SECTION HEADERS */
+.loan-ey{display:inline-flex;align-items:center;gap:.5rem;font-size:.66rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:#16a34a;margin-bottom:.85rem;padding:.35rem .95rem;background:rgba(22,163,74,.08);border:1px solid rgba(22,163,74,.18);border-radius:100px}
+.loan-ey-dark{display:inline-flex;align-items:center;gap:.5rem;font-size:.66rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:#4ade80;margin-bottom:.85rem;padding:.35rem .95rem;background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.25);border-radius:100px}
+.loan-st{font-family:'Manrope',sans-serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;line-height:1.18;letter-spacing:-.02em;color:var(--ink);margin-bottom:.7rem}
+.loan-st-i{color:#16a34a}
+.loan-st-i-dark{color:#4ade80}
+.loan-sb{font-family:'Manrope',sans-serif;font-size:clamp(.92rem,1.3vw,1.08rem);font-weight:400;line-height:1.62;color:var(--ink3);max-width:58ch;margin-bottom:2rem}
+.loan-sb-dark{font-family:'Manrope',sans-serif;font-size:clamp(.92rem,1.3vw,1.08rem);font-weight:400;line-height:1.62;color:rgba(255,255,255,.65);max-width:58ch;margin-bottom:2rem}
+
+/* FEATURES GRID */
+.loan-features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.loan-feature-card{background:white;border:1px solid var(--bdr);border-radius:14px;padding:1.8rem;transition:all .28s cubic-bezier(.4,0,.2,1);position:relative;overflow:hidden}
+.loan-feature-card:hover{transform:translateY(-5px);box-shadow:var(--s4);border-color:#16a34a}
+.loan-feature-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--cc,#16a34a);opacity:0;transition:opacity .2s}
+.loan-feature-card:hover::before{opacity:1}
+
+.loan-stop{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1rem}
+.loan-sico{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;background:rgba(22,163,74,.08)}
+.loan-sbr{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--ink4);margin-bottom:.3rem}
+.loan-snm{font-family:'Manrope',sans-serif;font-size:1.15rem;font-weight:700;color:var(--ink);margin-bottom:.6rem}
+.loan-sdesc{font-size:.92rem;color:var(--ink3);line-height:1.55}
+
+.stat-pill{display:inline-block;padding:.25rem .65rem;border-radius:6px;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.stat-pill.soon{background:#fef3c7;color:#92400e}
+
+/* HOW IT WORKS */
+.loan-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;max-width:960px;margin:0 auto;position:relative}
+.loan-step{text-align:center;padding:1.4rem 1rem;position:relative}
+.loan-step-num{width:42px;height:42px;display:flex;align-items:center;justify-content:center;border-radius:50%;color:white;font-size:.98rem;font-weight:800;margin:0 auto .9rem;font-family:'Manrope',sans-serif;background:#16a34a}
+.loan-step-ico{font-size:2.3rem;margin-bottom:.58rem}
+.loan-step-title{font-family:'Manrope',sans-serif;font-size:1.2rem;font-weight:700;color:var(--ink);margin-bottom:.38rem}
+.loan-step-desc{font-family:'Manrope',sans-serif;font-size:1rem;line-height:1.58;color:var(--ink3)}
+.loan-step-line{position:absolute;top:56px;right:-1rem;width:2rem;height:2px;background:var(--bdr)}
+
+/* WHY CHOOSE US */
+.loan-why-wrap{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.loan-why-left{padding-right:1rem}
+.loan-why-right{position:relative}
+.loan-why-points{display:flex;flex-direction:column;gap:1rem}
+.loan-why-pt{display:flex;gap:1rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1.2rem;transition:all .2s}
+.loan-why-pt:hover{background:rgba(255,255,255,.08);border-color:rgba(74,222,128,.2)}
+.loan-why-pt-ico{font-size:1.6rem;flex-shrink:0}
+.loan-why-pt-title{font-family:'Manrope',sans-serif;font-size:1.05rem;font-weight:700;color:white;margin-bottom:.3rem}
+.loan-why-pt-desc{font-size:.9rem;color:rgba(255,255,255,.6);line-height:1.5}
+.loan-why-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:2rem}
+.loan-why-card-icon{font-size:2.5rem;margin-bottom:1rem}
+.loan-why-card-title{font-family:'Manrope',sans-serif;font-size:1.3rem;font-weight:700;color:white;margin-bottom:.8rem}
+.loan-why-card-desc{font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.6;margin-bottom:1.5rem}
+.loan-why-card-stats{display:flex;gap:1.5rem}
+.loan-why-cs{display:flex;flex-direction:column;gap:.2rem}
+.loan-why-cs-num{font-family:'Manrope',sans-serif;font-size:1.4rem;font-weight:800;color:#4ade80}
+.loan-why-cs-label{font-size:.75rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.04em;font-weight:600}
+
+/* FAQ */
+.loan-faq-grid{display:flex;flex-direction:column;gap:1rem;max-width:800px;margin:0 auto}
+.loan-faq-item{background:white;border:1px solid var(--bdr);border-radius:12px;overflow:hidden;box-shadow:var(--s1);transition:all .2s}
+.loan-faq-item:hover{box-shadow:var(--s2)}
+.loan-faq-item summary{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 1.5rem;font-family:'Manrope',sans-serif;font-size:1rem;font-weight:600;color:var(--ink);cursor:pointer;list-style:none;gap:1rem}
+.loan-faq-item summary::-webkit-details-marker{display:none}
+.loan-faq-item summary svg{flex-shrink:0;transition:transform .2s;color:#16a34a}
+.loan-faq-item[open] summary svg{transform:rotate(180deg)}
+.loan-faq-item p{padding:0 1.5rem 1.2rem;font-size:.95rem;color:var(--ink3);line-height:1.6}
+
+/* CTA */
+.loan-cta-card{background:linear-gradient(135deg,#f0fdf4 0%,#dcfce7 100%);border:1px solid rgba(22,163,74,.2);border-radius:24px;padding:3.5rem;text-align:center;max-width:800px;margin:0 auto}
+.loan-cta-badge{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#16a34a;background:rgba(22,163,74,.1);padding:.35rem 1rem;border-radius:100px;margin-bottom:1.2rem;border:1px solid rgba(22,163,74,.2)}
+.loan-cta-title{font-family:'Manrope',sans-serif;font-size:var(--fs-h2);font-weight:800;color:var(--ink);margin-bottom:1rem;line-height:var(--lh-heading)}
+.loan-cta-desc{font-size:1.1rem;color:var(--ink3);line-height:1.6;margin-bottom:2rem;max-width:520px;margin-left:auto;margin-right:auto}
+.loan-cta-btns{display:flex;gap:1rem;justify-content:center;margin-bottom:2rem;flex-wrap:wrap}
+.loan-cta-btn-p{display:inline-flex;align-items:center;gap:.6rem;background:#16a34a;color:white;font-size:1rem;font-weight:700;padding:1rem 2rem;border-radius:12px;text-decoration:none;transition:all .2s;box-shadow:0 4px 16px rgba(22,163,74,.3)}
+.loan-cta-btn-p:hover{background:#15803d;transform:translateY(-2px);box-shadow:0 8px 24px rgba(22,163,74,.35)}
+.loan-cta-btn-s{display:inline-flex;align-items:center;gap:.6rem;background:white;color:var(--ink2);font-size:1rem;font-weight:700;padding:1rem 2rem;border-radius:12px;text-decoration:none;border:1px solid var(--bdr);transition:all .2s}
+.loan-cta-btn-s:hover{border-color:#16a34a;color:#16a34a;transform:translateY(-2px)}
+.loan-cta-info{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap}
+.loan-cta-info-item{display:flex;align-items:center;gap:.5rem;font-size:.9rem;color:var(--ink3)}
+.loan-cta-info-item svg{color:#16a34a}
+
+/* RESPONSIVE */
+@media (max-width:1024px){
+  .loan-hero{padding:82px 2rem 1.2rem;gap:1.5rem;min-height:auto}
+  .loan-hero-content{padding:.6rem 0}
+  .loan-hero-visual{flex:0 0 45%}
+  .loan-hero-sub{font-size:1.05rem}
+  .loan-hero-desc{font-size:1.05rem;margin-bottom:1.5rem}
+  .loan-hero-stats{gap:1.2rem}
+  .loan-sec{padding:2.8rem 2rem}
+  .loan-features-grid{grid-template-columns:repeat(2,1fr);gap:1.2rem}
+  .loan-steps{grid-template-columns:1fr;gap:1.5rem}
+  .loan-step-line{display:none}
+  .loan-why-wrap{grid-template-columns:1fr;gap:2rem}
+  .loan-why-left{padding-right:0}
+  .loan-why-card{max-width:100%}
+  .loan-cta-card{padding:2.5rem 2rem}
+}
+
+@media (max-width:768px){
+  .loan-hero{padding:76px 1.5rem 1.2rem;gap:0;grid-template-columns:1fr;min-height:auto}
+  .loan-hero-bg{clip-path:polygon(0 55%,100% 45%,100% 100%,0 100%);height:60%}
+  .loan-hero-content{padding:1.5rem 0 0;text-align:center;max-width:100%;display:flex;flex-direction:column;align-items:center}
+  .loan-hero-sub,.loan-hero-desc{max-width:100%}
+  .loan-hero-visual{padding:1rem 0 2rem}
+  .loan-hero-stats{justify-content:center}
+  .loan-sec{padding:2.5rem 1.2rem}
+  .loan-features-grid{grid-template-columns:1fr}
+  .loan-why-wrap{grid-template-columns:1fr;gap:2rem}
+  .loan-cta-card{padding:2rem 1.5rem}
+  .loan-cta-btns{flex-direction:column;gap:.6rem}
+  .loan-cta-btn-p,.loan-cta-btn-s{width:100%;justify-content:center}
+  .loan-cta-info{gap:1rem}
+}
+
+@media (max-width:480px){
+  .loan-hero{padding:68px 1rem 1.2rem}
+  .loan-hero-eyebrow{font-size:.66rem;padding:.3rem .7rem;margin-bottom:1rem}
+  .loan-hero-sub{font-size:1rem}
+  .loan-hero-desc{font-size:.92rem;margin-bottom:1rem}
+  .loan-hero-cta{flex-direction:column;margin-bottom:1.5rem}
+  .loan-btn-p,.loan-btn-s{justify-content:center;text-align:center;font-size:.9rem;padding:.7rem 1.4rem}
+  .loan-hero-stats{gap:1rem;padding-top:1.2rem}
+  .loan-stat-num{font-size:1.15rem}
+  .loan-stat-label{font-size:.65rem}
+  .loan-sec{padding:2rem 1rem}
+  .loan-feature-card{padding:1.5rem}
+  .loan-why-pt{padding:.8rem}
+  .loan-why-card{padding:1.5rem}
+  .loan-cta-card{padding:1.5rem 1rem}
+  .loan-cta-desc{font-size:1rem}
+}
