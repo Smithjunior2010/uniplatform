@@ -81,7 +81,7 @@ function Footer() {
 function AppContent() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { t, lang, toggleLang } = useLang();
-  const { isAdmin } = useAdmin();
+  const { isAdmin, user, logout } = useAdmin();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -118,8 +118,16 @@ function AppContent() {
             </li>
           )}
           <li className="nm-cta">
-            {isAdmin ? (
-              <span className="ncta connected-status">✅ Connecté</span>
+            {user ? (
+              <button
+                className="ncta disconnect-btn"
+                onClick={async () => {
+                  await logout();
+                  setMenuOpen(false);
+                }}
+              >
+                🔴 Déconnexion
+              </button>
             ) : (
               <Link to="/login" className="ncta" onClick={() => setMenuOpen(false)}>{t.nav.login}</Link>
             )}
@@ -129,12 +137,19 @@ function AppContent() {
           <span className={`nlang ${lang === 'fr' ? 'active' : ''}`} onClick={() => toggleLang('fr')}>FR</span>
           <span className="nlang-sep">|</span>
           <span className={`nlang ${lang === 'en' ? 'active' : ''}`} onClick={() => toggleLang('en')}>EN</span>
-          {isAdmin ? (
+          {user ? (
             <>
-              <Link to="/dashboard" className="ncta ndesk dashboard-btn">
-                📊 Dashboard
-              </Link>
-              <span className="ncta ndesk connected-status">✅ Connecté</span>
+              {isAdmin && (
+                <Link to="/dashboard" className="ncta ndesk dashboard-btn">
+                  📊 Dashboard
+                </Link>
+              )}
+              <button
+                className="ncta ndesk disconnect-btn"
+                onClick={logout}
+              >
+                🔴 Déconnexion
+              </button>
             </>
           ) : (
             <Link to="/login" className="ncta ndesk">{t.nav.login}</Link>
