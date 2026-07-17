@@ -40,7 +40,7 @@
 
 /* SECTIONS */
 .shop-sec{padding:2.8rem 3.5rem;position:relative}
-.shop-sec-alt{background:var(--off)}
+.shop-sec-alt{background:var(--off);margin-top:92px}
 .shop-sec-dark{background:#1a2332;color:white}
 .shop-sec-cta{background:linear-gradient(135deg,#f8fafc 0%,#f1f5f9 100%)}
 
@@ -299,6 +299,7 @@
   .shop-hero-visual{padding:.15rem 0 0}
   .shop-hero-stats{justify-content:center;padding-top:.6rem;margin-bottom:0}
   .shop-sec{padding:1.5rem 1.2rem}
+  .shop-sec-alt{margin-top:78px}
   .shop-ey{margin-bottom:.5rem;font-size:.62rem;padding:.22rem .7rem}
   .shop-st{margin-bottom:.6rem;font-size:1.4rem}
   .shop-sb{margin-bottom:1.6rem}
@@ -370,6 +371,7 @@
 @media (max-width:480px){
   .shop-hero{padding:68px 1rem 0}
   .shop-hero-bg{height:35%}
+  .shop-sec-alt{margin-top:70px}
   .shop-hero-eyebrow{font-size:.64rem;padding:.32rem .82rem;margin-bottom:1.2rem}
   .shop-hero-title{font-size:clamp(1.6rem,7vw,2rem)}
   .shop-hero-sub{font-size:.96rem;padding-left:.82rem;border-left-width:2px}
