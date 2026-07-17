@@ -9,6 +9,7 @@ const PRODUCTS = [
     nameFr: 'Écouteurs Sans Fil Pro',
     price: 2499,
     category: 'electronics',
+    audience: ['man', 'woman', 'students'],
     image: 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400&h=400&fit=crop',
     badge: 'bestseller',
     rating: 4.8,
@@ -20,6 +21,7 @@ const PRODUCTS = [
     nameFr: 'Montre Connectée Série 5',
     price: 4999,
     category: 'electronics',
+    audience: ['man', 'woman', 'students'],
     image: 'https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=400&h=400&fit=crop',
     badge: 'new',
     rating: 4.6,
@@ -31,6 +33,7 @@ const PRODUCTS = [
     nameFr: 'Enceinte Bluetooth Portable',
     price: 1899,
     category: 'electronics',
+    audience: ['man', 'woman', 'kids', 'students'],
     image: 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop',
     badge: null,
     rating: 4.5,
@@ -42,6 +45,7 @@ const PRODUCTS = [
     nameFr: 'Hub USB-C 7-en-1',
     price: 1599,
     category: 'electronics',
+    audience: ['man', 'woman', 'students'],
     image: 'https://images.unsplash.com/photo-1625766763788-95dcce9bf5ac?w=400&h=400&fit=crop',
     badge: null,
     rating: 4.3,
@@ -53,6 +57,7 @@ const PRODUCTS = [
     nameFr: 'Lampe de Bureau LED',
     price: 1299,
     category: 'home',
+    audience: ['man', 'woman', 'students'],
     image: 'https://images.unsplash.com/photo-1534073828943-f801091a7d58?w=400&h=400&fit=crop',
     badge: 'sale',
     rating: 4.7,
@@ -64,6 +69,7 @@ const PRODUCTS = [
     nameFr: 'Gourde en Acier Inoxydable',
     price: 899,
     category: 'home',
+    audience: ['man', 'woman', 'kids', 'students'],
     image: 'https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=400&h=400&fit=crop',
     badge: null,
     rating: 4.4,
@@ -71,10 +77,11 @@ const PRODUCTS = [
   },
   {
     id: 7,
-    name: 'Cotton T-Shirt (Pack of 3)',
-    nameFr: 'T-Shirt en Coton (Lot de 3)',
+    name: "Men's Cotton T-Shirt (Pack of 3)",
+    nameFr: 'T-Shirt Homme en Coton (Lot de 3)',
     price: 1999,
     category: 'fashion',
+    audience: ['man'],
     image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop',
     badge: 'bestseller',
     rating: 4.6,
@@ -82,10 +89,11 @@ const PRODUCTS = [
   },
   {
     id: 8,
-    name: 'Running Shoes',
-    nameFr: 'Chaussures de Course',
+    name: "Women's Running Shoes",
+    nameFr: "Chaussures de Course Femme",
     price: 3999,
     category: 'fashion',
+    audience: ['woman'],
     image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop',
     badge: 'new',
     rating: 4.7,
@@ -93,10 +101,11 @@ const PRODUCTS = [
   },
   {
     id: 9,
-    name: 'Leather Wallet',
-    nameFr: 'Portefeuille en Cuir',
+    name: "Men's Leather Wallet",
+    nameFr: 'Portefeuille en Cuir Homme',
     price: 1499,
     category: 'fashion',
+    audience: ['man'],
     image: 'https://images.unsplash.com/photo-1627123424574-724758594e93?w=400&h=400&fit=crop',
     badge: null,
     rating: 4.5,
@@ -104,10 +113,11 @@ const PRODUCTS = [
   },
   {
     id: 10,
-    name: 'Phone Case (iPhone/Samsung)',
-    nameFr: 'Coque de Téléphone (iPhone/Samsung)',
+    name: 'Kids Phone Case (iPhone/Samsung)',
+    nameFr: 'Coque Enfant (iPhone/Samsung)',
     price: 599,
     category: 'accessories',
+    audience: ['kids'],
     image: 'https://images.unsplash.com/photo-1603313011101-320f26a4f6f6?w=400&h=400&fit=crop',
     badge: 'sale',
     rating: 4.2,
@@ -115,10 +125,11 @@ const PRODUCTS = [
   },
   {
     id: 11,
-    name: 'Power Bank 20000mAh',
-    nameFr: 'Batterie Externe 20000mAh',
+    name: 'Student Power Bank 20000mAh',
+    nameFr: 'Batterie Externe Étudiant 20000mAh',
     price: 2199,
     category: 'electronics',
+    audience: ['students'],
     image: 'https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=400&h=400&fit=crop',
     badge: 'bestseller',
     rating: 4.8,
@@ -126,10 +137,11 @@ const PRODUCTS = [
   },
   {
     id: 12,
-    name: 'Sunglasses UV400',
-    nameFr: 'Lunettes de Soleil UV400',
+    name: "Women's Sunglasses UV400",
+    nameFr: "Lunettes de Soleil Femme UV400",
     price: 1299,
     category: 'fashion',
+    audience: ['woman'],
     image: 'https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=400&fit=crop',
     badge: null,
     rating: 4.3,
@@ -148,6 +160,10 @@ export default function Shop() {
 
   const categories = [
     { key: 'all', label: lang === 'fr' ? 'Tout' : 'All', labelFr: 'Tout' },
+    { key: 'man', label: 'Man', labelFr: 'Homme' },
+    { key: 'woman', label: 'Woman', labelFr: 'Femme' },
+    { key: 'kids', label: 'Kids', labelFr: 'Enfants' },
+    { key: 'students', label: 'Students', labelFr: 'Étudiants' },
     { key: 'electronics', label: 'Electronics', labelFr: 'Électronique' },
     { key: 'fashion', label: 'Fashion', labelFr: 'Mode' },
     { key: 'home', label: 'Home', labelFr: 'Maison' },
@@ -155,7 +171,13 @@ export default function Shop() {
   ];
 
   const filtered = PRODUCTS
-    .filter(p => activeCategory === 'all' || p.category === activeCategory)
+    .filter(p => {
+      if (activeCategory === 'all') return true;
+      if (['man', 'woman', 'kids', 'students'].includes(activeCategory)) {
+        return p.audience && p.audience.includes(activeCategory);
+      }
+      return p.category === activeCategory;
+    })
     .filter(p => {
       if (!searchQuery.trim()) return true;
       const query = searchQuery.toLowerCase();
@@ -227,91 +249,6 @@ export default function Shop() {
 
   return (
     <>
-      {/* ══════════════════════════════════════
-          HERO
-          ══════════════════════════════════════ */}
-      <section className="shop-hero" id="shop-home">
-        <div className="shop-hero-bg">
-          <div className="shop-orb"></div>
-          <div className="shop-orb"></div>
-          <div className="shop-orb"></div>
-        </div>
-        <div className="shop-hero-grid"></div>
-
-        <div className="shop-hero-content">
-          <div className="shop-hero-eyebrow">
-            <span className="shop-dot"></span>
-            {t.shop.hero.eyebrow}
-          </div>
-          <h1 className="shop-hero-title">
-            {t.shop.hero.title1}<br />
-            <span className="shop-gt">{t.shop.hero.title2}</span>
-          </h1>
-          <p className="shop-hero-sub">{t.shop.hero.subtitle}</p>
-          <p className="shop-hero-desc">{t.shop.hero.desc}</p>
-          <div className="shop-hero-cta">
-            <a href="#shop-products" className="shop-btn-p">
-              {t.shop.hero.cta1}
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-          <div className="shop-hero-stats">
-            <div className="shop-stat">
-              <span className="shop-stat-num">{PRODUCTS.length}+</span>
-              <span className="shop-stat-label">{t.shop.hero.stat1}</span>
-            </div>
-            <div className="shop-stat-div"></div>
-            <div className="shop-stat">
-              <span className="shop-stat-num">Amazon</span>
-              <span className="shop-stat-label">{t.shop.hero.stat2}</span>
-            </div>
-            <div className="shop-stat-div"></div>
-            <div className="shop-stat">
-              <span className="shop-stat-num">7/7</span>
-              <span className="shop-stat-label">{t.shop.hero.stat3}</span>
-            </div>
-          </div>
-        </div>
-
-        <div className="shop-hero-visual">
-          <div className="shop-hero-img-wrap">
-            <img
-              src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=600&h=500&fit=crop"
-              alt="Unidev Shop"
-              className="shop-hero-img"
-            />
-            <div className="shop-hero-float-card">
-              <span className="shop-hero-float-ico">🛍️</span>
-              <div>
-                <div className="shop-hero-float-title">{lang === 'fr' ? 'Livraison locale' : 'Local Delivery'}</div>
-                <div className="shop-hero-float-sub">{lang === 'fr' ? 'Ouanaminthe & Nord-Est' : 'Ouanaminthe & Nord-Est'}</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════
-          HOW IT WORKS
-          ══════════════════════════════════════ */}
-      <section className="shop-sec" id="shop-how">
-        <div className="shop-ey">{t.shop.how.eyebrow}</div>
-        <h2 className="shop-st">{t.shop.how.title1} <span className="shop-st-i">{t.shop.how.title2}</span></h2>
-        <p className="shop-sb">{t.shop.how.subtitle}</p>
-
-        <div className="shop-steps">
-          {t.shop.how.steps.map((step, i) => (
-            <div key={i} className="shop-step">
-              <div className="shop-step-num" style={{background: step.color}}>{i + 1}</div>
-              <div className="shop-step-ico">{step.icon}</div>
-              <div className="shop-step-title">{step.title}</div>
-              <p className="shop-step-desc">{step.desc}</p>
-              {i < t.shop.how.steps.length - 1 && <div className="shop-step-line"></div>}
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* ══════════════════════════════════════
           PRODUCTS
           ══════════════════════════════════════ */}
