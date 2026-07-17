@@ -393,51 +393,6 @@ export default function Shop() {
       )}
 
       {/* ══════════════════════════════════════
-          WHY CHOOSE US
-          ══════════════════════════════════════ */}
-      <section className="shop-sec shop-sec-dark" id="shop-why">
-        <div className="shop-why-wrap">
-          <div className="shop-why-left">
-            <div className="shop-ey-dark">{t.shop.why.eyebrow}</div>
-            <h2 className="shop-st-dark">{t.shop.why.title1} <span className="shop-st-i-dark">{t.shop.why.title2}</span></h2>
-            <p className="shop-sb-dark">{t.shop.why.subtitle}</p>
-            <div className="shop-why-points">
-              {t.shop.why.points.map((pt, i) => (
-                <div key={i} className="shop-why-pt">
-                  <div className="shop-why-pt-ico">{pt.icon}</div>
-                  <div>
-                    <div className="shop-why-pt-title">{pt.title}</div>
-                    <div className="shop-why-pt-desc">{pt.desc}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="shop-why-right">
-            <div className="shop-why-card">
-              <div className="shop-why-card-icon">🛍️</div>
-              <div className="shop-why-card-title">{t.shop.why.card.title}</div>
-              <p className="shop-why-card-desc">{t.shop.why.card.desc}</p>
-              <div className="shop-why-card-stats">
-                <div className="shop-why-cs">
-                  <span className="shop-why-cs-num">{t.shop.why.card.stat1}</span>
-                  <span className="shop-why-cs-label">{t.shop.why.card.stat1Label}</span>
-                </div>
-                <div className="shop-why-cs">
-                  <span className="shop-why-cs-num">{t.shop.why.card.stat2}</span>
-                  <span className="shop-why-cs-label">{t.shop.why.card.stat2Label}</span>
-                </div>
-                <div className="shop-why-cs">
-                  <span className="shop-why-cs-num">{t.shop.why.card.stat3}</span>
-                  <span className="shop-why-cs-label">{t.shop.why.card.stat3Label}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════
           CONTACT / CTA
           ══════════════════════════════════════ */}
       <section className="shop-sec shop-sec-cta" id="shop-contact">

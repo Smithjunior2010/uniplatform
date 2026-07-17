@@ -473,28 +473,7 @@
         title2: 'products.',
         subtitle: 'Popular products ready to order.',
       },
-      why: {
-        eyebrow: 'WHY UNIDEV SHOP',
-        title1: 'Why choose',
-        title2: 'us?',
-        subtitle: 'We make shopping easy for you.',
-        points: [
-          { icon: '🌍', title: 'Global access', desc: 'Access to international products.' },
-          { icon: '💰', title: 'Pay in HTG', desc: 'Local payment methods accepted.' },
-          { icon: '📦', title: 'Full service', desc: 'We handle everything for you.' },
-          { icon: '🤝', title: 'Trusted locally', desc: 'Local business you can trust.' },
-        ],
-        card: {
-          title: 'Your Local Shop',
-          desc: 'Professional import and delivery service.',
-          stat1: '5+',
-          stat1Label: 'Platforms',
-          stat2: 'HTG',
-          stat2Label: 'Local Pay',
-          stat3: 'Door',
-          stat3Label: 'Delivery',
-        },
-      },
+
       contact: {
         badge: 'START SHOPPING',
         title: 'Ready to order?',
