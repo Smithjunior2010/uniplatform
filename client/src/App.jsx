@@ -1,6 +1,7 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { LanguageProvider, useLang } from './i18n/LanguageContext';
+import { AdminProvider, useAdmin } from './contexts/AdminContext';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
@@ -80,6 +81,7 @@ function Footer() {
 function AppContent() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { t, lang, toggleLang } = useLang();
+  const { isAdmin } = useAdmin();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -108,15 +110,35 @@ function AppContent() {
           <li><Link to="/wifi" onClick={() => setMenuOpen(false)}>Unidev WiFi</Link></li>
           <li><Link to="/shipping" onClick={() => setMenuOpen(false)}>Unidev Shipping</Link></li>
           <li><Link to="/shop" onClick={() => setMenuOpen(false)}>Unidev Shop</Link></li>
+          {isAdmin && (
+            <li className="nmob">
+              <Link to="/dashboard" className="ncta dashboard-btn" onClick={() => setMenuOpen(false)}>
+                📊 Dashboard
+              </Link>
+            </li>
+          )}
           <li className="nm-cta">
-            <Link to="/login" className="ncta" onClick={() => setMenuOpen(false)}>{t.nav.login}</Link>
+            {isAdmin ? (
+              <span className="ncta connected-status">✅ Connecté</span>
+            ) : (
+              <Link to="/login" className="ncta" onClick={() => setMenuOpen(false)}>{t.nav.login}</Link>
+            )}
           </li>
         </ul>
         <div className="nend">
           <span className={`nlang ${lang === 'fr' ? 'active' : ''}`} onClick={() => toggleLang('fr')}>FR</span>
           <span className="nlang-sep">|</span>
           <span className={`nlang ${lang === 'en' ? 'active' : ''}`} onClick={() => toggleLang('en')}>EN</span>
-          <Link to="/login" className="ncta ndesk">{t.nav.login}</Link>
+          {isAdmin ? (
+            <>
+              <Link to="/dashboard" className="ncta ndesk dashboard-btn">
+                📊 Dashboard
+              </Link>
+              <span className="ncta ndesk connected-status">✅ Connecté</span>
+            </>
+          ) : (
+            <Link to="/login" className="ncta ndesk">{t.nav.login}</Link>
+          )}
           <button className={`hamburger ${menuOpen ? 'active' : ''}`} onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
             <span></span>
             <span></span>
@@ -154,7 +176,9 @@ function AppContent() {
 export default function App() {
   return (
     <LanguageProvider>
-      <AppContent />
+      <AdminProvider>
+        <AppContent />
+      </AdminProvider>
     </LanguageProvider>
   );
 }

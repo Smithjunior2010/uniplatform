@@ -2,10 +2,12 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { useLang } from '../i18n/LanguageContext';
+import { useAdmin } from '../contexts/AdminContext';
 
 export default function Login() {
   const { t } = useLang();
   const navigate = useNavigate();
+  const { loginAsAdmin, isAdmin: checkAdmin, ADMIN_CREDENTIALS, USER_CREDENTIALS } = useAdmin();
   const [mode, setMode] = useState('signin');
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState({ type: '', text: '' });
@@ -34,13 +36,32 @@ export default function Login() {
     setLoading(true);
     setMessage({ type: '', text: '' });
 
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    // Try admin login first
+    const result = await loginAsAdmin(email, password);
 
-    if (error) {
-      setMessage({ type: 'error', text: error.message });
+    if (result.success) {
+      if (result.isAdmin) {
+        setMessage({ type: 'success', text: 'Admin login successful! Redirecting to dashboard...' });
+        setTimeout(() => {
+          navigate('/dashboard');
+        }, 1000);
+      } else {
+        setMessage({ type: 'success', text: t.login.success });
+        setTimeout(() => {
+          navigate('/');
+        }, 1000);
+      }
     } else {
-      setMessage({ type: 'success', text: t.login.success });
+      // Try regular Supabase auth
+      const { error } = await supabase.auth.signInWithPassword({ email, password });
+
+      if (error) {
+        setMessage({ type: 'error', text: error.message });
+      } else {
+        setMessage({ type: 'success', text: t.login.success });
+      }
     }
+
     setLoading(false);
   };
 
@@ -108,6 +129,27 @@ export default function Login() {
           </div>
 
           <div className="auth-body">
+
+            {/* Admin Credentials Hint */}
+            {isSignIn && (
+              <div className="admin-hint" style={{
+                background: 'linear-gradient(135deg, #fef3c7 0%, #fde68a 100%)',
+                border: '1px solid #f59e0b',
+                borderRadius: '8px',
+                padding: '16px',
+                marginBottom: '16px',
+                fontSize: '13px',
+                color: '#92400e'
+              }}>
+                <strong>🔐 Demo Accounts:</strong><br /><br />
+                <strong>Admin:</strong><br />
+                Email: {ADMIN_CREDENTIALS.email}<br />
+                Password: {ADMIN_CREDENTIALS.password}<br /><br />
+                <strong>User (Non-Admin):</strong><br />
+                Email: {USER_CREDENTIALS.email}<br />
+                Password: {USER_CREDENTIALS.password}
+              </div>
+            )}
 
             {message.text && (
               <div className={`auth-message ${message.type}`}>

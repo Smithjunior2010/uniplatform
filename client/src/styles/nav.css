@@ -24,6 +24,7 @@ nav.scrolled{box-shadow:var(--s2)}
 .hamburger.active span:nth-child(2){opacity:0}
 .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
 .nm-cta{display:none}
+.nmob{display:none}
 
 /* Overlay */
 .overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:295;opacity:0;pointer-events:none;transition:opacity .4s cubic-bezier(.4,0,.2,1)}
@@ -57,6 +58,8 @@ nav.scrolled{box-shadow:var(--s2)}
   .nlang.active{color:var(--blue);font-weight:800;text-decoration:underline;text-underline-offset:2px}
   .nlang-sep{display:inline-block!important;font-size:.9rem;color:var(--bdr2);padding:0 1px}
   .ncta{display:none}
+  .nmob{display:list-item!important;opacity:0;transform:translateX(-15px);transition:opacity .3s ease,transform .3s ease}
+  .nl.open .nmob{opacity:1;transform:translateX(0);transition-delay:.4s}
   .nm-cta{display:block!important;padding-top:.5rem;opacity:0;transform:translateX(-15px);transition:opacity .3s ease,transform .3s ease}
   .nl.open .nm-cta{opacity:1;transform:translateX(0);transition-delay:.45s}
   .nm-cta a{background:var(--ink);color:white;font-size:.9rem;font-weight:700;padding:.6rem 1.5rem;border-radius:8px;text-decoration:none;display:inline-block;transition:transform .2s ease,box-shadow .2s ease}
