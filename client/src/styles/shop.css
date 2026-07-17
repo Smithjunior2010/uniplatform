@@ -179,32 +179,87 @@
 .shop-cta-info-item{display:flex;align-items:center;gap:.38rem;font-family:'Manrope',sans-serif;font-size:.84rem;font-weight:500;color:var(--ink4)}
 .shop-cta-info-ico{font-size:1rem}
 
-/* PRODUCT MODAL */
-.shop-modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:998;animation:fadeIn .25s;backdrop-filter:blur(4px)}
-.shop-modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:90%;max-width:700px;max-height:85vh;background:white;border-radius:16px;box-shadow:var(--s6);z-index:999;overflow:hidden;animation:modalSlideUp .3s ease-out;display:flex;flex-direction:column}
-.shop-modal-close{position:absolute;top:12px;right:12px;width:38px;height:38px;display:flex;align-items:center;justify-content:center;border:none;background:rgba(0,0,0,.06);border-radius:10px;cursor:pointer;z-index:10;transition:all .2s;color:var(--ink2)}
-.shop-modal-close:hover{background:rgba(0,0,0,.12);color:#ef4444}
-.shop-modal-content{display:grid;grid-template-columns:1fr 1fr;overflow-y:auto;max-height:85vh}
-.shop-modal-img-wrap{position:relative;width:100%;height:100%;min-height:300px;overflow:hidden;background:var(--off)}
-.shop-modal-img{width:100%;height:100%;object-fit:cover}
-.shop-modal-badge{top:16px;left:16px}
-.shop-modal-body{padding:1.8rem 1.5rem;display:flex;flex-direction:column;gap:.8rem}
-.shop-modal-rating{display:flex;align-items:center;gap:.4rem}
-.shop-modal-name{font-family:'Manrope',sans-serif;font-size:1.45rem;font-weight:800;color:var(--ink);line-height:1.28;margin:0}
-.shop-modal-price{display:flex;align-items:baseline;gap:.3rem;padding:.7rem 0;border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr)}
-.shop-modal-price .shop-product-amount{font-size:1.65rem}
-.shop-modal-desc{font-size:.92rem;line-height:1.62;color:var(--ink3);margin:0}
-.shop-modal-actions{display:flex;gap:.7rem;margin-top:.3rem}
-.shop-modal-add{flex:1}
-.shop-modal-whatsapp{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.4rem;padding:.72rem 1.2rem;background:#25D366;color:white;font-family:'Manrope',sans-serif;font-size:.82rem;font-weight:700;border-radius:9px;text-decoration:none;transition:all .2s;box-shadow:0 3px 13px rgba(37,211,102,.22)}
-.shop-modal-whatsapp:hover{background:#128c7e;transform:translateY(-1px);box-shadow:0 5px 18px rgba(37,211,102,.32)}
-.shop-modal-details{margin-top:.5rem;padding-top:.8rem;border-top:1px solid var(--bdr)}
-.shop-modal-details-title{font-family:'Manrope',sans-serif;font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:.5rem}
-.shop-modal-details-list{list-style:none;display:flex;flex-direction:column;gap:.35rem}
-.shop-modal-details-list li{font-size:.82rem;color:var(--ink3);line-height:1.45}
+/* PRODUCT MODAL - TAOBAO STYLE */
+.taobao-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:998;animation:taobaoFadeIn .3s ease-out;backdrop-filter:blur(6px)}
+.taobao-modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:88%;max-width:900px;height:80vh;background:white;border-radius:20px;box-shadow:0 25px 80px rgba(0,0,0,.35),0 10px 30px rgba(0,0,0,.22);z-index:999;overflow:hidden;animation:taobaoSlideUp .4s cubic-bezier(.16,1,.3,1);display:flex;flex-direction:column}
+.taobao-close{position:absolute;top:14px;right:14px;width:38px;height:38px;display:flex;align-items:center;justify-content:center;border:none;background:white;border-radius:10px;cursor:pointer;z-index:10;transition:all .25s;color:#666;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.taobao-close:hover{background:#fee2e2;color:#dc2626;transform:rotate(90deg)}
 
-/* MODAL ANIMATIONS */
-@keyframes modalSlideUp{from{opacity:0;transform:translate(-50%,-48%) scale(.96)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+.taobao-container{display:grid;grid-template-columns:42% 58%;height:100%;overflow:hidden}
+
+/* Left Side - Image Gallery */
+.taobao-left{background:linear-gradient(135deg,#f8fafc 0%,#e2e8f0 100%);padding:1.5rem;display:flex;flex-direction:column;gap:1rem;overflow-y:auto}
+.taobao-main-image{position:relative;width:100%;aspect-ratio:1/1;border-radius:14px;overflow:hidden;background:white;box-shadow:0 6px 24px rgba(0,0,0,.08);cursor:zoom-in}
+.taobao-img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
+.taobao-main-image:hover .taobao-img{transform:scale(1.05)}
+.taobao-badge{top:16px;left:16px;z-index:5}
+.taobao-thumbs{display:flex;gap:.7rem;padding:0 .4rem}
+.taobao-thumb{width:64px;height:64px;border-radius:8px;overflow:hidden;border:3px solid transparent;cursor:pointer;transition:all .2s;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.taobao-thumb.active{border-color:#2563eb;box-shadow:0 4px 14px rgba(37,99,235,.2)}
+.taobao-thumb img{width:100%;height:100%;object-fit:cover}
+
+/* Right Side - Product Info */
+.taobao-right{padding:1.6rem 2rem;overflow-y:auto;display:flex;flex-direction:column;gap:1.1rem}
+
+/* Header */
+.taobao-header{border-bottom:2px solid #f1f5f9;padding-bottom:.8rem}
+.taobao-title{font-family:'Manrope',sans-serif;font-size:1.45rem;font-weight:800;color:#0f172a;line-height:1.35;margin:0 0 .5rem 0}
+.taobao-id{font-size:.78rem;color:#94a3b8;font-weight:600;font-family:'SF Mono','Monaco',monospace;letter-spacing:.05em}
+
+/* Rating */
+.taobao-rating-box{display:flex;align-items:center;gap:.5rem;padding:.75rem 1rem;background:linear-gradient(135deg,#fefce8 0%,#fef3c7 100%);border-radius:10px;border:1px solid #fde68a}
+.taobao-stars{color:#f59e0b;font-size:1rem;letter-spacing:.05em}
+.taobao-rating-num{font-size:1.05rem;font-weight:800;color:#b45309}
+.taobao-reviews-count{font-size:.82rem;color:#92400e;font-weight:600}
+.taobao-divider{width:1px;height:22px;background:#fbbf24;margin:0 .35rem}
+
+/* Price Section */
+.taobao-price-section{background:linear-gradient(135deg,#fff7ed 0%,#ffedd5 100%);padding:1.2rem 1.3rem;border-radius:12px;border:2px solid #fed7aa}
+.taobao-price-label{font-size:.78rem;color:#c2410c;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.45rem}
+.taobao-price-row{display:flex;align-items:baseline;gap:.35rem}
+.taobao-currency{font-size:1.2rem;font-weight:700;color:#ea580c}
+.taobao-price-value{font-size:2.3rem;font-weight:900;color:#dc2626;line-height:1;font-family:'Manrope',sans-serif;text-shadow:0 2px 8px rgba(220,38,38,.1)}
+.taobao-price-unit{font-size:.88rem;color:#f97316;font-weight:600}
+.taobao-discount{margin-top:.6rem;padding:.45rem .85rem;background:#dc2626;color:white;font-size:.78rem;font-weight:700;border-radius:8px;display:inline-block;animation:taobaoPulse 2s infinite}
+
+/* Options */
+.taobao-options{padding:.8rem 0;border-bottom:1px solid #e2e8f0}
+.taobao-option-group{display:flex;align-items:center;gap:.9rem}
+.taobao-option-label{font-size:.88rem;font-weight:700;color:#334155;min-width:85px}
+.taobao-qty-selector{display:flex;align-items:center;border:2px solid #cbd5e1;border-radius:9px;overflow:hidden}
+.taobao-qty-btn{width:36px;height:36px;border:none;background:#f8fafc;color:#475569;font-size:1.25rem;font-weight:700;cursor:pointer;transition:all .2s;border-right:1px solid #e2e8f0}
+.taobao-qty-btn:last-child{border-right:none;border-left:1px solid #e2e8f0}
+.taobao-qty-btn:hover{background:#e2e8f0;color:#1e293b}
+.taobao-qty-input{width:55px;height:36px;border:none;text-align:center;font-size:.95rem;font-weight:700;color:#1e293b;background:white;outline:none}
+
+/* Description */
+.taobao-description{padding:.8rem 0}
+.taobao-description p{font-size:.92rem;line-height:1.7;color:#475569;margin:0}
+
+/* Services */
+.taobao-services{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;padding:1.2rem 0;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0}
+.taobao-service-item{display:flex;align-items:center;gap:.6rem;padding:.7rem .9rem;background:#f8fafc;border-radius:10px;border:1px solid #e2e8f0;transition:all .2s}
+.taobao-service-item:hover{background:#f1f5f9;border-color:#cbd5e1;transform:translateY(-1px)}
+.taobao-service-icon{font-size:1.3rem}
+.taobao-service-item span:last-child{font-size:.84rem;color:#475569;font-weight:600}
+
+/* Action Buttons */
+.taobao-actions{display:flex;gap:1rem;margin-top:auto;padding-top:1rem}
+.taobao-cart-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:.6rem;padding:1rem 1.5rem;background:linear-gradient(135deg,#2563eb 0%,#1d4ed8 100%);color:white;font-family:'Manrope',sans-serif;font-size:1rem;font-weight:800;border:none;border-radius:14px;cursor:pointer;transition:all .25s;box-shadow:0 8px 24px rgba(37,99,235,.3),0 4px 12px rgba(37,99,235,.2)}
+.taobao-cart-btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(37,99,235,.4),0 6px 16px rgba(37,99,235,.25);background:linear-gradient(135deg,#1d4ed8 0%,#1e40af 100%)}
+.taobao-cart-btn.added{background:linear-gradient(135deg,#10b981 0%,#059669 100%);box-shadow:0 8px 24px rgba(16,185,129,.3),0 4px 12px rgba(16,185,129,.2)}
+.taobao-buy-btn{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:1rem 1.5rem;background:linear-gradient(135deg,#25D366 0%,#128C7E 100%);color:white;font-family:'Manrope',sans-serif;font-size:1rem;font-weight:800;border-radius:14px;text-decoration:none;transition:all .25s;box-shadow:0 8px 24px rgba(37,211,102,.3),0 4px 12px rgba(37,211,102,.2)}
+.taobao-buy-btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(37,211,102,.4),0 6px 16px rgba(37,211,102,.25);background:linear-gradient(135deg,#128C7E 0%,#075E54 100%)}
+
+/* Stock Status */
+.taobao-stock{display:flex;align-items:center;gap:.6rem;padding:.8rem 1.1rem;background:linear-gradient(135deg,#ecfdf5 0%,#d1fae5 100%);border-radius:10px;border:1px solid #a7f3d0;margin-top:.8rem}
+.taobao-stock-dot{width:10px;height:10px;background:#10b981;border-radius:50%;animation:taobaoPulse 2s infinite}
+.taobao-stock{font-size:.88rem;font-weight:700;color:#047857}
+
+/* Animations */
+@keyframes taobaoFadeIn{from{opacity:0}to{opacity:1}}
+@keyframes taobaoSlideUp{from{opacity:0;transform:translate(-50%,-52%) scale(.95)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+@keyframes taobaoPulse{0%,100%{opacity:1}50%{opacity:.5}}
 
 /* RESPONSIVE */
 @media (max-width:1024px){
@@ -221,13 +276,17 @@
   .shop-why-card{max-width:100%}
   .shop-cta-card{padding:1.6rem 1.4rem}
   .shop-cart-sidebar{width:340px}
-  .shop-modal{width:92%;max-width:600px}
-  .shop-modal-content{grid-template-columns:1fr}
-  .shop-modal-img-wrap{min-height:240px;max-height:280px}
-  .shop-modal-body{padding:1.4rem 1.2rem}
-  .shop-modal-name{font-size:1.28rem}
-  .shop-modal-price .shop-product-amount{font-size:1.45rem}
-  .shop-modal-actions{flex-direction:column}
+
+  /* Taobao Modal - Tablet */
+  .taobao-modal{max-width:900px;height:90vh;border-radius:18px}
+  .taobao-container{grid-template-columns:42% 58%}
+  .taobao-left{padding:1.5rem;gap:1rem}
+  .taobao-right{padding:1.8rem 2rem;gap:1.1rem}
+  .taobao-title{font-size:1.45rem}
+  .taobao-price-value{font-size:2.3rem}
+  .taobao-services{grid-template-columns:repeat(2,1fr);gap:.6rem}
+  .taobao-actions{flex-direction:column;gap:.8rem}
+  .taobao-cart-btn,.taobao-buy-btn{padding:.9rem 1.3rem;font-size:.92rem}
 }
 
 @media (max-width:768px){
@@ -274,14 +333,36 @@
   .shop-cta-info{gap:1rem;margin-top:.85rem;flex-direction:column}
   .shop-cta-info-item{font-size:.76rem}
   .shop-cart-sidebar{width:100%}
-  .shop-modal{width:95%;max-height:90vh;border-radius:14px}
-  .shop-modal-content{grid-template-columns:1fr;max-height:90vh}
-  .shop-modal-img-wrap{min-height:200px;max-height:240px}
-  .shop-modal-body{padding:1.2rem 1rem;gap:.65rem}
-  .shop-modal-name{font-size:1.18rem;line-height:1.25}
-  .shop-modal-price .shop-product-amount{font-size:1.32rem}
-  .shop-modal-desc{font-size:.84rem;line-height:1.55}
-  .shop-modal-close{top:10px;right:10px;width:34px;height:34px}
+
+  /* Taobao Modal - Mobile - No Scroll */
+  .taobao-modal{width:96%;height:auto;max-height:none;border-radius:16px;overflow:hidden}
+  .taobao-container{grid-template-columns:1fr;display:flex;flex-direction:column;overflow:hidden}
+  .taobao-left{padding:1rem;gap:.6rem;border-bottom:2px solid #f1f5f9;flex-shrink:0}
+  .taobao-main-image{aspect-ratio:4/3;border-radius:12px}
+  .taobao-thumbs{display:none}
+  .taobao-right{padding:1rem 1.2rem;gap:.7rem;overflow:hidden;flex-shrink:0}
+  .taobao-title{font-size:1.15rem;line-height:1.25;margin-bottom:.3rem}
+  .taobao-header{padding-bottom:.4rem;margin-bottom:0}
+  .taobao-id{font-size:.75rem;margin-bottom:.2rem}
+  .taobao-rating-box{padding:.5rem .7rem;font-size:.78rem;gap:.4rem}
+  .taobao-stars{font-size:.92rem}
+  .taobao-rating-num{font-size:1rem}
+  .taobao-reviews-count{font-size:.78rem}
+  .taobao-divider{display:none}
+  .taobao-price-section{padding:.8rem 1rem;margin-top:0}
+  .taobao-price-label{font-size:.72rem;margin-bottom:.3rem}
+  .taobao-currency{font-size:1.1rem}
+  .taobao-price-value{font-size:1.75rem}
+  .taobao-price-unit{font-size:.82rem}
+  .taobao-options{padding:.6rem 0;margin-bottom:0}
+  .taobao-option-group{gap:.7rem}
+  .taobao-option-label{font-size:.82rem;min-width:80px}
+  .taobao-qty-selector{border-width:1.5px}
+  .taobao-qty-btn{width:34px;height:34px;font-size:1.15rem}
+  .taobao-qty-input{width:50px;height:34px;font-size:.9rem}
+  .taobao-actions{flex-direction:row;gap:.6rem;margin-top:.3rem;padding-top:0}
+  .taobao-cart-btn,.taobao-buy-btn{padding:.7rem .9rem;font-size:.82rem;flex:1}
+  .taobao-close{top:12px;right:12px;width:36px;height:36px}
 }
 
 @media (max-width:480px){
@@ -328,13 +409,33 @@
   .shop-cta-btn-p{font-size:.68rem;padding:.55rem 1.2rem;border-radius:7px;width:100%;justify-content:center}
   .shop-cta-info{gap:.85rem;margin-top:.72rem;flex-direction:column}
   .shop-cta-info-item{font-size:.7rem}
-  .shop-modal{width:96%;max-height:92vh;border-radius:12px}
-  .shop-modal-img-wrap{min-height:180px;max-height:220px}
-  .shop-modal-body{padding:1rem .85rem;gap:.55rem}
-  .shop-modal-name{font-size:1.08rem;line-height:1.22}
-  .shop-modal-price .shop-product-amount{font-size:1.2rem}
-  .shop-modal-desc{font-size:.78rem;line-height:1.5}
-  .shop-modal-add,.shop-modal-whatsapp{padding:.62rem 1rem;font-size:.76rem}
-  .shop-modal-details-title{font-size:.82rem}
-  .shop-modal-details-list li{font-size:.76rem}
+  .shop-cart-sidebar{width:100%}
+
+  /* Taobao Modal - Small Mobile - No Scroll */
+  .taobao-modal{width:98%;height:auto;max-height:none;border-radius:14px}
+  .taobao-container{display:flex;flex-direction:column;overflow:hidden}
+  .taobao-left{padding:.9rem;gap:.5rem;flex-shrink:0}
+  .taobao-main-image{aspect-ratio:4/3;border-radius:10px}
+  .taobao-thumbs{display:none}
+  .taobao-right{padding:.9rem 1.1rem;gap:.6rem;overflow:hidden;flex-shrink:0}
+  .taobao-title{font-size:1.08rem;line-height:1.22;margin-bottom:.25rem}
+  .taobao-header{padding-bottom:.35rem}
+  .taobao-id{font-size:.7rem;margin-bottom:.15rem}
+  .taobao-rating-box{padding:.45rem .65rem;font-size:.74rem;gap:.35rem}
+  .taobao-stars{font-size:.88rem}
+  .taobao-rating-num{font-size:.95rem}
+  .taobao-reviews-count{font-size:.74rem}
+  .taobao-price-section{padding:.7rem .9rem}
+  .taobao-price-label{font-size:.68rem;margin-bottom:.25rem}
+  .taobao-currency{font-size:1.05rem}
+  .taobao-price-value{font-size:1.6rem}
+  .taobao-price-unit{font-size:.78rem}
+  .taobao-options{padding:.5rem 0}
+  .taobao-option-label{font-size:.78rem;min-width:72px}
+  .taobao-option-group{gap:.6rem}
+  .taobao-qty-btn{width:32px;height:32px;font-size:1.1rem}
+  .taobao-qty-input{width:45px;height:32px;font-size:.85rem}
+  .taobao-actions{flex-direction:row;gap:.5rem;margin-top:.2rem}
+  .taobao-cart-btn,.taobao-buy-btn{padding:.65rem .8rem;font-size:.78rem;flex:1}
+  .taobao-close{top:10px;right:10px;width:34px;height:34px}
 }

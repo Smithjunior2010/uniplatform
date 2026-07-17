@@ -528,79 +528,105 @@ export default function Shop() {
       </section>
 
       {/* ══════════════════════════════════════
-          PRODUCT MODAL
+          TAOBAO-STYLE PRODUCT MODAL
           ══════════════════════════════════════ */}
       {selectedProduct && (
         <>
-          <div className="shop-modal-overlay" onClick={closeProductModal}></div>
-          <div className="shop-modal">
-            <button className="shop-modal-close" onClick={closeProductModal}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          <div className="taobao-overlay" onClick={closeProductModal}></div>
+          <div className="taobao-modal">
+            <button className="taobao-close" onClick={closeProductModal}>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
             </button>
 
-            <div className="shop-modal-content">
-              <div className="shop-modal-img-wrap">
-                <img src={selectedProduct.image} alt={lang === 'fr' ? selectedProduct.nameFr : selectedProduct.name} className="shop-modal-img" />
-                {selectedProduct.badge && (
-                  <span className={`shop-badge shop-modal-badge ${getBadgeClass(selectedProduct.badge)}`}>
-                    {getBadge(selectedProduct.badge)}
-                  </span>
-                )}
+            <div className="taobao-container">
+              {/* Left Side - Image Gallery */}
+              <div className="taobao-left">
+                <div className="taobao-main-image">
+                  <img src={selectedProduct.image} alt={lang === 'fr' ? selectedProduct.nameFr : selectedProduct.name} className="taobao-img" />
+                  {selectedProduct.badge && (
+                    <span className={`shop-badge taobao-badge ${getBadgeClass(selectedProduct.badge)}`}>
+                      {getBadge(selectedProduct.badge)}
+                    </span>
+                  )}
+                </div>
+                <div className="taobao-thumbs">
+                  <div className="taobao-thumb active">
+                    <img src={selectedProduct.image} alt="" />
+                  </div>
+                </div>
               </div>
 
-              <div className="shop-modal-body">
-                <div className="shop-modal-rating">
-                  <span className="shop-product-stars">{'★'.repeat(Math.floor(selectedProduct.rating))}{'☆'.repeat(5 - Math.floor(selectedProduct.rating))}</span>
-                  <span className="shop-product-reviews">({selectedProduct.reviews} {lang === 'fr' ? 'avis' : 'reviews'})</span>
+              {/* Right Side - Product Info */}
+              <div className="taobao-right">
+                {/* Product Title */}
+                <div className="taobao-header">
+                  <h1 className="taobao-title">{lang === 'fr' ? selectedProduct.nameFr : selectedProduct.name}</h1>
+                  <div className="taobao-id">SKU: UNI-{String(selectedProduct.id).padStart(5, '0')}</div>
                 </div>
 
-                <h2 className="shop-modal-name">{lang === 'fr' ? selectedProduct.nameFr : selectedProduct.name}</h2>
-
-                <div className="shop-modal-price">
-                  <span className="shop-product-currency">HTG</span>
-                  <span className="shop-product-amount">{formatPrice(selectedProduct.price)}</span>
+                {/* Rating & Reviews */}
+                <div className="taobao-rating-box">
+                  <div className="taobao-stars">
+                    {'★'.repeat(Math.floor(selectedProduct.rating))}
+                    {'☆'.repeat(5 - Math.floor(selectedProduct.rating))}
+                  </div>
+                  <span className="taobao-rating-num">{selectedProduct.rating}</span>
+                  <span className="taobao-reviews-count">({selectedProduct.reviews} {lang === 'fr' ? 'avis' : 'reviews'})</span>
+                  <div className="taobao-divider"></div>
                 </div>
 
-                <p className="shop-modal-desc">
-                  {lang === 'fr'
-                    ? `Produit de haute qualité disponible à Ouanaminthe. Livraison rapide dans le Nord-Est.`
-                    : `High quality product available in Ouanaminthe. Fast delivery in the Nord-Est region.`}
-                </p>
+                {/* Price Section */}
+                <div className="taobao-price-section">
+                  <div className="taobao-price-label">{lang === 'fr' ? 'Prix' : 'Price'}</div>
+                  <div className="taobao-price-row">
+                    <span className="taobao-currency">HTG</span>
+                    <span className="taobao-price-value">{formatPrice(selectedProduct.price)}</span>
+                    <span className="taobao-price-unit">{lang === 'fr' ? '/ unité' : '/ unit'}</span>
+                  </div>
+                  {selectedProduct.badge === 'sale' && (
+                    <div className="taobao-discount">{lang === 'fr' ? '-20% de réduction !' : '-20% discount!'}</div>
+                  )}
+                </div>
 
-                <div className="shop-modal-actions">
+                {/* Product Options */}
+                <div className="taobao-options">
+                  <div className="taobao-option-group">
+                    <label className="taobao-option-label">{lang === 'fr' ? 'Quantité' : 'Quantity'}:</label>
+                    <div className="taobao-qty-selector">
+                      <button className="taobao-qty-btn" onClick={() => {}}>-</button>
+                      <input type="number" value="1" min="1" className="taobao-qty-input" readOnly />
+                      <button className="taobao-qty-btn" onClick={() => {}}>+</button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="taobao-actions">
                   <button
-                    className={`shop-add-btn shop-modal-add ${addedId === selectedProduct.id ? 'added' : ''}`}
+                    className={`taobao-cart-btn ${addedId === selectedProduct.id ? 'added' : ''}`}
                     onClick={(e) => {
                       e.stopPropagation();
                       addToCart(selectedProduct);
                     }}
                   >
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
                     {addedId === selectedProduct.id
-                      ? (lang === 'fr' ? 'Ajouté !' : 'Added!')
+                      ? (lang === 'fr' ? '✓ Ajouté au panier' : '✓ Added to Cart')
                       : (lang === 'fr' ? 'Ajouter au panier' : 'Add to Cart')}
                   </button>
 
                   <a
-                    href="https://wa.me/50900000000?text=Bonjour, je suis intéressé par: ${encodeURIComponent(lang === 'fr' ? selectedProduct.nameFr : selectedProduct.name)}"
+                    href={`https://wa.me/50900000000?text=${encodeURIComponent((lang === 'fr' ? 'Bonjour, je souhaite commander: ' : 'Hello, I would like to order: ') + (lang === 'fr' ? selectedProduct.nameFr : selectedProduct.name))}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="shop-modal-whatsapp"
+                    className="taobao-buy-btn"
                     onClick={(e) => e.stopPropagation()}
                   >
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
-                    {lang === 'fr' ? 'Demander via WhatsApp' : 'Ask on WhatsApp'}
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    {lang === 'fr' ? 'Commander maintenant' : 'Buy Now'}
                   </a>
                 </div>
 
-                <div className="shop-modal-details">
-                  <h3 className="shop-modal-details-title">{lang === 'fr' ? 'Détails du produit' : 'Product Details'}</h3>
-                  <ul className="shop-modal-details-list">
-                    <li>{lang === 'fr' ? '✓ Livraison locale disponible' : '✓ Local delivery available'}</li>
-                    <li>{lang === 'fr' ? '✓ Paiement à la livraison' : '✓ Cash on delivery'}</li>
-                    <li>{lang === 'fr' ? '✓ Garantie satisfaction' : '✓ Satisfaction guarantee'}</li>
-                    <li>{lang === 'fr' ? '✓ Support client 7/7' : '✓ Customer support 7/7'}</li>
-                  </ul>
-                </div>
               </div>
             </div>
           </div>
