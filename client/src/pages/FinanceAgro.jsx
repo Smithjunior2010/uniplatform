@@ -122,11 +122,11 @@ export default function FinanceAgro() {
         <div className="fin-steps">
           {t.finance.how.steps.map((step, i) => (
             <div key={i} className="fin-step">
-              <div className="fin-step-ico" style={{background: step.color}}>
-                <span>{step.icon}</span>
+              <div className="fin-step-header">
+                <div className="fin-step-num" style={{background: step.color}}>{i + 1}</div>
+                <div className="fin-step-ico">{step.icon}</div>
+                <div className="fin-step-title">{step.title}</div>
               </div>
-              <div className="fin-step-num">0{i + 1}</div>
-              <div className="fin-step-title">{step.title}</div>
               <p className="fin-step-desc">{step.desc}</p>
             </div>
           ))}
