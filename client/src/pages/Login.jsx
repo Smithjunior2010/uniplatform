@@ -4,10 +4,14 @@ import { supabase } from '../lib/supabase';
 import { useLang } from '../i18n/LanguageContext';
 import { useAdmin } from '../contexts/AdminContext';
 
+// Input validation helpers
+const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+const sanitizeInput = (input) => input.trim();
+
 export default function Login() {
   const { t } = useLang();
   const navigate = useNavigate();
-  const { loginAsAdmin, isAdmin: checkAdmin, ADMIN_CREDENTIALS, USER_CREDENTIALS } = useAdmin();
+  const { loginAsAdmin } = useAdmin();
   const [mode, setMode] = useState('signin');
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState({ type: '', text: '' });
@@ -33,33 +37,36 @@ export default function Login() {
 
   const handleSignIn = async (e) => {
     e.preventDefault();
+
+    const cleanEmail = sanitizeInput(email);
+    const cleanPass = sanitizeInput(password);
+
+    // Validate inputs
+    if (!cleanEmail || !cleanPass) {
+      setMessage({ type: 'error', text: t.login.emptyFields || 'Please fill in all fields.' });
+      return;
+    }
+    if (!isValidEmail(cleanEmail)) {
+      setMessage({ type: 'error', text: t.login.invalidEmail || 'Please enter a valid email address.' });
+      return;
+    }
+    if (cleanPass.length < 6) {
+      setMessage({ type: 'error', text: t.login.passwordMinLength });
+      return;
+    }
+
     setLoading(true);
     setMessage({ type: '', text: '' });
 
-    // Try admin login first
-    const result = await loginAsAdmin(email, password);
+    const result = await loginAsAdmin(cleanEmail, cleanPass);
 
     if (result.success) {
-      if (result.isAdmin) {
-        setMessage({ type: 'success', text: 'Admin login successful! Redirecting to dashboard...' });
-        setTimeout(() => {
-          navigate('/dashboard');
-        }, 1000);
-      } else {
-        setMessage({ type: 'success', text: t.login.success });
-        setTimeout(() => {
-          navigate('/');
-        }, 1000);
-      }
+      setMessage({ type: 'success', text: result.isAdmin ? 'Admin login successful! Redirecting...' : t.login.success });
+      setTimeout(() => {
+        navigate(result.isAdmin ? '/dashboard' : '/');
+      }, 1000);
     } else {
-      // Try regular Supabase auth
-      const { error } = await supabase.auth.signInWithPassword({ email, password });
-
-      if (error) {
-        setMessage({ type: 'error', text: error.message });
-      } else {
-        setMessage({ type: 'success', text: t.login.success });
-      }
+      setMessage({ type: 'error', text: result.error });
     }
 
     setLoading(false);
@@ -67,23 +74,40 @@ export default function Login() {
 
   const handleSignUp = async (e) => {
     e.preventDefault();
-    setMessage({ type: '', text: '' });
 
-    if (password.length < 6) {
-      setMessage({ type: 'error', text: t.login.passwordMinLength });
+    const cleanEmail = sanitizeInput(email);
+    const cleanPass = sanitizeInput(password);
+    const cleanName = sanitizeInput(fullName);
+
+    // Validate inputs
+    if (!cleanEmail || !cleanPass || !cleanName) {
+      setMessage({ type: 'error', text: t.login.emptyFields || 'Please fill in all fields.' });
       return;
     }
-    if (password !== confirmPassword) {
+    if (!isValidEmail(cleanEmail)) {
+      setMessage({ type: 'error', text: t.login.invalidEmail || 'Please enter a valid email address.' });
+      return;
+    }
+    if (cleanName.length < 2) {
+      setMessage({ type: 'error', text: t.login.nameTooShort || 'Name must be at least 2 characters.' });
+      return;
+    }
+    if (cleanPass.length < 8) {
+      setMessage({ type: 'error', text: t.login.passwordMinLength || 'Password must be at least 8 characters.' });
+      return;
+    }
+    if (cleanPass !== sanitizeInput(confirmPassword)) {
       setMessage({ type: 'error', text: t.login.passwordMismatch });
       return;
     }
 
     setLoading(true);
+    setMessage({ type: '', text: '' });
 
     const { error } = await supabase.auth.signUp({
-      email,
-      password,
-      options: { data: { full_name: fullName } },
+      email: cleanEmail,
+      password: cleanPass,
+      options: { data: { full_name: cleanName } },
     });
 
     if (error) {
@@ -117,47 +141,27 @@ export default function Login() {
             <button
               className={`auth-tab ${isSignIn ? 'active' : ''}`}
               onClick={() => switchMode('signin')}
+              type="button"
             >
               {t.login.signIn}
             </button>
             <button
               className={`auth-tab ${!isSignIn ? 'active' : ''}`}
               onClick={() => switchMode('signup')}
+              type="button"
             >
               {t.login.signUp}
             </button>
           </div>
 
           <div className="auth-body">
-
-            {/* Admin Credentials Hint */}
-            {isSignIn && (
-              <div className="admin-hint" style={{
-                background: 'linear-gradient(135deg, #fef3c7 0%, #fde68a 100%)',
-                border: '1px solid #f59e0b',
-                borderRadius: '8px',
-                padding: '16px',
-                marginBottom: '16px',
-                fontSize: '13px',
-                color: '#92400e'
-              }}>
-                <strong>🔐 Demo Accounts:</strong><br /><br />
-                <strong>Admin:</strong><br />
-                Email: {ADMIN_CREDENTIALS.email}<br />
-                Password: {ADMIN_CREDENTIALS.password}<br /><br />
-                <strong>User (Non-Admin):</strong><br />
-                Email: {USER_CREDENTIALS.email}<br />
-                Password: {USER_CREDENTIALS.password}
-              </div>
-            )}
-
             {message.text && (
-              <div className={`auth-message ${message.type}`}>
+              <div className={`auth-message ${message.type}`} role="alert">
                 {message.text}
               </div>
             )}
 
-            <form onSubmit={isSignIn ? handleSignIn : handleSignUp} className="auth-form">
+            <form onSubmit={isSignIn ? handleSignIn : handleSignUp} className="auth-form" noValidate>
               {!isSignIn && (
                 <div className="auth-field">
                   <label htmlFor="fullName">{t.login.fullName}</label>
@@ -173,6 +177,9 @@ export default function Login() {
                       onChange={(e) => setFullName(e.target.value)}
                       placeholder="John Doe"
                       required
+                      minLength={2}
+                      maxLength={100}
+                      autoComplete="name"
                     />
                   </div>
                 </div>
@@ -192,6 +199,8 @@ export default function Login() {
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="you@example.com"
                     required
+                    maxLength={255}
+                    autoComplete="email"
                   />
                 </div>
               </div>
@@ -208,14 +217,18 @@ export default function Login() {
                     type={showPassword ? 'text' : 'password'}
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    placeholder="••••••••"
+                    placeholder={isSignIn ? '\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022' : (t.login.passwordPlaceholder || 'Min. 8 characters')}
                     required
+                    minLength={isSignIn ? 6 : 8}
+                    maxLength={128}
+                    autoComplete={isSignIn ? 'current-password' : 'new-password'}
                   />
                   <button
                     type="button"
                     className="auth-pw-toggle"
                     onClick={() => setShowPassword(!showPassword)}
                     tabIndex={-1}
+                    aria-label={showPassword ? 'Hide password' : 'Show password'}
                   >
                     {showPassword ? (
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -246,8 +259,11 @@ export default function Login() {
                       type={showPassword ? 'text' : 'password'}
                       value={confirmPassword}
                       onChange={(e) => setConfirmPassword(e.target.value)}
-                      placeholder="••••••••"
+                      placeholder={'\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022'}
                       required
+                      minLength={8}
+                      maxLength={128}
+                      autoComplete="new-password"
                     />
                   </div>
                 </div>
@@ -303,7 +319,7 @@ export default function Login() {
               {isSignIn ? (
                 <p>
                   {t.login.noAccount}{' '}
-                  <button onClick={() => switchMode('signup')} className="auth-switch-link">
+                  <button type="button" onClick={() => switchMode('signup')} className="auth-switch-link">
                     {t.login.signUp}
                   </button>
                 </p>
@@ -311,7 +327,7 @@ export default function Login() {
                 <>
                   <p>
                     {t.login.hasAccount}{' '}
-                    <button onClick={() => switchMode('signin')} className="auth-switch-link">
+                    <button type="button" onClick={() => switchMode('signin')} className="auth-switch-link">
                       {t.login.signIn}
                     </button>
                   </p>
