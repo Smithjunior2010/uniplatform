@@ -472,25 +472,57 @@ export default function Shop() {
             <div className="taobao-container">
               {/* ===== LEFT – Image Gallery ===== */}
               <div className="taobao-left">
-                <div className="taobao-main-image">
-                  <img
-                    src={selectedProduct.images?.[activeImage] || selectedProduct.image}
-                    alt={lang === 'fr' ? selectedProduct.nameFr : selectedProduct.name}
-                    className="taobao-img"
-                  />
-                  {selectedProduct.badge && (
-                    <span className={`shop-badge taobao-badge ${getBadgeClass(selectedProduct.badge)}`}>
-                      {getBadge(selectedProduct.badge)}
-                    </span>
-                  )}
-                  {/* image dots for mobile */}
-                  <div className="taobao-img-dots">
-                    {(selectedProduct.images || [selectedProduct.image]).map((_, i) => (
-                      <span key={i} className={`taobao-img-dot ${i === activeImage ? 'active' : ''}`} onClick={(e) => { e.stopPropagation(); setActiveImage(i); }}></span>
-                    ))}
-                  </div>
+                <div
+                  className="taobao-main-image"
+                  onScroll={(e) => {
+                    const container = e.target;
+                    const scrollLeft = container.scrollLeft;
+                    const imageWidth = container.offsetWidth;
+                    const newIndex = Math.round(scrollLeft / imageWidth);
+                    if (newIndex !== activeImage) {
+                      setActiveImage(newIndex);
+                    }
+                  }}
+                >
+                  {(selectedProduct.images || [selectedProduct.image]).map((img, i) => (
+                    <div key={i} style={{width: '100%', height: '100%', flexShrink: 0}}>
+                      <img
+                        src={img}
+                        alt={`${lang === 'fr' ? selectedProduct.nameFr : selectedProduct.name} - ${i + 1}`}
+                        className="taobao-img"
+                        draggable={false}
+                      />
+                      {i === 0 && selectedProduct.badge && (
+                        <span className={`shop-badge taobao-badge ${getBadgeClass(selectedProduct.badge)}`}>
+                          {getBadge(selectedProduct.badge)}
+                        </span>
+                      )}
+                    </div>
+                  ))}
                 </div>
-                {/* thumbs – desktop */}
+
+                {/* Image dots indicator - mobile */}
+                <div className="taobao-img-dots">
+                  {(selectedProduct.images || [selectedProduct.image]).map((_, i) => (
+                    <span
+                      key={i}
+                      className={`taobao-img-dot ${i === activeImage ? 'active' : ''}`}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setActiveImage(i);
+                        const imageContainer = document.querySelector('.taobao-main-image');
+                        if (imageContainer) {
+                          imageContainer.scrollTo({
+                            left: i * imageContainer.offsetWidth,
+                            behavior: 'smooth'
+                          });
+                        }
+                      }}
+                    ></span>
+                  ))}
+                </div>
+
+                {/* thumbs – desktop only */}
                 <div className="taobao-thumbs">
                   {(selectedProduct.images || [selectedProduct.image]).map((img, i) => (
                     <div key={i} className={`taobao-thumb ${i === activeImage ? 'active' : ''}`} onClick={() => setActiveImage(i)}>
