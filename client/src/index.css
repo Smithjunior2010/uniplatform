@@ -26,3 +26,6 @@
 
 /* 5. Utilities (animations, WhatsApp button, responsive typography) */
 @import './styles/utilities.css';
+
+/* 6. Scroll animations, progress bar, toasts, micro-interactions */
+@import './styles/animations.css';

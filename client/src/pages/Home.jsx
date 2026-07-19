@@ -10,7 +10,7 @@ export default function Home() {
       {/* ══════════════════════════════════════
           HERO (Modern 2025)
           ══════════════════════════════════════ */}
-      <section className="hero" id="home">
+      <section className="hero anim anim-fade" id="home">
         <div className="hero-diag"></div>
         <div className="hero-orb"></div>
         <div className="hero-orb"></div>
@@ -29,11 +29,11 @@ export default function Home() {
           <p className="hero-subtitle">{t.hero.subtitle}</p>
           <p className="hero-desc">{t.hero.desc}</p>
           <div className="hero-cta">
-            <a href="#about" className="bp">
+            <a href="#about" className="bp ripple">
               {t.hero.cta1}
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
             </a>
-            <a href="#contact" className="bg">
+            <a href="#contact" className="bg ripple">
               {t.hero.cta2}
             </a>
           </div>
@@ -117,7 +117,7 @@ export default function Home() {
       {/* ══════════════════════════════════════
           STATS BAR
           ══════════════════════════════════════ */}
-      <div className="sbar">
+      <div className="sbar anim anim-up">
         <div className="sc">
           <div className="sn">6</div>
           <div className="sl">{t.stats.sectors}</div>
@@ -139,13 +139,13 @@ export default function Home() {
       {/* ══════════════════════════════════════
           OUR BUSINESS SECTORS
           ══════════════════════════════════════ */}
-      <section className="sec biz-sec" id="about">
+      <section className="sec biz-sec anim anim-up" id="about">
         <div className="ey">{t.biz.eyebrow}</div>
         <h2 className="st">{t.biz.title1} <span className="i">{t.biz.title2}</span></h2>
         <p className="sb">{t.biz.subtitle}</p>
 
         <div className="biz-grid">
-          <a href="/wifi" className="biz-card" style={{'--bc':'var(--c-wifi)'}}>
+          <a href="/wifi" className="biz-card anim anim-up anim-d1" style={{'--bc':'var(--c-wifi)'}}>
             <div className="biz-top">
               <div className="biz-ico" style={{background:'rgba(26,86,219,.1)',border:'1px solid rgba(26,86,219,.2)'}}>
                 <span className="biz-emoji">📶</span>
@@ -161,7 +161,7 @@ export default function Home() {
             <span className="biz-link">{t.biz.discover}</span>
           </a>
 
-          <a href="/shipping" className="biz-card" style={{'--bc':'var(--c-ship)'}}>
+          <a href="/shipping" className="biz-card anim anim-up anim-d2" style={{'--bc':'var(--c-ship)'}}>
             <div className="biz-top">
               <div className="biz-ico" style={{background:'rgba(15,76,117,.1)',border:'1px solid rgba(15,76,117,.2)'}}>
                 <span className="biz-emoji">📦</span>
@@ -177,7 +177,7 @@ export default function Home() {
             <span className="biz-link">{t.biz.discover}</span>
           </a>
 
-          <a href="/shop" className="biz-card" style={{'--bc':'var(--c-shop)'}}>
+          <a href="/shop" className="biz-card anim anim-up anim-d3" style={{'--bc':'var(--c-shop)'}}>
             <div className="biz-top">
               <div className="biz-ico" style={{background:'rgba(13,122,95,.1)',border:'1px solid rgba(13,122,95,.2)'}}>
                 <span className="biz-emoji">🛍️</span>
@@ -193,7 +193,7 @@ export default function Home() {
             <span className="biz-link">{t.biz.discover}</span>
           </a>
 
-          <a href="/energy" className="biz-card" style={{'--bc':'var(--c-energy)'}}>
+          <a href="/energy" className="biz-card anim anim-up anim-d4" style={{'--bc':'var(--c-energy)'}}>
             <div className="biz-top">
               <div className="biz-ico" style={{background:'rgba(196,122,0,.1)',border:'1px solid rgba(196,122,0,.2)'}}>
                 <span className="biz-emoji">⚡</span>
@@ -209,7 +209,7 @@ export default function Home() {
             <span className="biz-link">{t.biz.discover}</span>
           </a>
 
-          <a href="/finance-agro" className="biz-card" style={{'--bc':'var(--c-fin)'}}>
+          <a href="/finance-agro" className="biz-card anim anim-up anim-d5" style={{'--bc':'var(--c-fin)'}}>
             <div className="biz-top">
               <div className="biz-ico" style={{background:'rgba(107,63,160,.1)',border:'1px solid rgba(107,63,160,.2)'}}>
                 <span className="biz-emoji">🥭</span>
@@ -225,7 +225,7 @@ export default function Home() {
             <span className="biz-link">{t.biz.discover}</span>
           </a>
 
-          <div className="biz-card biz-card-cta">
+          <div className="biz-card biz-card-cta anim anim-up anim-d6">
             <div className="biz-cta-content">
               <h2 className="biz-cta-heading">{t.biz.cta.heading}</h2>
               <span className="biz-cta-flag">🇭🇹</span>
@@ -243,7 +243,7 @@ export default function Home() {
       {/* ══════════════════════════════════════
           TEAM
           ══════════════════════════════════════ */}
-      <section className="sec" id="team">
+      <section className="sec anim anim-up" id="team">
         <div className="sh">
           <div>
             <div className="ey">{t.team.eyebrow}</div>
@@ -253,7 +253,7 @@ export default function Home() {
         </div>
         <div className="tscroll-wrapper">
           <div className="tgrid">
-            <div className="tmc tmc-founder">
+            <div className="tmc tmc-founder anim anim-up anim-d1">
               <div className="tmc-avatar">
                 <div className="tmc-avatar-ring">★</div>
                 <img src="https://i.postimg.cc/528rV460/incognito.jpg" alt="The Founder" />
@@ -268,7 +268,7 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            <div className="tmc">
+            <div className="tmc anim anim-up anim-d2">
               <div className="tmc-avatar">
                 <img src="https://i.postimg.cc/Fstsjdwy/babypic.jpg" alt="Alfred Patrice" style={{objectPosition: 'center 30%'}} />
               </div>
@@ -282,7 +282,7 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            <div className="tmc">
+            <div className="tmc anim anim-up anim-d3">
               <div className="tmc-avatar">
                 <img src="https://i.postimg.cc/jjdQDZ3S/profile-picture.jpg" alt="Prud'homme Smith Junior" />
               </div>
@@ -296,7 +296,7 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            <div className="tmc">
+            <div className="tmc anim anim-up anim-d4">
               <div className="tmc-avatar">
                 <img src="https://i.postimg.cc/X704ZMyt/castra.jpg" alt="Castra" />
               </div>
@@ -318,7 +318,7 @@ export default function Home() {
       {/* ══════════════════════════════════════
           INVESTOR / CONTACT
           ══════════════════════════════════════ */}
-      <section className="sec dark" id="contact">
+      <section className="sec dark anim anim-up" id="contact">
         <div className="iw">
           <div className="il">
             <div className="ey">{t.contact.eyebrow}</div>
@@ -360,7 +360,7 @@ export default function Home() {
                 ))}
               </select>
               <textarea className="fta" placeholder={t.contact.form.message}></textarea>
-              <button type="submit" className="fsub">
+              <button type="submit" className="fsub ripple">
                 {t.contact.form.submit}
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </button>

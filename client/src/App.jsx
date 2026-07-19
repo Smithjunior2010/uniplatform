@@ -2,6 +2,9 @@ import { Routes, Route, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { LanguageProvider, useLang } from './i18n/LanguageContext';
 import { AdminProvider, useAdmin } from './contexts/AdminContext';
+import { ToastProvider } from './contexts/ToastContext';
+import useScrollAnim from './hooks/useScrollAnim';
+import ScrollUI from './components/ScrollUI';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
@@ -83,6 +86,9 @@ function AppContent() {
   const { t, lang, toggleLang } = useLang();
   const { isAdmin, user, logout } = useAdmin();
 
+  // Activate scroll-triggered animations
+  useScrollAnim();
+
   useEffect(() => {
     const handleScroll = () => {
       const nav = document.querySelector('nav');
@@ -96,6 +102,7 @@ function AppContent() {
 
   return (
     <div>
+      <ScrollUI />
       <nav>
         <div className={`overlay ${menuOpen ? 'visible' : ''}`} onClick={() => setMenuOpen(false)}></div>
         <Link to="/" className="brand">
@@ -192,7 +199,9 @@ export default function App() {
   return (
     <LanguageProvider>
       <AdminProvider>
-        <AppContent />
+        <ToastProvider>
+          <AppContent />
+        </ToastProvider>
       </AdminProvider>
     </LanguageProvider>
   );
