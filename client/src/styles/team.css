@@ -4,7 +4,13 @@
 #team .st{font-family:'Manrope',sans-serif;font-size:var(--fs-h1);font-weight:800;letter-spacing:-.03em}
 #team .st .i{font-style:normal;background:var(--grad-r);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:800}
 #team.sec{padding-top:3rem}
-.tscroll-wrapper{position:relative;overflow-x:auto;padding-bottom:1rem}
+.tscroll-wrapper{
+  position:relative;
+  overflow-x:auto;
+  padding-bottom:1rem;
+  scrollbar-width:none;-ms-overflow-style:none
+}
+.tscroll-wrapper::-webkit-scrollbar{display:none}
 .tgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
 .tscroll-indicator{height:4px;background:var(--bdr);border-radius:2px;margin-top:1rem}
 .tmc{position:relative;background:white;border:1px solid var(--bdr);border-radius:14px;padding:1.2rem;box-shadow:var(--s2);transition:transform .25s cubic-bezier(.4,0,.2,1),box-shadow .25s;display:flex;flex-direction:column;align-items:center;text-align:center;gap:.6rem}
@@ -39,7 +45,11 @@
 }
 @media (max-width:768px){
   .tgrid{grid-template-columns:repeat(4,320px);gap:1.3rem;min-width:0}
-  .tscroll-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .tscroll-wrapper{
+    overflow-x:auto;-webkit-overflow-scrolling:touch;
+    scrollbar-width:none;-ms-overflow-style:none
+  }
+  .tscroll-wrapper::-webkit-scrollbar{display:none}
   #team .st{font-size:1.75rem}
   #team.sec{padding-top:2rem}
   .tmc{padding:1.5rem}
